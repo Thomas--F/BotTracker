@@ -201,7 +201,7 @@ class BotTracker extends \Piwik\Plugin
 
 	public function logToFile($msg)
 	{ 
-		$logActive = true;
+		$logActive = false;
 		
 		if ($logActive){
 			$pfad = "tmp/logs/";
