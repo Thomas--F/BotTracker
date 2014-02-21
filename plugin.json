@@ -1,10 +1,10 @@
 {
     "name": "BotTracker",
-    "version": "0.43",
+    "version": "0.44",
     "keywords": ["BotTracker"],
     "homepage": "http://dev.piwik.org/trac/ticket/2391",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
-    "license": "GPL/fair use",    
+    "license": "GPL 3.0 / fair use",    
     "authors": [
         {
             "name": "Thomas Fasselt",
