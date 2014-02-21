@@ -14,7 +14,7 @@ Before you install this plugin, some things you should be aware of:
 - if you update form Piwik 1.x to Piwik 2.x sometimes the update-script (BotTracker\Updates\0.43.php) is not executed. In this case you get an error about a not existing column "extra_stats" when you open the config-page. Then you have to execute the following 2 statemnts on your Piwik-Database (e.g. with MyPHPAdmin):
 
 ```sql
-ALTER TABLE `piwik_bot_db'`
+ALTER TABLE `piwik_bot_db`
 ADD `extra_stats` BOOLEAN NOT NULL DEFAULT FALSE
 ```
 ```sql
@@ -31,3 +31,9 @@ CREATE TABLE IF NOT EXISTS `piwik_bot_db_stat`
 ```
 
 - the "extra Stats"-Feature is in "early developing". You can collect the data about the who, when and where, but there is currently no widget to display the data.
+
+
+And last but not least:
+I wrote BotTracker for my own needs but people ask me to make it public - so I put it online.
+It's free to use and I will support it as long as I can spend the time. But I will *not* activate a donation button. If someone is paying money, I fell like I have to support him. 
+I want to work on this plugin beacute I want to and not because I have to. I hope you can unterstand that.
