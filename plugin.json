@@ -3,7 +3,7 @@
     "version": "0.43",
     "keywords": ["BotTracker"],
     "homepage": "http://dev.piwik.org/trac/ticket/2391",
-    "description": "Detection of bots & spiders and count there visits without tracking them in the visitor-log.",
+    "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
     "license": "GPL/fair use",    
     "authors": [
         {
