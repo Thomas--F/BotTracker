@@ -20,7 +20,7 @@ class Updates_0_45 extends Updates
     static function getSql($schema = 'Myisam')
     {
         return array(
-            'ALTER TABLE `'.Common::prefixTable('bot_db').'`
+            'ALTER TABLE `'.Common::prefixTable('bot_db_stat').'`
                 DROP PRIMARY KEY,
                 ADD PRIMARY KEY(
                  `botId`,
