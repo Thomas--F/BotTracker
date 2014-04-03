@@ -46,6 +46,8 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.45__
+* add column to primary key in extra-stats-table
 
 __0.44__
 * more description for the marketplace
