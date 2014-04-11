@@ -119,7 +119,7 @@ class BotTracker extends \Piwik\Plugin
 			 			`visit_timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 			 			`useragent` VARCHAR(100) NOT NULL,
 			 
-			 			PRIMARY KEY(`botId`)
+			 			PRIMARY KEY(`botId`,`visit_timestamp`)
 						)  DEFAULT CHARSET=utf8';
 		Db::query($query4);
 	}
