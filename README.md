@@ -46,6 +46,9 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.46__
+* bugfix: remove depricated method for Piwik v2.2
+
 __0.45__
 * add column to primary key in extra-stats-table
 
