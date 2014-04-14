@@ -87,7 +87,7 @@ class Controller extends \Piwik\Plugin\Controller
 	}
 
 	public function config($siteID=0, $errorList = array()) {
-		Piwik::checkUserIsSuperUser();
+		Piwik::checkUserHasSuperUserAccess();
 
 		// $this->logToFile('config: siteID='.$siteID);
 
@@ -121,7 +121,7 @@ class Controller extends \Piwik\Plugin\Controller
 	}
 
 	public function config_reload() {
-		Piwik::checkUserIsSuperUser();
+		Piwik::checkUserHasSuperUserAccess();
 
 		$siteID=Common::getRequestVar('siteID',0);
 		if ($siteID==0){
@@ -135,7 +135,7 @@ class Controller extends \Piwik\Plugin\Controller
 	public function saveConfig() {
 		try{
 			// Only admin is allowed to do this!
-			Piwik::checkUserIsSuperUser();
+			Piwik::checkUserHasSuperUserAccess();
 			$siteID=Common::getRequestVar('siteID',0);
 			if ($siteID==0){
 				$siteID=Common::getRequestVar("idSite");
@@ -200,7 +200,7 @@ class Controller extends \Piwik\Plugin\Controller
 	public function deleteBotEntry() {
 		try{
 			// Only admin is allowed to do this!
-			Piwik::checkUserIsSuperUser();
+			Piwik::checkUserHasSuperUserAccess();
 			$siteID=Common::getRequestVar('siteID',0);
 			if ($siteID==0){
 				$siteID=Common::getRequestVar("idSite");
@@ -221,7 +221,7 @@ class Controller extends \Piwik\Plugin\Controller
 	public function config_insert_db() {
 		try{
 			// Only admin is allowed to do this!
-			Piwik::checkUserIsSuperUser();
+			Piwik::checkUserHasSuperUserAccess();
 			$siteID=Common::getRequestVar('siteID',0);
 			if ($siteID==0){
 				$siteID=Common::getRequestVar("idSite");
