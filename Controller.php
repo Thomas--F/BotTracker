@@ -25,6 +25,7 @@ use Piwik\Plugins\SitesManager\API as APISitesManager;
 use Piwik\Plugins\BotTracker\API as APIBotTracker;
 use Piwik\Menu\MenuAdmin;
 use Piwik\Menu\MenuTop;
+use Piwik\Menu\MenuUser;
 use Piwik\Menu\MenuMain;
 
 class Controller extends \Piwik\Plugin\Controller
@@ -112,6 +113,7 @@ class Controller extends \Piwik\Plugin\Controller
 		$view->nonce = Nonce::getNonce('BotTracker.saveConfig');
 		$view->adminMenu = MenuAdmin::getInstance()->getMenu();
 		$view->topMenu = MenuTop::getInstance()->getMenu();
+		$view->userMenu = MenuUser::getInstance()->getMenu();
 		$view->notifications = NotificationManager::getAllNotificationsToDisplay();
 		$view->phpVersion = phpversion();
 		$view->phpIsNewEnough = version_compare($view->phpVersion, '5.3.0', '>=');		
