@@ -46,6 +46,9 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.48__
+* change requirements because 0.47 doesn't wokr with Piwik 2.3
+
 __0.47__
 * bugfix: changes menu-creation for Piwik v2.4
 
