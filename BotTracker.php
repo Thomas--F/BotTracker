@@ -13,12 +13,10 @@
 namespace Piwik\Plugins\BotTracker;
 
 use Piwik\WidgetsList;
-use Piwik\Menu\MenuMain;
 use Piwik\Settings\SystemSetting;
 use Piwik\Common;
 use Piwik\Db;
 use Piwik\Plugins\SitesManager\API as APISitesManager;
-use Piwik\Menu\MenuAdmin;
 use Piwik\Piwik;
 use Piwik\Tracker;
 
@@ -136,9 +134,7 @@ class BotTracker extends \Piwik\Plugin
 	{
 		return array(
 			'Tracker.isExcludedVisit'  => 'checkBot',
-			'WidgetsList.addWidgets'   => 'addWidget',
-			'Menu.Reporting.addItems'  => 'addMenu',
-			'Menu.Admin.addItems'      => 'addConfigMenu'
+			'WidgetsList.addWidgets'   => 'addWidget'
 		);
 	}
 	function addWidget()
@@ -146,22 +142,6 @@ class BotTracker extends \Piwik\Plugin
 		WidgetsList::add('BotTracker_Widgets', 'BotTracker_DisplayWidget', 'BotTracker', 'displayWidget');
 	}
 	
-	function addMenu()
-	{
-		MenuMain::getInstance()->add('General_Visitors', 'BotTracker', array('module' => 'BotTracker', 'action' => 'getBotTrackerPage'), true, 30);
-	}
-	
-	public function addConfigMenu() {
-		
-		MenuAdmin::addEntry(
-				'BotTracker',
-				array('module' => 'BotTracker', 'action' => 'config'),
-				Piwik::isUserHasSomeAdminAccess(),
-				$order = 9
-		);
-	}
-
-
 	function checkBot(&$exclude)
 	{
 		$ua = $_SERVER['HTTP_USER_AGENT'];
