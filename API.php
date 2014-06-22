@@ -79,6 +79,8 @@ class API extends \Piwik\Plugin\API
 		$rows = Db::get()->fetchAll("SELECT `botName`, `botCount` FROM ".Common::prefixTable('bot_db')." WHERE `idSite`= ? ORDER BY `botCount` DESC LIMIT 10", array($idSite));
 
 		$i = 0;
+		$keys[0] = "";
+		$values[0] = "";
 		foreach($rows as $row)
 		{
 			$keys[$i] = $row['botName'];
