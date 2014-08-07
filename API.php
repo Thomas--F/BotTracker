@@ -14,6 +14,9 @@ namespace Piwik\Plugins\BotTracker;
 use Piwik\Db;
 use Piwik\Common;
 use Piwik\DataTable;
+use Piwik\Site;
+use Piwik\Date;
+
 
 
 /**
