@@ -46,6 +46,8 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.50__
+* bugfix for issue #9 (wrong time zone for last visit)
 __0.49__
 * fixed crash with a new and empty webpage
 
