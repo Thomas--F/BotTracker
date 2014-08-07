@@ -39,7 +39,7 @@ class API extends \Piwik\Plugin\API
 	static function getAllBotData($idSite)
 	{
 		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE idSite= ? ORDER BY `botId`", array($idSite));
-
+		$rows = self::convertBotLastVisitToLocalTime($rows, $idSite);
 		// convert this array to a DataTable object
 		return DataTable::makeFromIndexedArray($rows);
 	}
@@ -55,7 +55,7 @@ class API extends \Piwik\Plugin\API
 	static function getActiveBotData($idSite)
 	{
 		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE `botActive` = 1 AND idSite= ? ORDER BY `botId`", array($idSite));
-
+		$rows = self::convertBotLastVisitToLocalTime($rows, $idSite);
 		// convert this array to a DataTable object
 		return DataTable::makeFromIndexedArray($rows);
 	}
@@ -65,10 +65,10 @@ class API extends \Piwik\Plugin\API
 		$dataTable = $this->getAllBotData($idSite);
 		$dataTable->renameColumn('botActive', 'label');
 		
-      $dataTable->filter('ColumnCallbackAddMetadata', array('label', 'logo', __NAMESPACE__ . '\getActiveIcon'));
-      $dataTable->filter('ColumnCallbackReplace', array('label', create_function('$label', "return ' ';")));
-      $dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoWidth', function () { return 16; }));
-      $dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoHeight', function () { return 16; }));
+		$dataTable->filter('ColumnCallbackAddMetadata', array('label', 'logo', __NAMESPACE__ . '\getActiveIcon'));
+      		$dataTable->filter('ColumnCallbackReplace', array('label', create_function('$label', "return ' ';")));
+      		$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoWidth', function () { return 16; }));
+      		$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoHeight', function () { return 16; }));
 		
 		return $dataTable;
 	}
@@ -121,6 +121,24 @@ class API extends \Piwik\Plugin\API
 	static function getBotByName($siteID,$botName)
 	{
 		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE `botName` = ? AND `idSite`= ? ORDER BY `botId`", array($botName, $siteID));
+		$rows = self::convertBotLastVisitToLocalTime($rows, $idSite);
+		return $rows;
+	}
+
+	static function convertBotLastVisitToLocalTime($rows, $idSite)
+	{
+		// convert lastVisit to localtime
+		$timezone = Site::getTimezoneFor($idSite);
+		
+		foreach($rows as &$row)
+		{
+			if ($row['botLastVisit'] == '0000-00-00 00:00:00'){
+				$row['botLastVisit'] = " - ";
+			} else {
+				$botLastVisit = Date::adjustForTimezone(strtotime($row['botLastVisit']), $timezone);
+	        		$row['botLastVisit'] = date('Y-m-d H:i:s', $botLastVisit);
+        		}
+		}
 		return $rows;
 	}
 	
