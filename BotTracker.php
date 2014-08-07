@@ -146,7 +146,7 @@ class BotTracker extends \Piwik\Plugin
 	{
 		$ua = $_SERVER['HTTP_USER_AGENT'];
 		$idSite = $_REQUEST['idsite'];
-		$currentTimestamp = date("Y-m-d H:i:s");
+		$currentTimestamp = gmdate("Y-m-d H:i:s");
 		$currentUrl = $_REQUEST['url'];
 		
 		BotTracker::logToFile('SiteID:'.$idSite.' user Agent: '.$ua.' TS:'.$currentTimestamp.' page:'.$currentUrl);
