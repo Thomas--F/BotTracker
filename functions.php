@@ -25,3 +25,10 @@ function getActiveIcon($botActive)
 	return $pathWithCode;
 }
 
+function getRequest($key) {   
+    return (isset($_REQUEST[$key]) && $_REQUEST[$key])?$_REQUEST[$key]:'';
+}
+function getServer($key) {   
+    return (isset($_SERVER[$key]) && $_SERVER[$key])?$_SERVER[$key]:'';
+}
+
