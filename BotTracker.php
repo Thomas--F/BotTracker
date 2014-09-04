@@ -20,6 +20,8 @@ use Piwik\Plugins\SitesManager\API as APISitesManager;
 use Piwik\Piwik;
 use Piwik\Tracker;
 
+require_once PIWIK_INCLUDE_PATH . '/plugins/BotTracker/functions.php';
+
 class BotTracker extends \Piwik\Plugin
 {	
 	protected $botDb = null;
@@ -144,10 +146,10 @@ class BotTracker extends \Piwik\Plugin
 	
 	function checkBot(&$exclude)
 	{
-		$ua = $_SERVER['HTTP_USER_AGENT'];
-		$idSite = $_REQUEST['idsite'];
+		$ua = getServer('HTTP_USER_AGENT');
+		$idSite = getRequest('idsite');
 		$currentTimestamp = gmdate("Y-m-d H:i:s");
-		$currentUrl = $_REQUEST['url'];
+		$currentUrl = getRequest('url');
 		
 		BotTracker::logToFile('SiteID:'.$idSite.' user Agent: '.$ua.' TS:'.$currentTimestamp.' page:'.$currentUrl);
 		
