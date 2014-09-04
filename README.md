@@ -46,6 +46,8 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.52__
+* bugfix for issue #10 (NOTICE in error-log for undeclared variables)
 __0.51__
 * emergency-fix for v0.50
 __0.50__
