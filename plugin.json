@@ -1,6 +1,6 @@
 {
     "name": "BotTracker",
-    "version": "0.51",
+    "version": "0.52",
     "keywords": ["BotTracker"],
     "homepage": "http://dev.piwik.org/trac/ticket/2391",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
