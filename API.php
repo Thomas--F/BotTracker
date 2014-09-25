@@ -107,13 +107,13 @@ class API extends \Piwik\Plugin\API
 
 	}
 
-	static function insertBot($siteID, $botName, $botActive, $botKeyword, $extraStats)
+	static function insertBot($idSite, $botName, $botActive, $botKeyword, $extraStats)
 	{
 	
 		Db::get()->query("INSERT INTO `".Common::prefixTable('bot_db')."` 
                (`idsite`,`botName`, `botActive`, `botKeyword`, `botCount`, `botLastVisit`, `extra_stats`)
                 VALUES (?,?,?,?,0,'0000-00-00 00:00:00',?)"
-          , array($siteID, $botName, $botActive, $botKeyword, $extraStats));
+          , array($idSite, $botName, $botActive, $botKeyword, $extraStats));
 	}
 
 	static function deleteBot($botId)
@@ -121,9 +121,9 @@ class API extends \Piwik\Plugin\API
 		Db::get()->query("DELETE FROM `".Common::prefixTable('bot_db')."` WHERE `botId` = ?",array($botId));
 	}
 
-	static function getBotByName($siteID,$botName)
+	static function getBotByName($idSite, $botName)
 	{
-		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE `botName` = ? AND `idSite`= ? ORDER BY `botId`", array($botName, $siteID));
+		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE `botName` = ? AND `idSite`= ? ORDER BY `botId`", array($botName, $idSite));
 		$rows = self::convertBotLastVisitToLocalTime($rows, $idSite);
 		return $rows;
 	}
