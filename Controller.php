@@ -232,8 +232,9 @@ class Controller extends \Piwik\Plugin\Controller
 			$errorList = array();
 			$botList = array();
 			$botList[] = array('MSN Search'              ,'MSNBOT'              );
+			$botList[] = array('MSN Bot Media'           ,'msnbot-media'        );
 			$botList[] = array('Bingbot'                 ,'bingbot'             );
-			$botList[] = array('GoogleBot'               ,'GoogleBot'           );
+			$botList[] = array('GoogleBot'               ,'Googlebot'           );
 			$botList[] = array('Google Instant'          ,'Google Web Preview'  );
 			$botList[] = array('Media Partners GoogleBot','Mediapartners-Google');
 			$botList[] = array('Baiduspider'             ,'BaiDuSpider'         );
@@ -252,6 +253,15 @@ class Controller extends \Piwik\Plugin\Controller
 			$botList[] = array('Yandex ?'                ,'Java/1.4.1_04'       );
 			$botList[] = array('SiteBot'                 ,'SiteBot'             );
 			$botList[] = array('Exabot'                  ,'Exabot'              );
+			$botList[] = array('AhrefsBot'               ,'AhrefsBot'           );
+			$botList[] = array('MJ12Bot'                 ,'MJ12bot'             );
+			$botList[] = array('NetSeer Crawler'         ,'NetSeer crawler'     );
+			$botList[] = array('TurnitinBot'             ,'TurnitinBot'         );
+			$botList[] = array('Magpie Crawler'          ,'magpie-crawler'      );
+			$botList[] = array('Nutch Crawler'           ,'Nutch Crawler'       );
+			$botList[] = array('CMS Crawler'             ,'CMS Crawler'         );
+			$botList[] = array('RogerBot'                ,'rogerbot'            );
+			$botList[] = array('MJ12bot'                 ,'MJ12bot'             );
 			
 			$i = 0;
 			foreach($botList as $bot)
