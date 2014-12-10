@@ -37,8 +37,8 @@ class Controller extends \Piwik\Plugin\Controller
 	 */
 	function displayWidget($fetch = false)
 	{
-      $controllerAction = $this->pluginName . '.' . __FUNCTION__;
-      $apiAction = 'BotTracker.getActiveBotData';	
+      		$controllerAction = $this->pluginName . '.' . __FUNCTION__;
+      		$apiAction = 'BotTracker.getActiveBotData';	
 
 		$view = $this->getStandardDataTable('table', $apiAction, $controllerAction);
 		$view->config->columns_to_display  = array('botName','botCount','botLastVisit');
@@ -52,8 +52,8 @@ class Controller extends \Piwik\Plugin\Controller
 	
 	function getBotTrackerView($fetch = false)
 	{
-      $controllerAction = $this->pluginName . '.' . __FUNCTION__;
-      $apiAction = 'BotTracker.getAllBotDataWithIcon';	
+		$controllerAction = $this->pluginName . '.' . __FUNCTION__;
+      		$apiAction = 'BotTracker.getAllBotDataWithIcon';	
       
 		$view = $this->getStandardDataTable('table', $apiAction, $controllerAction);
 		$view->config->columns_to_display  = array('label','botName','botKeyword','botCount','botLastVisit');
@@ -67,14 +67,14 @@ class Controller extends \Piwik\Plugin\Controller
 	{
 		$view = ViewDataTableFactory::build('graphPie', 'BotTracker.getAllBotDataPie', $controllerAction = 'BotTracker.getBotTrackerPie');
 
-      $view->config->columns_to_display = array('value');
-      $view->config->translations['value'] = "hits by Bot";
-      $view->config->show_footer_icons = true;
-      $view->config->selectable_columns = array("value");
-      $view->config->max_graph_elements = 10;
+		//$view->config->columns_to_display = array('value');
+      		$view->config->translations['value'] = "hits by Bot";
+      		$view->config->show_footer_icons = true;
+      		$view->config->selectable_columns = array("value");
+      		$view->config->max_graph_elements = 10;
 		$view->config->disable_row_evolution  = true;
 
-      return $view->render();
+      		return $view->render();
 	}
 
 	function getBotTrackerPage()
@@ -131,7 +131,7 @@ class Controller extends \Piwik\Plugin\Controller
 		}
 		// $this->logToFile('config_reload: siteID='.$siteID);
 		
-	   $this->config($siteID);
+	   	$this->config($siteID);
 	}
 
 	public function saveConfig() {
