@@ -261,8 +261,7 @@ class Controller extends \Piwik\Plugin\Controller
 			$botList[] = array('Nutch Crawler'           ,'Nutch Crawler'       );
 			$botList[] = array('CMS Crawler'             ,'CMS Crawler'         );
 			$botList[] = array('RogerBot'                ,'rogerbot'            );
-			$botList[] = array('MJ12bot'                 ,'MJ12bot'             );
-			
+
 			$i = 0;
 			foreach($botList as $bot)
 			{
