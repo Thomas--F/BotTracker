@@ -62,7 +62,7 @@ class BotTracker extends \Piwik\Plugin
 		if (!$tableExists){		
 			$sites = APISitesManager::getInstance()->getSitesWithAdminAccess();
 			foreach ($sites as $site){
-				$params3 = array_fill(0,31,$site['idsite']);
+				$params3 = array_fill(0,30,$site['idsite']);
 				$query3 = "INSERT INTO `".Common::prefixTable('bot_db')."` 
 				(idsite,botName, botActive, botKeyword, botCount, botLastVisit)
 				VALUES (?,'MSN Search'              ,1,'MSNBOT'              ,0,'0000-00-00 00:00:00')
@@ -95,7 +95,6 @@ class BotTracker extends \Piwik\Plugin
 				     , (?,'Nutch Crawler'           ,1,'Nutch Crawler'       ,0,'0000-00-00 00:00:00')
 				     , (?,'CMS Crawler'             ,1,'CMS Crawler'         ,0,'0000-00-00 00:00:00')
 				     , (?,'RogerBot'                ,1,'rogerbot'            ,0,'0000-00-00 00:00:00')
-				     , (?,'MJ12bot'                 ,1,'MJ12bot'             ,0,'0000-00-00 00:00:00')
 				     ";
 			     
 				Db::query($query3,$params3);
