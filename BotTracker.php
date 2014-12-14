@@ -19,6 +19,7 @@ use Piwik\Db;
 use Piwik\Plugins\SitesManager\API as APISitesManager;
 use Piwik\Piwik;
 use Piwik\Tracker;
+use Piwik\Plugins\BotTracker\API as BotTrackerAPI;
 
 require_once PIWIK_INCLUDE_PATH . '/plugins/BotTracker/functions.php';
 
@@ -62,42 +63,7 @@ class BotTracker extends \Piwik\Plugin
 		if (!$tableExists){		
 			$sites = APISitesManager::getInstance()->getSitesWithAdminAccess();
 			foreach ($sites as $site){
-				$params3 = array_fill(0,30,$site['idsite']);
-				$query3 = "INSERT INTO `".Common::prefixTable('bot_db')."` 
-				(idsite,botName, botActive, botKeyword, botCount, botLastVisit)
-				VALUES (?,'MSN Search'              ,1,'MSNBOT'              ,0,'0000-00-00 00:00:00')
-				     , (?,'MSN Bot Media'           ,1,'msnbot-media'        ,0,'0000-00-00 00:00:00')
-				     , (?,'Bingbot'                 ,1,'bingbot'             ,0,'0000-00-00 00:00:00')
-				     , (?,'GoogleBot'               ,1,'Googlebot'           ,0,'0000-00-00 00:00:00')
-				     , (?,'Google Instant'          ,1,'Google Web Preview'  ,0,'0000-00-00 00:00:00')
-				     , (?,'Media Partners GoogleBot',1,'Mediapartners-Google',0,'0000-00-00 00:00:00')
-				     , (?,'Baiduspider'             ,1,'BaiDuSpider'         ,0,'0000-00-00 00:00:00')
-				     , (?,'Ezooms'                  ,1,'Ezooms'              ,0,'0000-00-00 00:00:00')
-				     , (?,'YahooSeeker'             ,1,'YahooSeeker'         ,0,'0000-00-00 00:00:00')
-				     , (?,'Yahoo! Slurp'            ,1,'Yahoo! Slurp'        ,0,'0000-00-00 00:00:00')
-				     , (?,'Altavista 1'             ,1,'AltaVista'           ,0,'0000-00-00 00:00:00')
-				     , (?,'Altavista 2'             ,1,'AVSearch'            ,0,'0000-00-00 00:00:00')
-				     , (?,'Altavista 3'             ,1,'Mercator'            ,0,'0000-00-00 00:00:00')
-				     , (?,'Altavista 4'             ,1,'Scooter'             ,0,'0000-00-00 00:00:00')
-				     , (?,'Infoseek 1'              ,1,'InfoSeek'            ,0,'0000-00-00 00:00:00')
-				     , (?,'Infoseek 2'              ,1,'Ultraseek'           ,0,'0000-00-00 00:00:00')
-				     , (?,'Lycos'                   ,1,'Lycos'               ,0,'0000-00-00 00:00:00')
-				     , (?,'Wget'                    ,1,'Wget'                ,0,'0000-00-00 00:00:00')
-				     , (?,'Yandex'                  ,1,'YandexBot'           ,0,'0000-00-00 00:00:00')
-				     , (?,'Yandex ?'                ,1,'Java/1.4.1_04'       ,0,'0000-00-00 00:00:00')
-				     , (?,'SiteBot'                 ,1,'SiteBot'             ,0,'0000-00-00 00:00:00')
-				     , (?,'Exabot'                  ,1,'Exabot'              ,0,'0000-00-00 00:00:00')
-				     , (?,'AhrefsBot'               ,1,'AhrefsBot'           ,0,'0000-00-00 00:00:00')
-				     , (?,'MJ12Bot'                 ,1,'MJ12bot'             ,0,'0000-00-00 00:00:00')
-				     , (?,'NetSeer Crawler'         ,1,'NetSeer crawler'     ,0,'0000-00-00 00:00:00')
-				     , (?,'TurnitinBot'             ,1,'TurnitinBot'         ,0,'0000-00-00 00:00:00')
-				     , (?,'Magpie Crawler'          ,1,'magpie-crawler'      ,0,'0000-00-00 00:00:00')
-				     , (?,'Nutch Crawler'           ,1,'Nutch Crawler'       ,0,'0000-00-00 00:00:00')
-				     , (?,'CMS Crawler'             ,1,'CMS Crawler'         ,0,'0000-00-00 00:00:00')
-				     , (?,'RogerBot'                ,1,'rogerbot'            ,0,'0000-00-00 00:00:00')
-				     ";
-			     
-				Db::query($query3,$params3);
+				BotTrackerAPI::insert_default_bots($site['idsite']);
 			}
 		}
 		// Create extendet_stats_table
