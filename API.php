@@ -116,6 +116,66 @@ class API extends \Piwik\Plugin\API
           , array($idSite, $botName, $botActive, $botKeyword, $extraStats));
 	}
 
+	static function insert_default_bots($idsite = 0) {
+		$i = 0;
+		
+		if ($idsite <> 0){
+			// Only admin is allowed to do this!
+			Piwik::checkUserHasSuperUserAccess();
+
+			$botList = array();
+			$botList[] = array('MSN Search'              ,'MSNBOT'              );
+			$botList[] = array('MSN Bot Media'           ,'msnbot-media'        );
+			$botList[] = array('Bingbot'                 ,'bingbot'             );
+			$botList[] = array('GoogleBot'               ,'Googlebot'           );
+			$botList[] = array('Google Instant'          ,'Google Web Preview'  );
+			$botList[] = array('Media Partners GoogleBot','Mediapartners-Google');
+			$botList[] = array('Baiduspider'             ,'BaiDuSpider'         );
+			$botList[] = array('Ezooms'                  ,'Ezooms'              );
+			$botList[] = array('YahooSeeker'             ,'YahooSeeker'         );
+			$botList[] = array('Yahoo! Slurp'            ,'Slurp'               );
+			$botList[] = array('Altavista 1'             ,'AltaVista'           );
+			$botList[] = array('Altavista 2'             ,'AVSearch'            );
+			$botList[] = array('Altavista 3'             ,'Mercator'            );
+			$botList[] = array('Altavista 4'             ,'Scooter'             );
+			$botList[] = array('Infoseek 1'              ,'InfoSeek'            );
+			$botList[] = array('Infoseek 2'              ,'Ultraseek'           );
+			$botList[] = array('Lycos'                   ,'Lycos'               );
+			$botList[] = array('Wget'                    ,'Wget'                );
+			$botList[] = array('Yandex'                  ,'YandexBot'           );
+			$botList[] = array('Yandex ?'                ,'Java/1.4.1_04'       );
+			$botList[] = array('SiteBot'                 ,'SiteBot'             );
+			$botList[] = array('Exabot'                  ,'Exabot'              );
+			$botList[] = array('AhrefsBot'               ,'AhrefsBot'           );
+			$botList[] = array('MJ12Bot'                 ,'MJ12bot'             );
+			$botList[] = array('NetSeer Crawler'         ,'NetSeer crawler'     );
+			$botList[] = array('TurnitinBot'             ,'TurnitinBot'         );
+			$botList[] = array('Magpie Crawler'          ,'magpie-crawler'      );
+			$botList[] = array('Nutch Crawler'           ,'Nutch Crawler'       );
+			$botList[] = array('CMS Crawler'             ,'CMS Crawler'         );
+			$botList[] = array('RogerBot'                ,'rogerbot'            );
+			$botList[] = array('MJ12bot'                 ,'MJ12bot'             );
+			$botList[] = array('Domnutch-Bot'            ,'Domnutch'            );
+			$botList[] = array('Ssearch Crawler'         ,'ssearch_bot'         );
+			$botList[] = array('XoviBot'                 ,'XoviBot'             );
+			$botList[] = array('NetSeer Crawler'         ,'netseer'             );
+			$botList[] = array('Digincore'               ,'digincore'           );
+			$botList[] = array('Fr-Crawler'              ,'fr-crawler'          );
+
+			foreach($botList as $bot)
+			{
+				$botX = BotTrackerAPI::getBotByName($idsite, $bot[0]);
+				
+				if (empty($botX)){
+					BotTrackerAPI::insertBot($idsite, $bot[0],1,$bot[1],0);
+					$i++;	
+				}
+			}
+		}	
+	
+		return $i;
+	}
+
 	static function deleteBot($botId)
 	{
 		Db::get()->query("DELETE FROM `".Common::prefixTable('bot_db')."` WHERE `botId` = ?",array($botId));
