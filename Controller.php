@@ -70,6 +70,7 @@ class Controller extends \Piwik\Plugin\Controller
 		//$view->config->columns_to_display = array('value');
       		$view->config->translations['value'] = "hits by Bot";
       		$view->config->show_footer_icons = true;
+      		$view->config->show_insights = false;
       		$view->config->selectable_columns = array("value");
       		$view->config->max_graph_elements = 10;
 		$view->config->disable_row_evolution  = true;
