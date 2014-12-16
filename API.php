@@ -11,11 +11,13 @@
  */
 namespace Piwik\Plugins\BotTracker;
 
+use Piwik\Plugins\BotTracker\API as BotTrackerAPI;
 use Piwik\Db;
 use Piwik\Common;
 use Piwik\DataTable;
 use Piwik\Site;
 use Piwik\Date;
+use Piwik\Piwik;
 
 
 
