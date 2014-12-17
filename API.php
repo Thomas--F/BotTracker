@@ -132,7 +132,7 @@ class API extends \Piwik\Plugin\API
 			$botList[] = array('GoogleBot'               ,'Googlebot'           );
 			$botList[] = array('Google Instant'          ,'Google Web Preview'  );
 			$botList[] = array('Media Partners GoogleBot','Mediapartners-Google');
-			$botList[] = array('Baiduspider'             ,'BaiDuSpider'         );
+			$botList[] = array('Baiduspider'             ,'Baiduspider'         );
 			$botList[] = array('Ezooms'                  ,'Ezooms'              );
 			$botList[] = array('YahooSeeker'             ,'YahooSeeker'         );
 			$botList[] = array('Yahoo! Slurp'            ,'Slurp'               );
