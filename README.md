@@ -48,7 +48,8 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 ## Changelog
 __0.53__
 * bugfix for cloud-view on "Top 10"
-* add more default bots
+* deactivating insights for "Top 10"
+* add more default bots (just use the "add default bots" button, only the new ones will be added)
 
 __0.52__
 * bugfix for issue #10 (NOTICE in error-log for undeclared variables)
