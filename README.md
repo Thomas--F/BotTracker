@@ -46,6 +46,9 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.54__
+* bugfix for Piwik 2.11
+
 __0.53__
 * bugfix for cloud-view on "Top 10"
 * deactivating insights for "Top 10"
