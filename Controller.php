@@ -104,7 +104,6 @@ class Controller extends \Piwik\Plugin\Controller
 		$view->language = LanguagesManager::getLanguageCodeForCurrentUser();
 		
 		$this->setBasicVariablesView($view);
-		$view->currentAdminMenuName = MenuAdmin::getInstance()->getCurrentAdminMenuName();
 		$view->defaultReportSiteName = Site::getNameFor($siteID);
 		$view->assign('sitesList', $sitesList);
 		$view->assign('botList', $botList);
