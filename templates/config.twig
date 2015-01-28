@@ -8,12 +8,6 @@
 	<p>{{'BotTracker_PluginDescription'|translate}}</p>
 
 	<div id="sites">
-		<div id="button" style="float:right;" >
-			<form method="post" action="{{ {'action':'config_insert_db', 'token_auth':token_auth} | urlRewriteWithParameters }}" id="dbButton">
-				<input type="hidden" value="{{ idSite }}" name="siteID" />
-				<input type="submit" value="{{'BotTracker_insert_db'|translate}} (38)" name="submit" class="submit" />
-			</form>
-		</div>
 		<div id="label" style="float:left;margin-top:10px">{{'General_ChooseWebsite'|translate}} : </div>
 		<div id="selectID" style="display:inline;">
 		<form method="post" action="{{ linkTo({'module':'BotTracker','action':'config_reload'})}}" id="accessSites">
@@ -24,10 +18,13 @@
 			</select>
 		</form>
 		</div>
+		<div id="button" style="display:inline;" >
+			<form method="post" action="{{ {'action':'config_insert_db', 'token_auth':token_auth} | urlRewriteWithParameters }}" id="dbButton">
+				<input type="hidden" value="{{ idSite }}" name="siteID" />
+				<input type="submit" value="{{'BotTracker_insert_db'|translate}} (38)" name="submit" class="submit" />
+			</form>
+		</div>
 	</div>
-
-	<br>
-	<br>
 	<br>
 	<br>
    {% if errorList|length >= 1 %}
