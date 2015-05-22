@@ -16,18 +16,16 @@ I want to work on this plugin because I want to and not because I have to. I hop
 
 ## How it works
 
-The plugin scans the user agent of any incuming visit for specific keywords. If the keyword is found, the visit is excluded from the normal log and the corresponding counter in the bot-table (BOT_DB) is increased.
-If you enable the "extra stats" für this bot entry, the visit will also be written into the second bot-talbe (BOT_DB_STAT). This second table logs the timestamp, the visited page and the user agent.
+The plugin scans the user agent of any incoming visit for specific keywords. If the keyword is found, the visit is excluded from the normal log and the corresponding counter in the bot-table (BOT_DB) is increased.
+If you enable the "extra stats" for a bot entry, the visit will also be written into a second bot-table (BOT_DB_STAT). This second table logs the timestamp, the visited page and the user agent. The second table is currently not displayed in Piwik, but the more experienced users can select the data from the database. Some more detailed reports may come in the future.
 
-You can add/delete/modify the keywords in the administration-menu. There are webpages, that list the user-agents of known spiders and webcrawlers (e.g. http://www.useragentstring.com/pages/Crawlerlist/ ). The most common bots are already in the default-list of the plugin. 
-
-The second table is currently not displayed in Piwik, but the more experienced users can select the data from the database. Some more detailed reports may come in the future.
+You can add/delete/modify the keywords in the administration-menu. There are webpages that list the user-agents of known spiders and webcrawlers (e.g. http://www.useragentstring.com/pages/Crawlerlist/). The most common bots are already in the default list of the plugin.
 
 ## Installation / Update
 
 See http://piwik.org/faq/plugins/#faq_21
 
-for additional information go to http://dev.piwik.org/trac/ticket/2391
+For additional information go to http://dev.piwik.org/trac/ticket/2391
 
 If you update form Piwik 1.x to Piwik 2.x sometimes the update-script (BotTracker\Updates\0.43.php) is not executed. In this case you get an error about a not existing column "extra_stats" when you open the config-page. Then you have to execute the following 2 statemnts on your Piwik-Database (e.g. with MyPHPAdmin):
 
