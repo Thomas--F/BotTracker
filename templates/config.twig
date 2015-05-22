@@ -41,13 +41,13 @@
 	<form method="POST" action="{{ linkTo({'module':'BotTracker','action':'saveConfig'}) }}">
 	
 	<table class="adminTable" style="width: 700px;">
-	<tr><th style="text-align: left;">BotID</th>
-	    <th style="text-align: left;">Site ID</th>
-	    <th style="text-align: left;">{{'BotTracker_BotActive'|translate}}</th>
-	    <th style="text-align: left;">{{'BotTracker_ExtraStats'|translate}}</th>
-	    <th style="text-align: left;">{{'BotTracker_BotName'|translate}}</th>
-	    <th style="text-align: left;">{{'BotTracker_BotKeyword'|translate}}</th>
-	    <th style="text-align: left;"></th>
+	<tr><th style="text-align: left; padding: 0px 5px;">BotID</th>
+	    <th style="text-align: left; padding: 0px 5px;">Side ID</th>
+	    <th style="text-align: left; padding: 0px 5px;">{{'BotTracker_BotActive'|translate}}</th>
+	    <th style="text-align: left; padding: 0px 5px;">{{'BotTracker_ExtraStats'|translate}}</th>
+	    <th style="text-align: left; padding: 0px 5px;">{{'BotTracker_BotName'|translate}}</th>
+	    <th style="text-align: left; padding: 0px 5px;">{{'BotTracker_BotKeyword'|translate}}</th>
+	    <th style="text-align: left; padding: 0px 5px;"></th>
 	</tr>    
 	{% for bot in botList %}
 		<tr>
