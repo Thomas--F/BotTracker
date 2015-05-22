@@ -1,6 +1,6 @@
 {                  
     "BotTracker": {
-   "PluginDescription" : "Detection of bots & spiders and count there visits without tracking them in the visitor-log.",
+   "PluginDescription" : "Detects bots & spiders and counts their visits without tracking them in the visitor log.",
 	"Widgets" : "BotTracker",
 	"DisplayWidget" : "BotTracker Display",
 	"BotName" : "Bot-Name",	
@@ -11,7 +11,7 @@
 	"ExtraStats": "extra Stats",
 	"Config" : "BotTracker Configuration",
 	"save_changes" : "Save",
-	"NoOfActiveBots": "No of Bots for this site",	
+	"NoOfActiveBots": "No. of Bots for this site",	
 	"true" : "Yes",
 	"false" : "No",
 	"Error_empty" : " is empty!",
