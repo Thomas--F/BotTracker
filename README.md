@@ -2,12 +2,12 @@
 
 ## Description
 
-BotTracker ist a plugin to track the visits of bots, spiders and webcrawler, that hit yout page.
+BotTracker ist a plugin to track the visits of bots, spiders and webcrawlers, that hit your page.
 
-This plugin is still in BETA-status, but I have testet it for a while. It should be stable.
+This plugin is still in BETA-status, but I have tested it for a while. It should be stable.
 
 Before you install this plugin, here's something you should be aware of:
-Many webcrawler, spiders and bots don't load the images in a page and most of them don't execute JavaScript. So you cannot track them with Piwik if you don't use the PHP-API. The BotTracker can only track those, who were caught by Piwik itself.
+Many webcrawlers, spiders and bots don't load the images in a page and most of them don't execute JavaScript. So you cannot track them with Piwik if you don't use the PHP-API. The BotTracker can only track those that were caught by Piwik itself.
 
 
 
