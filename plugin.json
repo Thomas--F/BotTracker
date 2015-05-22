@@ -2,14 +2,14 @@
     "name": "BotTracker",
     "version": "0.54",
     "keywords": ["BotTracker"],
-    "homepage": "http://dev.piwik.org/trac/ticket/2391",
+    "homepage": "https://github.com/Thomas--F/BotTracker",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
     "license": "GPL 3.0 / fair use",    
     "authors": [
         {
             "name": "Thomas Fasselt",
             "email": "Thomas.Fasselt@gmx.com",
-            "homepage": "http://dev.piwik.org/trac/ticket/2391"
+            "homepage": "https://github.com/Thomas--F/BotTracker"
         }
     ],
     "require": {
