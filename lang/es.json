@@ -1,21 +1,21 @@
 {
     "BotTracker": {
-	"PluginDescription": "Detecta bots & spiders y las contabiliza sin agregarlas al contador de visitas.",
-	"Widgets": "BotTracker",
-	"DisplayWidget": "Mostar BotTracker",
-	"BotName": "Bot",
-	"BotCount": "Visitas",
-	"BotKeyword": "Keyword",
-	"BotLastVisit": "Visto",
-	"BotActive": "Activo",
-	"Config": "Configuraci&oacute;n del BotTracker",
-	"save_changes": "Guardar",
-	"true": "´S&iacute;",
-	"false": "No",
-	"Error_empty": " esta vacio!",
-	"Message_deleted": " fu&eacute; eliminado!",
-	"Message_bot_inserted": " Bots a&ntilde;adidos",
-	"insert_db": "Insertar Bots por defecto",
-	"delete": "eliminar"
+        "PluginDescription": "Detecta bots & spiders y las contabiliza sin agregarlas al contador de visitas.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "Mostar BotTracker",
+        "BotName": "Bot",
+        "BotCount": "Visitas",
+        "BotKeyword": "Keyword",
+        "BotLastVisit": "Visto",
+        "BotActive": "Activo",
+        "Config": "Configuración del BotTracker",
+        "save_changes": "Guardar",
+        "true": "´Sí",
+        "false": "No",
+        "Error_empty": "esta vacio!",
+        "Message_deleted": "fué eliminado!",
+        "Message_bot_inserted": "Bots añadidos",
+        "insert_db": "Insertar Bots por defecto",
+        "delete": "eliminar"
     }
 }
