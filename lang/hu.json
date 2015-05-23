@@ -1,22 +1,21 @@
-{                  
+{
     "BotTracker": {
-	"PluginDescription" : "Botokat és sipdereket azonosít, számolja a látogatásaikat anélkül, hogy a többi statisztikában megjelennének.",
-	"Widgets" : "BotTracker",
-	"DisplayWidget" : "BotTracker statisztikák",
-	"BotName" : "Bot neve",	
-	"BotCount" : "Látogatások száma",
-	"BotKeyword" : "Kulcsszó",
-	"BotLastVisit" : "Utolsó látogatás",
-	"BotActive" : "Aktív",
-	"Config" : "BotTracker Beállítása",
-	"save_changes" : "Mentés",
-	"true" : "Igen",
-	"false" : "Nem",
-	"Error_empty" : " üres!",
-	"Message_deleted" : " törölve!",
-	"Message_bot_inserted" : " bot beszúrva.",
-	"insert_db" : "Alapértelmezett botok beszúrása",
-	"delete" : "töröl"
+        "PluginDescription": "Botokat és sipdereket azonosít, számolja a látogatásaikat anélkül, hogy a többi statisztikában megjelennének.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker statisztikák",
+        "BotName": "Bot neve",
+        "BotCount": "Látogatások száma",
+        "BotKeyword": "Kulcsszó",
+        "BotLastVisit": "Utolsó látogatás",
+        "BotActive": "Aktív",
+        "Config": "BotTracker Beállítása",
+        "save_changes": "Mentés",
+        "true": "Igen",
+        "false": "Nem",
+        "Error_empty": "üres!",
+        "Message_deleted": "törölve!",
+        "Message_bot_inserted": "bot beszúrva.",
+        "insert_db": "Alapértelmezett botok beszúrása",
+        "delete": "töröl"
     }
 }
-
