@@ -1,0 +1,23 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Εντοπίζει μποτ και αράχνες και μετράει τις επισκέψεις τους χωρίς να καταμετρώνται στο ημερολόγιο επισκεπτών.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "Εικόνα BotTracker",
+        "BotName": "Όνομα-Μποτ",
+        "BotCount": "Αριθμός επισκέψεων",
+        "BotKeyword": "Λέξη κλειδί",
+        "BotLastVisit": "Τελευταία επίσκεψη",
+        "BotActive": "Ενεργό",
+        "ExtraStats": "επιπλέον στατιστικά",
+        "Config": "Παραμετροποίηση του BotTracker",
+        "save_changes": "Αποθήκευση",
+        "NoOfActiveBots": "Αριθμός μποτ σε αυτόν τον ιστοτόπο",
+        "true": "Ναι",
+        "false": "Όχι",
+        "Error_empty": "είναι κενό!",
+        "Message_deleted": "διαγράφηκε!",
+        "Message_bot_inserted": "Μποτ που εισήχθησαν",
+        "insert_db": "Εισαγωγή προκαθορισμένου μποτ",
+        "delete": "διαγραφή"
+    }
+}
