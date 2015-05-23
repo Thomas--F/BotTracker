@@ -1,23 +1,23 @@
 {
-   "BotTracker": {
-     "PluginDescription": "Ermitteln und Zählen von Bot & WebSpider-Zugriffen ohne dass diese im Besucher-Log erscheinen",
- 	"Widgets": "BotTracker",
-	"DisplayWidget": "BotTracker Anzeige",
-	"BotName": "Bot-Name",	
-	"BotCount": "Anzahl Zugriffe",
-	"BotKeyword": "Schlüsselwort",
-	"BotActive": "Aktiv",
-	"ExtraStats": "erw. Statistik",
-	"BotLastVisit": "letzter Zugriff",
-	"Config": "BotTracker Konfiguration",
-	"save_changes": "Speichern",
-	"NoOfActiveBots": "Anzahl Bots für diese Seite",
-	"true": "Ja",
-	"false": "Nein",
-	"Error_empty": " ist leer!",
-	"Message_deleted": " wurde gelöscht!",
-	"Message_bot_inserted": " Bots eingefügt",
-	"insert_db": "Default-Bots hinzufügen",
-	"delete": "löschen"
-   }
+    "BotTracker": {
+        "PluginDescription": "Ermitteln und Zählen von Bot & WebSpider-Zugriffen ohne dass diese im Besucher-Log erscheinen",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker Anzeige",
+        "BotName": "Bot-Name",
+        "BotCount": "Anzahl Zugriffe",
+        "BotKeyword": "Schlüsselwort",
+        "BotLastVisit": "letzter Zugriff",
+        "BotActive": "Aktiv",
+        "ExtraStats": "erw. Statistik",
+        "Config": "BotTracker Konfiguration",
+        "save_changes": "Speichern",
+        "NoOfActiveBots": "Anzahl Bots für diese Seite",
+        "true": "Ja",
+        "false": "Nein",
+        "Error_empty": "ist leer!",
+        "Message_deleted": "wurde gelöscht!",
+        "Message_bot_inserted": "Bots eingefügt",
+        "insert_db": "Default-Bots hinzufügen",
+        "delete": "löschen"
+    }
 }
