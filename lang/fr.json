@@ -1,0 +1,17 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Détecte les robots et indexeurs et compte leurs visites sans les enregistrer dans le journal des visiteurs.",
+        "BotName": "Nom du robot",
+        "BotKeyword": "Mot clef",
+        "BotLastVisit": "Dernière visite",
+        "BotActive": "Actif",
+        "save_changes": "Enregistrer",
+        "true": "Oui",
+        "false": "Non",
+        "Error_empty": "est vide!",
+        "Message_deleted": "a été supprimé!",
+        "Message_bot_inserted": "Robots insérés",
+        "insert_db": "Insérer les robots par défaut",
+        "delete": "supprimer"
+    }
+}
