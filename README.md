@@ -53,6 +53,10 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.55__
+* some minor bugfixes and typos
+* add some more languages
+
 __0.54__
 * bugfix for Piwik 2.11
 
