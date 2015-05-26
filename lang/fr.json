@@ -1,11 +1,17 @@
 {
     "BotTracker": {
         "PluginDescription": "Détecte les robots et indexeurs et compte leurs visites sans les enregistrer dans le journal des visiteurs.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "Affichage BotTracker",
         "BotName": "Nom du robot",
+        "BotCount": "Nombre de visites",
         "BotKeyword": "Mot clef",
         "BotLastVisit": "Dernière visite",
         "BotActive": "Actif",
+        "ExtraStats": "Stats supp.",
+        "Config": "Configuration BotTracker",
         "save_changes": "Enregistrer",
+        "NoOfActiveBots": "Nombre de robots pour ce site",
         "true": "Oui",
         "false": "Non",
         "Error_empty": "est vide!",
