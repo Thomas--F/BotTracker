@@ -105,7 +105,7 @@ class API extends \Piwik\Plugin\API
 		               , `botKeyword` = ?
 		               , `botActive` = ?
 		               , `extra_stats` = ?
-		             WHERE `botId` = ?", array($botName, $botKeyword, $botActive, $extraStats, $botId));
+		             WHERE `botId` = ?", array(self::htmlentities2utf8($botName), self::htmlentities2utf8($botKeyword), $botActive, $extraStats, $botId));
 
 	}
 
@@ -115,7 +115,7 @@ class API extends \Piwik\Plugin\API
 		Db::get()->query("INSERT INTO `".Common::prefixTable('bot_db')."` 
                (`idsite`,`botName`, `botActive`, `botKeyword`, `botCount`, `botLastVisit`, `extra_stats`)
                 VALUES (?,?,?,?,0,'0000-00-00 00:00:00',?)"
-          , array($idSite, $botName, $botActive, $botKeyword, $extraStats));
+          , array($idSite, self::htmlentities2utf8($botName), $botActive, self::htmlentities2utf8($botKeyword), $extraStats));
 	}
 
 	static function insert_default_bots($idsite = 0) {
@@ -206,5 +206,9 @@ class API extends \Piwik\Plugin\API
 		}
 		return $rows;
 	}
-	
+	static function htmlentities2utf8 ($string)
+	{
+		$output = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $string); 
+    		return html_entity_decode($output);
+  	} 
 }
