@@ -1,0 +1,23 @@
+{
+    "BotTracker": {
+        "PluginDescription": "बॉट और मकड़ियों पता लगाता है और आगंतुक प्रवेश में उन पर नज़र रखने के बिना अपने दौरे में गिना जाता है ।",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker प्रदर्शन",
+        "BotName": "BOT-नाम",
+        "BotCount": "भेंट गणना",
+        "BotKeyword": "कीवर्ड",
+        "BotLastVisit": "अंतिम विजिट",
+        "BotActive": "सक्रिय",
+        "ExtraStats": "extra Stats",
+        "Config": "BotTracker Configuration",
+        "save_changes": "सहेजें",
+        "NoOfActiveBots": "इस साइट के लिए बॉट की संख्या",
+        "true": "हां",
+        "false": "नहीं",
+        "Error_empty": "खाली है!",
+        "Message_deleted": "हटाया गया था!",
+        "Message_bot_inserted": "बॉट डाला",
+        "insert_db": "सम्मिलित करें डिफ़ॉल्ट बॉट",
+        "delete": "हटाना"
+    }
+}

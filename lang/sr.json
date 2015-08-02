@@ -1,0 +1,23 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Detekcija botova i spajdera i brojanje njihovih poseta bez praćenja kroz zapis poseta.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker prikaz",
+        "BotName": "Naziv bota",
+        "BotCount": "Broj poseta",
+        "BotKeyword": "Ključna reč",
+        "BotLastVisit": "Poslednja poseta",
+        "BotActive": "Aktivan",
+        "ExtraStats": "dodatna statistika",
+        "Config": "BotTracker pdoešavanja",
+        "save_changes": "Sačuvaj",
+        "NoOfActiveBots": "Broj botova za ovaj sajt",
+        "true": "Da",
+        "false": "Ne",
+        "Error_empty": "je prazno!",
+        "Message_deleted": "je obrisano!",
+        "Message_bot_inserted": "Bot ubačen",
+        "insert_db": "Ubacivanje podrazumevanih botova",
+        "delete": "brisanje"
+    }
+}

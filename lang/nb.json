@@ -1,0 +1,15 @@
+{
+    "BotTracker": {
+        "Widgets": "BotTracker",
+        "BotKeyword": "Nøkkelord",
+        "BotLastVisit": "Siste besøk",
+        "BotActive": "Aktiv",
+        "Config": "BotTracker-konfigurasjon",
+        "save_changes": "Lagre",
+        "true": "Ja",
+        "false": "Nei",
+        "Error_empty": "er tom!",
+        "Message_deleted": "ble slettet!",
+        "delete": "Slett"
+    }
+}

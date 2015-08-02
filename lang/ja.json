@@ -1,0 +1,8 @@
+{
+    "BotTracker": {
+        "BotName": "ボット名",
+        "BotCount": "訪問回数",
+        "BotActive": "アクティブ",
+        "delete": "削除"
+    }
+}

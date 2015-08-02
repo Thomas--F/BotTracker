@@ -1,0 +1,9 @@
+{
+    "BotTracker": {
+        "BotKeyword": "關鍵字",
+        "BotActive": "啟用中",
+        "save_changes": "儲存",
+        "true": "是",
+        "false": "否"
+    }
+}

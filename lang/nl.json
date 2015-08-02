@@ -1,0 +1,23 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Detecteert bots en zoekmachines en telt hun bezoek zonder deze in het bezoekerslog te vermelden.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker Scherm",
+        "BotName": "Bot-naam",
+        "BotCount": "Aantal bezoeken",
+        "BotKeyword": "Sleutelwoord",
+        "BotLastVisit": "Laatste bezoek",
+        "BotActive": "Ingeschakeld",
+        "ExtraStats": "Extra statistieken",
+        "Config": "BotTracker configuratie",
+        "save_changes": "Bewaar",
+        "NoOfActiveBots": "Nr. of Bots voor deze website",
+        "true": "Ja",
+        "false": "Nee",
+        "Error_empty": "is leeg!",
+        "Message_deleted": "is verwijderd!",
+        "Message_bot_inserted": "Bots ingevoegd",
+        "insert_db": "Voeg standaard-Bots in",
+        "delete": "verwijder"
+    }
+}

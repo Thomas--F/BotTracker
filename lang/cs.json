@@ -1,0 +1,23 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Detekuje roboty a počítá jejich návštěvy bez sledování v návštěvnické protokolu.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker Přehled",
+        "BotName": "Jméno bota",
+        "BotCount": "Počet návštěv",
+        "BotKeyword": "Klíčové slovo",
+        "BotLastVisit": "Poslední návštěva",
+        "BotActive": "Aktivní",
+        "ExtraStats": "extra Statistiky",
+        "Config": "Nastavení BotTracker",
+        "save_changes": "Uložit",
+        "NoOfActiveBots": "Žádné návštěvy botů pro tuto stránku.",
+        "true": "Ano",
+        "false": "Ne",
+        "Error_empty": "je prázdný!",
+        "Message_deleted": "byl smazán!",
+        "Message_bot_inserted": "bot byl vložen",
+        "insert_db": "Vložit základní boty",
+        "delete": "smazat"
+    }
+}
