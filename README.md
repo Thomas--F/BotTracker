@@ -51,6 +51,11 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+__0.56__
+* bugfix: botLastVisit-Date is not shown (pull request #35)
+* bugfix: Some characters are not quoted properly (issue #32)
+* a lot more languages. Thanks a lot to all transiflex-supporter
+
 __0.55__
 * some minor bugfixes and typos
 * add some more languages
