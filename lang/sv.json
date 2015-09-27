@@ -1,0 +1,10 @@
+{
+    "BotTracker": {
+        "Widgets": "BotTracker",
+        "BotName": "Bot-namn",
+        "BotCount": "Besöksräknare",
+        "BotKeyword": "Nyckelord",
+        "BotLastVisit": "Senaste besöket",
+        "delete": "ta bort"
+    }
+}
