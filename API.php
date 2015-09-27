@@ -113,8 +113,8 @@ class API extends \Piwik\Plugin\API
 	{
 	
 		Db::get()->query("INSERT INTO `".Common::prefixTable('bot_db')."` 
-               (`idsite`,`botName`, `botActive`, `botKeyword`, `botCount`, `botLastVisit`, `extra_stats`)
-                VALUES (?,?,?,?,0,'0000-00-00 00:00:00',?)"
+               (`idsite`,`botName`, `botActive`, `botKeyword`, `botCount`, `extra_stats`)
+                VALUES (?,?,?,?,0,?)"
           , array($idSite, self::htmlentities2utf8($botName), $botActive, self::htmlentities2utf8($botKeyword), $extraStats));
 	}
 
