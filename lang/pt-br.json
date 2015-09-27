@@ -1,0 +1,23 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Detecta bots & spiders e contabiliza as visitas deles sem rastreá-los no log de visitantes.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "Exibição do BotTracker",
+        "BotName": "Nome do Bot",
+        "BotCount": "Contagem de Visitas",
+        "BotKeyword": "Palavra-chave",
+        "BotLastVisit": "Última visita",
+        "BotActive": "Ativo",
+        "ExtraStats": "Estatísticas extras",
+        "Config": "Configuração do BotTracker",
+        "save_changes": "Salvar",
+        "NoOfActiveBots": "No. de Bots para este site",
+        "true": "Sim",
+        "false": "Não",
+        "Error_empty": "está vazio!",
+        "Message_deleted": "foi apagado!",
+        "Message_bot_inserted": "Bots inseridos",
+        "insert_db": "Inserir Bots-Padrão",
+        "delete": "apagar"
+    }
+}
