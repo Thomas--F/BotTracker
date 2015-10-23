@@ -51,6 +51,10 @@ The "extra Stats"-Feature is in "early developing". You can collect the data abo
 
 
 ## Changelog
+
+__0.57__
+* bugfix: change of order and position in the BotTracker-Visitor-View
+
 __0.56__
 * bugfix: botLastVisit-Date is not shown (pull request #35)
 * bugfix: Some characters are not quoted properly (issue #32)
