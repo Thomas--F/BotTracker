@@ -25,35 +25,13 @@ You can add/delete/modify the keywords in the administration-menu. There are web
 
 See http://piwik.org/faq/plugins/#faq_21
 
-For additional information go to http://dev.piwik.org/trac/ticket/2391
-
-If you update form Piwik 1.x to Piwik 2.x sometimes the update-script (BotTracker\Updates\0.43.php) is not executed. In this case you get an error about a not existing column "extra_stats" when you open the config-page. Then you have to execute the following 2 statemnts on your Piwik-Database (e.g. with MyPHPAdmin):
-
-```sql
-ALTER TABLE `piwik_bot_db`
-ADD `extra_stats` BOOLEAN NOT NULL DEFAULT FALSE
-```
-```sql
-CREATE TABLE IF NOT EXISTS `piwik_bot_db_stat`
-(
- `botId` INTEGER(10) UNSIGNED NOT NULL,
- `idsite` INTEGER(10) UNSIGNED NOT NULL,
- `page` VARCHAR(100) NOT NULL,
- `visit_timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
- `useragent` VARCHAR(100) NOT NULL,
-		 
- PRIMARY KEY(`botId`)
-)  DEFAULT CHARSET=utf8
-```
-
-
-The "extra Stats"-Feature is in "early developing". You can collect the data about the who, when and where, but there is currently no widget to display the data.
-
+If you update form Piwik 1.x to Piwik 2.x or from an old version of BotTracker (before 0.45) please reinstall the plugin.
 
 ## Changelog
 
 __0.57__
 * bugfix: change of order and position in the BotTracker-Visitor-View
+* deleting of the old update-scripts (from version 0.43 and 0.45)
 
 __0.56__
 * bugfix: botLastVisit-Date is not shown (pull request #35)
