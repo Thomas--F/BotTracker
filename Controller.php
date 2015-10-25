@@ -134,6 +134,41 @@ class Controller extends \Piwik\Plugin\Controller
 	   	$this->config($siteID);
 	}
 
+	public function config_import() {
+		Piwik::checkUserHasSuperUserAccess();
+		
+		$errorList = array();
+		$siteID=Common::getRequestVar('siteID',0);
+		if ($siteID==0){
+			$siteID=Common::getRequestVar("idSite");
+		}
+		
+		if (is_uploaded_file($_FILES['importfile']['tmp_name'])){
+  			$fileData = file_get_contents($_FILES['importfile']['tmp_name']);
+  			// remove linefeeds
+  			$order   = array("\r\n", "\n", "\r");
+			$data = str_replace($order, '', $fileData);
+			// divide data
+			$parts = explode("|", $data);
+			$count = 0;
+			if (count($parts) % 2 == 0){
+				for ($i = 0; $i < count($parts); $i=$i + 2) {
+					$botX = APIBotTracker::getBotByName($siteID, $parts[$i]);
+					if (empty($botX)){
+						APIBotTracker::insertBot($siteID, $parts[$i], 1 , $parts[$i + 1], 0);
+						$count++;	
+					}
+				}
+				$errorList[]=$count." ".Piwik::translate('BotTracker_Message_bot_inserted');
+			} else {
+    				$errorList[]=Piwik::translate('BotTracker_Error_Fileimport_Not_Even');
+    			}
+		} else {
+    			$errorList[]=Piwik::translate('BotTracker_Error_Fileimport_Upload');
+		}
+		$this->config($siteID,$errorList);
+	}
+
 	public function saveConfig() {
 		try{
 			// Only admin is allowed to do this!
