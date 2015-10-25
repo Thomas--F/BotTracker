@@ -18,6 +18,10 @@
         "Message_deleted": "wurde gelöscht!",
         "Message_bot_inserted": "Bots eingefügt",
         "insert_db": "Default-Bots hinzufügen",
-        "delete": "löschen"
+        "delete": "löschen",
+	    "Importfile" : "Importdatei wählen...",
+	    "send_file" : "Hochladen und Ausführen",
+	    "Error_Fileimport_Upload" : "Fehler beim Upload!",
+	    "Error_Fileimport_Not_Even" : "Anzahl der Werte in der Datei nicht gerade!"
     }
 }
