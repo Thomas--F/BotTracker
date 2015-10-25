@@ -18,6 +18,10 @@
 	"Message_deleted" : " was deleted!",
 	"Message_bot_inserted" : " Bots inserted",
 	"insert_db" : "Insert Default-Bots",
-	"delete" : "delete"
+	"delete" : "delete",
+	"Importfile" : "Choose Importfile...",
+	"send_file" : "Upload and Process File",
+	"Error_Fileimport_Upload" : "Error during upload",
+	"Error_Fileimport_Not_Even" : "Number of parameter in file are not even"
 	}
 }
