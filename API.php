@@ -199,6 +199,8 @@ class API extends \Piwik\Plugin\API
 		{
 			if ($row['botLastVisit'] == '0000-00-00 00:00:00'){
 				$row['botLastVisit'] = " - ";
+			} else if ($row['botLastVisit'] == '2000-01-01 00:00:00'){
+				$row['botLastVisit'] = " - ";
 			} else {
 				$botLastVisit = Date::adjustForTimezone(strtotime($row['botLastVisit']), $timezone);
 	        		$row['botLastVisit'] = date('Y-m-d H:i:s', $botLastVisit);
