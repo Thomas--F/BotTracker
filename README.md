@@ -32,6 +32,7 @@ If you update form Piwik 1.x to Piwik 2.x or from an old version of BotTracker (
 __0.57__
 * bugfix: change of order and position in the BotTracker-Visitor-View
 * deleting of the old update-scripts (from version 0.43 and 0.45)
+* bugfix: change of the default-value for botLastVisit '0000-00-00' to '2000-01-01'
 
 __0.56__
 * bugfix: botLastVisit-Date is not shown (pull request #35)
