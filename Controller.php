@@ -297,21 +297,24 @@ class Controller extends \Piwik\Plugin\Controller
 	
 	public function logToFile($msg)
 	{ 
-//		$pfad = "tmp/logs/";
-//		$filename = "log2.txt";
-//		// open file
-//		$fd = fopen($pfad.$filename, "a");
-//		// append date/time to message
-//    		if(is_array($msg))
-//    		{
-//  			$str = "[" . date("Y/m/d H:i:s", time()) . "] " . var_export($msg,true);
-//    		} else {
-//			$str = "[" . date("Y/m/d H:i:s", time()) . "] " . $msg; 
-//		}
-//		// write string
-//		fwrite($fd, $str . "\n");
-//		// close file
-//		fclose($fd);
-	}
-	
+		$logActive = false;
+		
+		if ($logActive){
+			$pfad = "tmp/logs/";
+			$filename = "log2.txt";
+			// open file
+			$fd = fopen($pfad.$filename, "a");
+			// append date/time to message
+	    		if(is_array($msg))
+	    		{
+	  			$str = "[" . date("Y/m/d H:i:s", time()) . "] " . var_export($msg,true);
+	    		} else {
+				$str = "[" . date("Y/m/d H:i:s", time()) . "] " . $msg; 
+			}
+			// write string
+			fwrite($fd, $str . "\n");
+			// close file
+			fclose($fd);
+		}
+	}	
 }
