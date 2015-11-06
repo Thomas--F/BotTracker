@@ -33,6 +33,7 @@ __0.57__
 * bugfix: change of order and position in the BotTracker-Visitor-View
 * deleting of the old update-scripts (from version 0.43 and 0.45)
 * bugfix: change of the default-value for botLastVisit '0000-00-00' to '2000-01-01'
+* new feature: file import for new bots (see online-help in the administration-dialog for more infos)
 
 __0.56__
 * bugfix: botLastVisit-Date is not shown (pull request #35)
