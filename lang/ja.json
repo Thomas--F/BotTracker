@@ -1,8 +1,20 @@
 {
     "BotTracker": {
+        "Widgets": "Botトラッカー",
+        "DisplayWidget": "Botトラッカーを表示",
         "BotName": "ボット名",
         "BotCount": "訪問回数",
+        "BotKeyword": "キーワード",
+        "BotLastVisit": "最後の訪問",
         "BotActive": "アクティブ",
+        "Config": "Botトラッカーの環境設定",
+        "save_changes": "保存",
+        "true": "はい",
+        "false": "いいえ",
+        "Error_empty": "空です！",
+        "Message_deleted": "削除されました!",
+        "Message_bot_inserted": "Botを挿入",
+        "insert_db": "デフォルトのBotを挿入します。",
         "delete": "削除"
     }
 }

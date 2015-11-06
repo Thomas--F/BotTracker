@@ -18,6 +18,15 @@
         "Message_deleted": "διαγράφηκε!",
         "Message_bot_inserted": "Μποτ που εισήχθησαν",
         "insert_db": "Εισαγωγή προκαθορισμένου μποτ",
-        "delete": "διαγραφή"
+        "delete": "διαγραφή",
+        "Importfile": "Επιλέξτε αρχείο για εισαγωγή...",
+        "send_file": "Ανέβασμα και Επεξεργασία Αρχείου",
+        "Error_Fileimport_Upload": "Σφάλμα κατά το ανέβασμα",
+        "Error_Fileimport_Not_Even": "Ο αριθμός παραμέτρου στο αρχείο δεν είναι άρτιος",
+        "Import_help_headline": "Μορφή συνόλου δεδομένων:",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
+        "Import_help_line1": "- κάθε αλλαγή γραμμής θα αφαιρεθεί πριν την εισαγωγή, για να μπορείτε να εισαγάγετε μια αποκοπή μετά από κάθε εγγραφή του bot",
+        "Import_help_line2": "- ο αριθμός των τιμών πρέπει να είναι άρτιος",
+        "Import_help_line3": "- δεν υπάρχει διαχωριστής \"|\" στο τέλος"
     }
 }

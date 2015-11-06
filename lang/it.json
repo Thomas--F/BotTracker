@@ -1,6 +1,6 @@
 {
     "BotTracker": {
-        "PluginDescription": "Individua e conteggia bots e spiders senza alterare il conteggio dei visitatori.",
+        "PluginDescription": "Individua e conteggia bot e spider senza alterare il conteggio dei visitatori.",
         "Widgets": "BotTracker",
         "DisplayWidget": "Visualizza BotTracker",
         "BotName": "Bot",
@@ -11,13 +11,22 @@
         "ExtraStats": "extra Statistiche",
         "Config": "Configurazione di BotTracker",
         "save_changes": "Salva",
-        "NoOfActiveBots": "Nessun Bots per questo sito",
+        "NoOfActiveBots": "Nessun Bot per questo sito",
         "true": "´Si",
         "false": "No",
         "Error_empty": "vuoto!",
         "Message_deleted": "eliminato!",
-        "Message_bot_inserted": "Bots aggiunti",
-        "insert_db": "Inserisci Bots di default",
-        "delete": "elimina"
+        "Message_bot_inserted": "Bot aggiunti",
+        "insert_db": "Inserisci Bot predefiniti",
+        "delete": "elimina",
+        "Importfile": "Scegli file da importare...",
+        "send_file": "Carica ed Elabora il file",
+        "Error_Fileimport_Upload": "Errore durante il caricamento",
+        "Error_Fileimport_Not_Even": "Il numero di parametri nel file non è pari",
+        "Import_help_headline": "Formato-Dataset",
+        "Import_help_format": "nomebot1|botkeyword1|nomebot2|botkeyword2|...",
+        "Import_help_line1": "- tutti gli \"a capo\" verranno rimossi prima dell'importazione, così che tu possa inserire un'interruzione dopo ogni immissione di un bot",
+        "Import_help_line2": "- il numero dei valori deve essere pari",
+        "Import_help_line3": "- NON c'è il delimitatore \"|\" alla fine"
     }
 }

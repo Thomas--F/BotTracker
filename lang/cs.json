@@ -18,6 +18,15 @@
         "Message_deleted": "byl smazán!",
         "Message_bot_inserted": "bot byl vložen",
         "insert_db": "Vložit základní boty",
-        "delete": "smazat"
+        "delete": "smazat",
+        "Importfile": "Zvolte soubor k importu...",
+        "send_file": "Nahrát a zpracovat soubor",
+        "Error_Fileimport_Upload": "Chyba při nahrávání",
+        "Error_Fileimport_Not_Even": "Počet parametrů v souboru není sudý",
+        "Import_help_headline": "Formát datové sady:",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|?",
+        "Import_help_line1": "Každý nový řádek bude před importem odstraněn, takže můžete oddělit každý záznam bota",
+        "Import_help_line2": "Počet hodnot musí být sudý",
+        "Import_help_line3": "Na konci není oddělovač"
     }
 }
