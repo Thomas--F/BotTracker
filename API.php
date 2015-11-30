@@ -150,13 +150,11 @@ class API extends \Piwik\Plugin\API
 			$botList[] = array('Exabot'                  ,'Exabot'              );
 			$botList[] = array('AhrefsBot'               ,'AhrefsBot'           );
 			$botList[] = array('MJ12Bot'                 ,'MJ12bot'             );
-			$botList[] = array('NetSeer Crawler'         ,'NetSeer crawler'     );
 			$botList[] = array('TurnitinBot'             ,'TurnitinBot'         );
 			$botList[] = array('Magpie Crawler'          ,'magpie-crawler'      );
 			$botList[] = array('Nutch Crawler'           ,'Nutch Crawler'       );
 			$botList[] = array('CMS Crawler'             ,'CMS Crawler'         );
 			$botList[] = array('RogerBot'                ,'rogerbot'            );
-			$botList[] = array('MJ12bot'                 ,'MJ12bot'             );
 			$botList[] = array('Domnutch-Bot'            ,'Domnutch'            );
 			$botList[] = array('Ssearch Crawler'         ,'ssearch_bot'         );
 			$botList[] = array('XoviBot'                 ,'XoviBot'             );
