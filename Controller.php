@@ -58,6 +58,8 @@ class Controller extends \Piwik\Plugin\Controller
 		$view = $this->getStandardDataTable('table', $apiAction, $controllerAction);
 		$view->config->columns_to_display  = array('label','botName','botKeyword','botCount','botLastVisit');
 		$view->config->translations['label'] = Piwik::translate('BotTracker_BotActive');
+		$view->requestConfig->filter_sort_column = 'botCount';
+		$view->requestConfig->filter_sort_order = 'desc';
 		$view->config->disable_row_evolution  = true;
 
 		return $view->render();
