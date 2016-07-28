@@ -161,6 +161,8 @@ class API extends \Piwik\Plugin\API
 			$botList[] = array('NetSeer Crawler'         ,'netseer'             );
 			$botList[] = array('Digincore'               ,'digincore'           );
 			$botList[] = array('Fr-Crawler'              ,'fr-crawler'          );
+			$botList[] = array('Seznam'                  ,'SeznamBot'           );
+			$botList[] = array('Sezanm screenshot'       ,'Seznam screenshot-generator'          );
 
 			foreach($botList as $bot)
 			{
