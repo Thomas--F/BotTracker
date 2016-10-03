@@ -100,12 +100,12 @@ class BotTracker extends \Piwik\Plugin
 		WidgetsList::add('BotTracker_Widgets', 'BotTracker_DisplayWidget', 'BotTracker', 'displayWidget');
 	}
 	
-	function checkBot(&$exclude)
+	function checkBot(&$exclude, $request)
 	{
-		$ua = getServer('HTTP_USER_AGENT');
-		$idSite = getRequest('idsite');
+		$ua = $request->getUserAgent();
+		$idSite = $request->getIdSite();
 		$currentTimestamp = gmdate("Y-m-d H:i:s");
-		$currentUrl = getRequest('url');
+		$currentUrl = $request->getParam('url');
 		
 		BotTracker::logToFile('SiteID:'.$idSite.' user Agent: '.$ua.' TS:'.$currentTimestamp.' page:'.$currentUrl);
 		
@@ -139,6 +139,7 @@ class BotTracker extends \Piwik\Plugin
 
 	public function logToFile($msg)
 	{ 
+		// to aktivate logging just change the value to "true".
 		$logActive = false;
 		
 		if ($logActive){
