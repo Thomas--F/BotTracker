@@ -29,6 +29,9 @@ If you update form Piwik 1.x to Piwik 2.x or from an old version of BotTracker (
 
 ## Changelog
 
+__0.58__
+* new feature: BotTracker now works with the import_logs-script (issue #38)
+
 __0.57__
 * bugfix: change of order and position in the BotTracker-Visitor-View
 * deleting of the old update-scripts (from version 0.43 and 0.45)
