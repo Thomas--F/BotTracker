@@ -21,11 +21,11 @@ class Menu extends \Piwik\Plugin\Menu
 {
     public function configureReportingMenu(MenuReporting $menu)
     {
-        $menu->add('General_Visitors', 'BotTracker', array('module' => 'BotTracker', 'action' => 'getBotTrackerPage'),true, $orderId = 30);
+        $menu->add('General_Visitors', Piwik::translate('BotTracker_BotTracker'), array('module' => 'BotTracker', 'action' => 'getBotTrackerPage'),true, $orderId = 30);
     }
 
     public function configureAdminMenu(MenuAdmin $menu)
     {
-				$menu->add('General_Settings', 'BotTracker', array('module' => 'BotTracker', 'action' => 'config'), Piwik::isUserHasSomeAdminAccess(), $orderId = 9);
+				$menu->add('General_Settings', Piwik::translate('BotTracker_BotTracker'), array('module' => 'BotTracker', 'action' => 'config'), Piwik::isUserHasSomeAdminAccess(), $orderId = 9);
     }
 }
