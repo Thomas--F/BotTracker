@@ -69,8 +69,7 @@ class Controller extends \Piwik\Plugin\Controller
 	{
 		$view = ViewDataTableFactory::build('graphPie', 'BotTracker.getAllBotDataPie', $controllerAction = 'BotTracker.getBotTrackerPie');
 
-		//$view->config->columns_to_display = array('value');
-      		$view->config->translations['value'] = "hits by Bot";
+      		$view->config->translations['value'] = Piwik::translate('BotTracker_hits_by_Bot');
       		$view->config->show_footer_icons = true;
       		$view->config->show_insights = false;
       		$view->config->selectable_columns = array("value");
