@@ -1,0 +1,26 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Tunnistaa botit ja laskee niiden osuuden käynneistä, ilman että botteja kirjoitetaan kävijälogeihin.",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTrackerin näkymä",
+        "BotName": "Botin nimi",
+        "BotCount": "Käyntien määrä",
+        "BotKeyword": "Avainsana",
+        "BotLastVisit": "Edellinen käynti",
+        "BotActive": "Aktiivinen",
+        "ExtraStats": "Lisätiedot",
+        "Config": "BotTrackerin asetukset",
+        "save_changes": "Tallenna",
+        "NoOfActiveBots": "Bottien määrä tällä sivulla",
+        "true": "Kyllä",
+        "false": "Ei",
+        "Error_empty": "on tyhjä!",
+        "Message_deleted": "poistettiin!",
+        "Message_bot_inserted": "Botit lisätty",
+        "insert_db": "Lisää oletusasetukset",
+        "delete": "poista",
+        "Importfile": "Valitse tiedosto...",
+        "send_file": "Lähetä ja prosessoi tiedosto",
+        "Error_Fileimport_Upload": "Virhe lähetyksen aikana"
+    }
+}

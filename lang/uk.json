@@ -1,0 +1,32 @@
+{
+    "BotTracker": {
+        "PluginDescription": "Виявляє ботів та павуків і підраховує їхні візити без відстеження їх в журналі відвідувачів.",
+        "Widgets": "Пошукові боти",
+        "DisplayWidget": "Показати пошукових ботів",
+        "BotName": "Ім'я бота",
+        "BotCount": "Усього відвідувань",
+        "BotKeyword": "Ключове слово",
+        "BotLastVisit": "Останній візит",
+        "BotActive": "Активний",
+        "ExtraStats": "додаткова Статистика",
+        "Config": "Налаштування пошукових ботів",
+        "save_changes": "Зберегти",
+        "NoOfActiveBots": "Кількість пошукових ботів для цього сайту",
+        "true": "Так",
+        "false": "Ні",
+        "Error_empty": "порожньо!",
+        "Message_deleted": "був видалений!",
+        "Message_bot_inserted": "ботів вставлено",
+        "insert_db": "Вставити стандартних ботів",
+        "delete": "видалити",
+        "Importfile": "Виберіть файл для імпорту...",
+        "send_file": "Завантажити та Обробляти файл",
+        "Error_Fileimport_Upload": "Помилка під час завантаження",
+        "Error_Fileimport_Not_Even": "Кількість параметрів у файлі не знайдено",
+        "Import_help_headline": "Dataset-Format:",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
+        "Import_help_line1": "- кожен новий рядок буде видалений перед імпортом, так що ви можете вставити розрив після кожного запису бота",
+        "Import_help_line2": "- число значень повинно бути більше",
+        "Import_help_line3": "- немає ніякого роздільника \"|\" в кінці"
+    }
+}

@@ -1,6 +1,8 @@
 {                  
     "BotTracker": {
    "PluginDescription" : "Detects bots & spiders and counts their visits without tracking them in the visitor log.",
+	"BotTracker" : "BotTracker",
+	"Bot_Tracker" : "Bot Tracker",
 	"Widgets" : "BotTracker",
 	"DisplayWidget" : "BotTracker Display",
 	"BotName" : "Bot-Name",	
@@ -27,6 +29,8 @@
 	"Import_help_format" : "botname1|botkeyword1|botname2|botkeyword2|\u2026",
 	"Import_help_line1" : "- every linefeed will be removed before the import, so you can insert a break after every bot-entry",
 	"Import_help_line2" : "- the number of values must be even",
-	"Import_help_line3" : "- there is NO delimiter \"|\" at the end"
+	"Import_help_line3" : "- there is NO delimiter \"|\" at the end",
+	"Top_10_Bots" : "Top 10 Bots",
+	"hits_by_Bot" : "hits by Bot"
 	}
 }

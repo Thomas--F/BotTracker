@@ -1,11 +1,17 @@
 {
     "BotTracker": {
+        "PluginDescription": "Finner roboter og edderkopper og teller besøkene deres uten å vise dem i besøksloggen.",
         "Widgets": "BotTracker",
+        "DisplayWidget": "Robotsporervisning",
+        "BotName": "Robotnavn",
+        "BotCount": "Antall besøk",
         "BotKeyword": "Nøkkelord",
         "BotLastVisit": "Siste besøk",
         "BotActive": "Aktiv",
+        "ExtraStats": "ekstra statistikk",
         "Config": "BotTracker-konfigurasjon",
         "save_changes": "Lagre",
+        "NoOfActiveBots": "Antall roboter på dette nettstedet",
         "true": "Ja",
         "false": "Nei",
         "Error_empty": "er tom!",

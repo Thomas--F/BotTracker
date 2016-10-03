@@ -1,10 +1,32 @@
 {
     "BotTracker": {
+        "PluginDescription": "Upptäcler och räknar besök av bottar och spiders utan att lagra dem i besöksloggen.",
         "Widgets": "BotTracker",
+        "DisplayWidget": "Visa BotTracker",
         "BotName": "Bot-namn",
         "BotCount": "Besöksräknare",
         "BotKeyword": "Nyckelord",
         "BotLastVisit": "Senaste besöket",
-        "delete": "ta bort"
+        "BotActive": "Aktiv",
+        "ExtraStats": "extra statistik",
+        "Config": "BotTracker konfiguration",
+        "save_changes": "Spara",
+        "NoOfActiveBots": "Nr. av bots för den här sidan",
+        "true": "Ja",
+        "false": "Nej",
+        "Error_empty": "är tom!",
+        "Message_deleted": "togs bort!",
+        "Message_bot_inserted": "Infoga bots",
+        "insert_db": "Infoga standard-bots",
+        "delete": "ta bort",
+        "Importfile": "Välj importfil...",
+        "send_file": "Ladda upp och bearbeta fil",
+        "Error_Fileimport_Upload": "Fel vid uppladdning",
+        "Error_Fileimport_Not_Even": "Nummer och parametrar i filen måste vara lika",
+        "Import_help_headline": "Dataset-Format:",
+        "Import_help_format": "botnamn1|botsökord1|botnamn2|botsökord2|…",
+        "Import_help_line1": "- varje radbrytning kommer att tas bort innan importen så att du kan använda dig av radbrytning efter varje bot-post",
+        "Import_help_line2": "- antalet värden måste vara lika",
+        "Import_help_line3": "Det finns ingen avgränsare \"|\" i slutet"
     }
 }

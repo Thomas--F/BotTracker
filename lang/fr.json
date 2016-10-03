@@ -18,6 +18,15 @@
         "Message_deleted": "a été supprimé!",
         "Message_bot_inserted": "Robots insérés",
         "insert_db": "Insérer les robots par défaut",
-        "delete": "supprimer"
+        "delete": "supprimer",
+        "Importfile": "Sélectionner le fichier à importer...",
+        "send_file": "Téléverser et traiter un fichier",
+        "Error_Fileimport_Upload": "Erreur pendant le télé-versement",
+        "Error_Fileimport_Not_Even": "Le nombre de paramètres dans le fichier n'est pas pair",
+        "Import_help_headline": "Format-de-données:",
+        "Import_help_format": "nomdurobot1motclefdurobot1nomdurobot2motclefdurobot2|...",
+        "Import_help_line1": "- chaque saut de ligne sera retiré avant l'importation, de sorte que vous pouvez insérer un retour à la ligne après chaque entrée de robot",
+        "Import_help_line2": "- le nombre de valeurs doit être pair",
+        "Import_help_line3": "- il n'y a pas de délimiteur \"|\" à la fin"
     }
 }

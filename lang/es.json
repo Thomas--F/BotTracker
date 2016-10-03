@@ -18,6 +18,15 @@
         "Message_deleted": "fue eliminado!",
         "Message_bot_inserted": "Bots añadido",
         "insert_db": "Insertar Bots predeterminados",
-        "delete": "eliminar"
+        "delete": "eliminar",
+        "Importfile": "Elegir Importfile...",
+        "send_file": "Cargar y procesar archivo",
+        "Error_Fileimport_Upload": "Error durante la carga",
+        "Error_Fileimport_Not_Even": "Número de parámetros en el archivo no es par",
+        "Import_help_headline": "Formato del conjunto de datos:",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
+        "Import_help_line1": "- cada salto de línea será eliminado antes de su importación, por lo que puede insertar una pausa cada vez que ingresa un bot.",
+        "Import_help_line2": "- el número de valores debe ser par",
+        "Import_help_line3": "- NO hay un delimitador \"|\" al final"
     }
 }

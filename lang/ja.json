@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "PluginDescription": "ボットやスパイダーを検出し、ビジターログでそれらを除外してビジットを数をカウントします。",
         "Widgets": "Botトラッカー",
         "DisplayWidget": "Botトラッカーを表示",
         "BotName": "ボット名",
@@ -7,14 +8,20 @@
         "BotKeyword": "キーワード",
         "BotLastVisit": "最後の訪問",
         "BotActive": "アクティブ",
+        "ExtraStats": "余分な統計",
         "Config": "Botトラッカーの環境設定",
         "save_changes": "保存",
+        "NoOfActiveBots": "このサイトのボットナンバー",
         "true": "はい",
         "false": "いいえ",
         "Error_empty": "空です！",
         "Message_deleted": "削除されました!",
         "Message_bot_inserted": "Botを挿入",
         "insert_db": "デフォルトのBotを挿入します。",
-        "delete": "削除"
+        "delete": "削除",
+        "Importfile": "インポートファイルを選択して下さい...",
+        "send_file": "アップロードおよびプロセスファイル",
+        "Error_Fileimport_Upload": "アップロード中にエラーが発生しました",
+        "Import_help_headline": "データセット・フォーマット："
     }
 }

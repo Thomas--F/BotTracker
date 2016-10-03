@@ -18,6 +18,9 @@
         "Message_deleted": "is verwijderd!",
         "Message_bot_inserted": "Bots ingevoegd",
         "insert_db": "Voeg standaard-Bots in",
-        "delete": "verwijder"
+        "delete": "verwijder",
+        "Importfile": "Kies uploadbestand...",
+        "Error_Fileimport_Upload": "Fout tijdens uploaden",
+        "Import_help_line2": "- de nummers van waarden moeten gelijk zijn"
     }
 }

@@ -1,6 +1,6 @@
 {
     "BotTracker": {
-        "PluginDescription": "Ermitteln und Zählen von Bot & WebSpider-Zugriffen ohne dass diese im Besucher-Log erscheinen",
+        "PluginDescription": "Ermitteln und Zählen von Bot & WebSpider-Zugriffen, ohne dass diese im Besucher-Log erscheinen.",
         "Widgets": "BotTracker",
         "DisplayWidget": "BotTracker Anzeige",
         "BotName": "Bot-Name",
