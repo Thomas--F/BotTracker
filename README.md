@@ -32,6 +32,7 @@ If you update form Piwik 1.x to Piwik 2.x or from an old version of BotTracker (
 __0.58__
 * new feature: BotTracker now works with the import_logs-script (issue #38)
 * add: some new translation-strings (issue #46)
+* bufgix: truncate the url to max 100 bytes (issue #49)
 
 __0.57__
 * bugfix: change of order and position in the BotTracker-Visitor-View
