@@ -105,7 +105,8 @@ class BotTracker extends \Piwik\Plugin
 		$ua = $request->getUserAgent();
 		$idSite = $request->getIdSite();
 		$currentTimestamp = gmdate("Y-m-d H:i:s");
-		$currentUrl = $request->getParam('url');
+		// max length of url can be 100 Bytes
+		$currentUrl = substr($request->getParam('url'),0,100);
 		
 		BotTracker::logToFile('SiteID:'.$idSite.' user Agent: '.$ua.' TS:'.$currentTimestamp.' page:'.$currentUrl);
 		
