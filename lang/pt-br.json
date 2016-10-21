@@ -1,6 +1,8 @@
 {
     "BotTracker": {
         "PluginDescription": "Detecta bots & spiders e contabiliza as visitas deles sem rastreá-los no log de visitantes.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Bot Tracker",
         "Widgets": "BotTracker",
         "DisplayWidget": "Exibição do BotTracker",
         "BotName": "Nome do Bot",

@@ -1,6 +1,8 @@
 {
     "BotTracker": {
         "PluginDescription": "Ermitteln und Zählen von Bot & WebSpider-Zugriffen, ohne dass diese im Besucher-Log erscheinen.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Bot Tracker",
         "Widgets": "BotTracker",
         "DisplayWidget": "BotTracker Anzeige",
         "BotName": "Bot-Name",
@@ -27,6 +29,8 @@
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|\\u2026",
         "Import_help_line1": "- jeder Zeilenumbruch wird vor dem Import gelöscht, es können also Umbrüche nach jedem Bot-Eintrag eingefügt werden",
         "Import_help_line2": "- die Anzahl der Werte muss gerade sein",
-        "Import_help_line3": "- am Ende darf kein Delimiter \"|\" stehen"
+        "Import_help_line3": "- am Ende darf kein Delimiter \"|\" stehen",
+        "Top_10_Bots": "Top 10 Bots",
+        "hits_by_Bot": "Zählung von Bots"
     }
 }

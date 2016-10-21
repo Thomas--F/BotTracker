@@ -1,6 +1,8 @@
 {
     "BotTracker": {
         "PluginDescription": "Détecte les robots et indexeurs et compte leurs visites sans les enregistrer dans le journal des visiteurs.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Traceur de robots",
         "Widgets": "BotTracker",
         "DisplayWidget": "Affichage BotTracker",
         "BotName": "Nom du robot",
@@ -27,6 +29,8 @@
         "Import_help_format": "nomdurobot1motclefdurobot1nomdurobot2motclefdurobot2|...",
         "Import_help_line1": "- chaque saut de ligne sera retiré avant l'importation, de sorte que vous pouvez insérer un retour à la ligne après chaque entrée de robot",
         "Import_help_line2": "- le nombre de valeurs doit être pair",
-        "Import_help_line3": "- il n'y a pas de délimiteur \"|\" à la fin"
+        "Import_help_line3": "- il n'y a pas de délimiteur \"|\" à la fin",
+        "Top_10_Bots": "10 meilleurs robots",
+        "hits_by_Bot": "visites de robots"
     }
 }

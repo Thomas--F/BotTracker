@@ -1,6 +1,8 @@
 {
     "BotTracker": {
         "PluginDescription": "Определяет ботов и пауков и считает их посещения без занесения в журнал посещений.",
+        "BotTracker": "Отслеживание ботов",
+        "Bot_Tracker": "Отслеживание ботов",
         "Widgets": "BotTracker",
         "DisplayWidget": "Отображение BotTracker",
         "BotName": "Имя бота",
@@ -24,8 +26,11 @@
         "Error_Fileimport_Upload": "Ошибка во время загрузки",
         "Error_Fileimport_Not_Even": "Номер параметра в файле не точен",
         "Import_help_headline": "Dataset-Format:",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
         "Import_help_line1": "- каждый перевод строки будет удален перед импортом, так что вы можете вставить разрыв после каждого ввода бота",
         "Import_help_line2": "- число значений должно быть точным",
-        "Import_help_line3": "- в конце НЕТ ограничителя \"|\""
+        "Import_help_line3": "- в конце НЕТ ограничителя \"|\"",
+        "Top_10_Bots": "Топ 10 ботов",
+        "hits_by_Bot": "хиты ботов"
     }
 }

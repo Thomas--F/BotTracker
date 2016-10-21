@@ -1,6 +1,8 @@
 {
     "BotTracker": {
         "PluginDescription": "Εντοπίζει μποτ και αράχνες και μετράει τις επισκέψεις τους χωρίς να καταμετρώνται στο ημερολόγιο επισκεπτών.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Bot Tracker",
         "Widgets": "BotTracker",
         "DisplayWidget": "Εικόνα BotTracker",
         "BotName": "Όνομα-Μποτ",
@@ -27,6 +29,8 @@
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
         "Import_help_line1": "- κάθε αλλαγή γραμμής θα αφαιρεθεί πριν την εισαγωγή, για να μπορείτε να εισαγάγετε μια αποκοπή μετά από κάθε εγγραφή του bot",
         "Import_help_line2": "- ο αριθμός των τιμών πρέπει να είναι άρτιος",
-        "Import_help_line3": "- δεν υπάρχει διαχωριστής \"|\" στο τέλος"
+        "Import_help_line3": "- δεν υπάρχει διαχωριστής \"|\" στο τέλος",
+        "Top_10_Bots": "Κορυφαία 10 Bot",
+        "hits_by_Bot": "επισκέψεις από Bot"
     }
 }
