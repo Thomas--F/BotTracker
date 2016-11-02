@@ -21,18 +21,16 @@ use Piwik\Report\ReportWidgetFactory;
  *
  * See {@link http://developer.piwik.org/api-reference/Piwik/Plugin/Report} for more information.
  */
-class GetBotTracker extends Base
+class GetBotTrackerAnzeige extends Base
 {
     protected function init()
     {
         parent::init();
 
-        $this->name          = Piwik::translate('BotTracker_BotTracker');
-    	   $this->subcategoryId = 'BotTracker';
-        //$this->subCategory   = 'BotTracker_BotTracker';
-        // This defines in which order your report appears in the mobile app, in the menu and in the list of widgets
+        $this->name          = Piwik::translate('BotTracker_DisplayWidget');
+        $this->subCategory   = 'BotTracker_BotTracker';
+	   //$this->subcategoryId = 'BotTracker';
         $this->order = 99;
-
     }
 
     /**
@@ -51,14 +49,11 @@ class GetBotTracker extends Base
 		$view->config->show_search = false;
 		$view->config->show_footer_icons = false;
 		$view->config->show_exclude_low_population = false;
-		$view->requestConfig->filter_limit = 25;
+		$view->config->columns_to_display  = array('botName','botCount','botLastVisit');
 		$view->requestConfig->filter_sort_column = 'botCount';
 		$view->requestConfig->filter_sort_order = 'desc';
-
-		$view->config->columns_to_display  = array('label','botName','botKeyword','botCount','botLastVisit');
-		$view->config->translations['label'] = Piwik::translate('BotTracker_BotActive');
+		$view->requestConfig->filter_limit = 10;
 		$view->config->disable_row_evolution  = true;
-		$view->config->show_related_reports  = true;
     }
 
     /**
@@ -71,13 +66,11 @@ class GetBotTracker extends Base
     {
         return array(); // eg return array(new XyzReport());
     }
-    
+
 	public function configureWidgets(WidgetsList $widgetsList, ReportWidgetFactory $factory)
 	{
-		
-		$widgetsList->addWidgetConfig(
-        		$factory->createWidget()->setIsNotWidgetizable()
-    			);
+    		// we have to do it manually since it's only done automatically if a subcategoryId is specified,
+    		// we do not set a subcategoryId since this report is not supposed to be shown in the UI
+    		$widgetsList->addWidgetConfig($factory->createWidget());
 	}
-    
 }

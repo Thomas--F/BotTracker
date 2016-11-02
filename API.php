@@ -56,7 +56,7 @@ class API extends \Piwik\Plugin\API
 	}
 
 
-	static function getActiveBotData($idSite)
+	public static function getActiveBotData($idSite)
 	{
 		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE `botActive` = 1 AND idSite= ? ORDER BY `botId`", array($idSite));
 		$rows = self::convertBotLastVisitToLocalTime($rows, $idSite);
@@ -234,6 +234,20 @@ class API extends \Piwik\Plugin\API
     public function getBotTracker($idSite, $period, $date, $segment = false)
     {
         return $this->getAllBotDataWithIcon($idSite);
+    }
+
+
+    /**
+     * Get Data for Dashboard-Widget
+     * @param int    $idSite
+     * @param string $period
+     * @param string $date
+     * @param bool|string $segment
+     * @return DataTable
+     */
+    public function getBotTrackerAnzeige($idSite, $period, $date, $segment = false)
+    {
+		return $this->getActiveBotData($idSite);
     }
 
 }

@@ -24,6 +24,7 @@ use Piwik\Plugins\BotTracker\API as APIBotTracker;
 use Piwik\Menu\MenuAdmin;
 use Piwik\Menu\MenuTop;
 
+
 class Controller extends \Piwik\Plugin\Controller
 {	
 	public function config($siteID=0, $errorList = array()) {
@@ -211,7 +212,7 @@ class Controller extends \Piwik\Plugin\Controller
 			echo $e;
 		}
 	}
-	
+
 	public function logToFile($msg)
 	{ 
 		$logActive = false;
