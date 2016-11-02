@@ -1,23 +1,33 @@
 {% extends 'admin.twig' %}
 
+{% set title %}{{'BotTracker_Config'|translate}}{% endset %}
+
 {% block content %}
 {% import 'macros.twig' as piwik %}
 {% if isSuperUser %}
-
-	<h2>{{'BotTracker_Config'|translate}}</h2>
+<div piwik-content-block
+     content-title="{{ title|e('html_attr') }}"
+     feature="true"
+     style="width:800px;"
+    >
 	<p>{{'BotTracker_PluginDescription'|translate}}</p>
 
 	<div id="sites">
-		<div id="label" style="float:left;margin-top:10px">{{'General_ChooseWebsite'|translate}} : </div>
-		<div id="selectID" style="display:inline;">
-		<form method="post" action="{{ linkTo({'module':'BotTracker','action':'config_reload'})}}" id="accessSites">
-			<select style="width: 200px" id="siteID" name="siteID" onchange="this.form.submit()">
-		   	 {% for site in sitesList %}
-		      	  <option value="{{site.idsite}}" {% if idSite == site.idsite %}selected{% endif %}>{{site.name}}</option>
-		    	 {% endfor %}
-			</select>
-		</form>
-		</div>
+    <div id="sites" class="BotTracker">
+        <section class="sites_selector_container">
+            <div piwik-siteselector
+                 show-selected-site="true"
+                 only-sites-with-admin-access="true"
+                 class="sites_autocomplete"
+                 ng-model="sitesList.site"
+                 ng-change="BotTracker.config_reload()"
+                 siteid="{{ idSite }}"
+                 sitename="{{ defaultReportSiteName }}"
+                 id="selectID"
+                 show-all-sites-item="false"
+                 switch-site-on-select="true"></div>
+        </section>
+
 		<div id="button" style="display:inline;" >
 			<form method="post" action="{{ {'action':'config_insert_db', 'token_auth':token_auth} | urlRewriteWithParameters }}" id="dbButton">
 				<input type="hidden" value="{{ idSite }}" name="siteID" />
@@ -53,19 +63,31 @@
 		<tr>
 	       <td>{{bot.botId}}</td>
 	       <td>{{bot.idsite}}</td>
-	       <td><input type="checkbox" name="{{bot.botId}}_botActive" value="1" {% if (bot.botActive == 1) %}checked{% endif %}></td>
-	       <td><input type="checkbox" name="{{bot.botId}}_extraStats" value="1" {% if (bot.extra_stats == 1) %}checked{% endif %}></td>
+	       <td><div piwik-field uicontrol="checkbox" name="{{bot.botId}}_botActive"
+                  		ng-model="botActive_{{bot.botId}}.enabled"
+	                    value="{% if bot.botActive == 1%}1{% endif %}"
+		      </div></td>
+            <td><div piwik-field uicontrol="checkbox" name="{{bot.botId}}_extraStats"
+                 		ng-model="botExtraStat_{{bot.botId}}.enabled"
+	                    value="{% if bot.extra_stats == 1%}1{% endif %}"
+		      </div></td>
 		  <td><input type="text" size="30" value="{{bot.botName}}" name="{{bot.botId}}_botName"/></td>
 		  <td><input type="text" size="32" maxlength="32" value="{{bot.botKeyword}}" name="{{bot.botId}}_botKeyword"/></td>
-		  <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'><img src='plugins/BotTracker/images/delete.png' title="{{'BotTracker_delete'|translate}}" border="0"/></a></td>
+		  <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'><span class="icon-delete"></span></a></td>
 		</tr>
 	{% endfor %}	
 	
 		<tr>
 	     <td>new</td>
 	     <td>{{idSite}}</td>
-	     <td><input type="checkbox" name="new_botActive" value="1"></td>
-	     <td><input type="checkbox" name="new_extraStats" value="1"></td>
+          <td><div piwik-field uicontrol="checkbox" name="new_botActive"
+                  		ng-model="botActive_new.enabled"
+	                    value=""
+		    </div></td>
+          <td><div piwik-field uicontrol="checkbox" name="new_extraStats"
+                 		ng-model="botExtraStat_new.enabled"
+	                    value=""
+		    </div></td>
 		<td><input type="text" size="30" name="new_botName"/></td>
 		<td><input type="text" size="32" maxlength="32" name="new_botKeyword"/></td>
 		</tr>
@@ -108,6 +130,7 @@
    		<li>{{'BotTracker_Import_help_line3'|translate}}</li>
    	</ul>
 	</div>
+</div>
 
 
     

@@ -9,7 +9,6 @@
 namespace Piwik\Plugins\BotTracker;
 
 use Piwik\Menu\MenuAdmin;
-use Piwik\Menu\MenuReporting;
 use Piwik\Piwik;
 
 /**
@@ -19,13 +18,14 @@ use Piwik\Piwik;
  */
 class Menu extends \Piwik\Plugin\Menu
 {
-    public function configureReportingMenu(MenuReporting $menu)
-    {
-        $menu->add('General_Visitors', Piwik::translate('BotTracker_BotTracker'), array('module' => 'BotTracker', 'action' => 'getBotTrackerPage'),true, $orderId = 30);
-    }
-
+	
     public function configureAdminMenu(MenuAdmin $menu)
     {
-				$menu->add('General_Settings', Piwik::translate('BotTracker_BotTracker'), array('module' => 'BotTracker', 'action' => 'config'), Piwik::isUserHasSomeAdminAccess(), $orderId = 9);
+    		if (Piwik::isUserHasSomeAdminAccess()){
+    			$menu->addSystemItem(
+    				Piwik::translate('BotTracker_BotTracker'), 
+    				array('module' => 'BotTracker', 'action' => 'config'), 
+    				$orderId = 99);
+          }
     }
 }

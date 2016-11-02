@@ -1,10 +1,10 @@
 {
     "name": "BotTracker",
-    "version": "0.58",
+    "version": "1.00",
     "keywords": ["BotTracker"],
     "homepage": "https://github.com/Thomas--F/BotTracker",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
-    "license": "GPL 3.0 / fair use",    
+    "license": "GPL 3.0 / fair use",
     "authors": [
         {
             "name": "Thomas Fasselt",
@@ -12,8 +12,12 @@
             "homepage": "https://github.com/Thomas--F/BotTracker"
         }
     ],
+	"support": {
+	        "issues": "https://github.com/Thomas--F/BotTracker/issues",
+	        "source": "https://github.com/Thomas--F/BotTracker/"
+	},
     "require": {
-         "piwik": ">=2.16.3,<3.0.0-b1", 
-         "php": ">=5.3.10" 
+        "piwik": ">=3.0.0-b2,<4.0.0-b1",
+        "php": "5.3.10"
     }
 }

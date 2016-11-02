@@ -11,15 +11,14 @@
  */
 namespace Piwik\Plugins\BotTracker;
 
-use Piwik\Plugins\BotTracker\API as BotTrackerAPI;
+use Piwik\DataTable\Row;
+
 use Piwik\Db;
 use Piwik\Common;
 use Piwik\DataTable;
 use Piwik\Site;
 use Piwik\Date;
 use Piwik\Piwik;
-
-
 
 /**
  * @see plugins/BotTracker/functions.php
@@ -71,9 +70,9 @@ class API extends \Piwik\Plugin\API
 		$dataTable->renameColumn('botActive', 'label');
 		
 		$dataTable->filter('ColumnCallbackAddMetadata', array('label', 'logo', __NAMESPACE__ . '\getActiveIcon'));
-      		$dataTable->filter('ColumnCallbackReplace', array('label', create_function('$label', "return ' ';")));
-      		$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoWidth', function () { return 16; }));
-      		$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoHeight', function () { return 16; }));
+      	$dataTable->filter('ColumnCallbackReplace', array('label', create_function('$label', "return ' ';")));
+      	$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoWidth', function () { return 16; }));
+      	$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoHeight', function () { return 16; }));
 		
 		return $dataTable;
 	}
@@ -150,6 +149,7 @@ class API extends \Piwik\Plugin\API
 			$botList[] = array('Exabot'                  ,'Exabot'              );
 			$botList[] = array('AhrefsBot'               ,'AhrefsBot'           );
 			$botList[] = array('MJ12Bot'                 ,'MJ12bot'             );
+			$botList[] = array('NetSeer Crawler'         ,'NetSeer crawler'     );
 			$botList[] = array('TurnitinBot'             ,'TurnitinBot'         );
 			$botList[] = array('Magpie Crawler'          ,'magpie-crawler'      );
 			$botList[] = array('Nutch Crawler'           ,'Nutch Crawler'       );
@@ -158,16 +158,15 @@ class API extends \Piwik\Plugin\API
 			$botList[] = array('Domnutch-Bot'            ,'Domnutch'            );
 			$botList[] = array('Ssearch Crawler'         ,'ssearch_bot'         );
 			$botList[] = array('XoviBot'                 ,'XoviBot'             );
-			$botList[] = array('NetSeer Crawler'         ,'netseer'             );
 			$botList[] = array('Digincore'               ,'digincore'           );
 			$botList[] = array('Fr-Crawler'              ,'fr-crawler'          );
 
 			foreach($botList as $bot)
 			{
-				$botX = BotTrackerAPI::getBotByName($idsite, $bot[0]);
+				$botX = Self::getBotByName($idsite, $bot[0]);
 				
 				if (empty($botX)){
-					BotTrackerAPI::insertBot($idsite, $bot[0],1,$bot[1],0);
+					Self::insertBot($idsite, $bot[0],1,$bot[1],0);
 					$i++;	
 				}
 			}
@@ -211,4 +210,30 @@ class API extends \Piwik\Plugin\API
 		$output = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $string); 
     		return html_entity_decode($output);
   	} 
+
+    /**
+     * Get Data for the Report "Top10"
+     * @param int    $idSite
+     * @param string $period
+     * @param string $date
+     * @param bool|string $segment
+     * @return DataTable
+     */
+    public function getTop10($idSite, $period, $date, $segment = false)
+    {
+        return $this->getAllBotDataPie($idSite);
+    }
+    /**
+     * Get Data for the Report "BotTracker"
+     * @param int    $idSite
+     * @param string $period
+     * @param string $date
+     * @param bool|string $segment
+     * @return DataTable
+     */
+    public function getBotTracker($idSite, $period, $date, $segment = false)
+    {
+        return $this->getAllBotDataWithIcon($idSite);
+    }
+
 }

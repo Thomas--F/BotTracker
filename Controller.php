@@ -14,81 +14,18 @@ namespace Piwik\Plugins\BotTracker;
 
 use Piwik\Common;
 use Piwik\Nonce;
-use Piwik\Notification;
 use Piwik\Notification\Manager as NotificationManager;
 use Piwik\Piwik;
 use Piwik\Site;
 use Piwik\Plugins\LanguagesManager\LanguagesManager;
 use Piwik\View;
-use Piwik\ViewDataTable\Factory as ViewDataTableFactory;
 use Piwik\Plugins\SitesManager\API as APISitesManager;
 use Piwik\Plugins\BotTracker\API as APIBotTracker;
 use Piwik\Menu\MenuAdmin;
 use Piwik\Menu\MenuTop;
-use Piwik\Menu\MenuUser;
-use Piwik\Menu\MenuMain;
 
 class Controller extends \Piwik\Plugin\Controller
 {	
-	/**
-	 * See the result on piwik/?module=BotTracker&action=displayWidget
-	 * or in the dashboard > Add a new widget 
-	 *
-	 */
-	function displayWidget($fetch = false)
-	{
-      		$controllerAction = $this->pluginName . '.' . __FUNCTION__;
-      		$apiAction = 'BotTracker.getActiveBotData';	
-
-		$view = $this->getStandardDataTable('table', $apiAction, $controllerAction);
-		$view->config->columns_to_display  = array('botName','botCount','botLastVisit');
-		$view->requestConfig->filter_sort_column = 'botCount';
-		$view->requestConfig->filter_sort_order = 'desc';
-		$view->requestConfig->filter_limit = 10;
-		$view->config->disable_row_evolution  = true;
-		
-		return $this->renderView($view, $fetch);
-	}
-	
-	function getBotTrackerView($fetch = false)
-	{
-		$controllerAction = $this->pluginName . '.' . __FUNCTION__;
-      		$apiAction = 'BotTracker.getAllBotDataWithIcon';	
-      
-		$view = $this->getStandardDataTable('table', $apiAction, $controllerAction);
-		$view->config->columns_to_display  = array('label','botName','botKeyword','botCount','botLastVisit');
-		$view->config->translations['label'] = Piwik::translate('BotTracker_BotActive');
-		$view->requestConfig->filter_sort_column = 'botCount';
-		$view->requestConfig->filter_sort_order = 'desc';
-		$view->config->disable_row_evolution  = true;
-
-		return $view->render();
-	}
-
-	function getBotTrackerPie($fetch = false)
-	{
-		$view = ViewDataTableFactory::build('graphPie', 'BotTracker.getAllBotDataPie', $controllerAction = 'BotTracker.getBotTrackerPie');
-
-      		$view->config->translations['value'] = Piwik::translate('BotTracker_hits_by_Bot');
-      		$view->config->show_footer_icons = true;
-      		$view->config->show_insights = false;
-      		$view->config->selectable_columns = array("value");
-      		$view->config->max_graph_elements = 10;
-		$view->config->disable_row_evolution  = true;
-
-      		return $view->render();
-	}
-
-	function getBotTrackerPage()
-	{
-		$view = new View('@BotTracker/viewTracker');
-
-		$view->dataTableTrackerBot1 = $this->getBotTrackerView(true);
-		$view->dataTableTrackerBot2 = $this->getBotTrackerPie(true);
-
-		echo $view->render();		
-	}
-
 	public function config($siteID=0, $errorList = array()) {
 		Piwik::checkUserHasSuperUserAccess();
 
@@ -114,7 +51,6 @@ class Controller extends \Piwik\Plugin\Controller
 		$view->nonce = Nonce::getNonce('BotTracker.saveConfig');
 		$view->adminMenu = MenuAdmin::getInstance()->getMenu();
 		$view->topMenu = MenuTop::getInstance()->getMenu();
-		$view->userMenu = MenuUser::getInstance()->getMenu();
 		$view->notifications = NotificationManager::getAllNotificationsToDisplay();
 		$view->phpVersion = phpversion();
 		$view->phpIsNewEnough = version_compare($view->phpVersion, '5.3.0', '>=');		
@@ -274,26 +210,6 @@ class Controller extends \Piwik\Plugin\Controller
 		} catch(Exception $e ) {
 			echo $e;
 		}
-	}
-
-	
-	protected function getStandardDataTable( $name, $apiAction, $controllerAction)
-	{
-		$view = ViewDataTableFactory::build($name, $apiAction, $controllerAction);
-		
-		$view->config->translations['botId'] = Piwik::translate('BotTracker_BotId');
-		$view->config->translations['botName'] = Piwik::translate('BotTracker_BotName');
-		$view->config->translations['botKeyword'] = Piwik::translate('BotTracker_BotKeyword');
-		$view->config->translations['botCount'] = Piwik::translate('BotTracker_BotCount');
-		$view->config->translations['botLastVisit'] = Piwik::translate('BotTracker_BotLastVisit');
-		$view->config->show_search = false;
-		$view->config->show_footer_icons = false;
-		$view->config->show_exclude_low_population = false;
-		$view->requestConfig->filter_limit = 25;
-		$view->requestConfig->filter_sort_column = 'botId';
-		$view->requestConfig->filter_sort_order = 'asc';
-		
-		return $view;
 	}
 	
 	public function logToFile($msg)

@@ -12,8 +12,6 @@
  */
 namespace Piwik\Plugins\BotTracker;
 
-use Piwik\WidgetsList;
-use Piwik\Settings\SystemSetting;
 use Piwik\Common;
 use Piwik\Db;
 use Piwik\Plugins\SitesManager\API as APISitesManager;
@@ -88,16 +86,11 @@ class BotTracker extends \Piwik\Plugin
 		Db::query($query2);
 	}
 	
-	public function getListHooksRegistered()
+	public function registerEvents()
 	{
 		return array(
 			'Tracker.isExcludedVisit'  => 'checkBot',
-			'WidgetsList.addWidgets'   => 'addWidget'
 		);
-	}
-	function addWidget()
-	{
-		WidgetsList::add('BotTracker_Widgets', 'BotTracker_DisplayWidget', 'BotTracker', 'displayWidget');
 	}
 	
 	function checkBot(&$exclude, $request)
@@ -107,8 +100,8 @@ class BotTracker extends \Piwik\Plugin
 		$currentTimestamp = gmdate("Y-m-d H:i:s");
 		// max length of url can be 100 Bytes
 		$currentUrl = substr($request->getParam('url'),0,100);
-		
-		BotTracker::logToFile('SiteID:'.$idSite.' user Agent: '.$ua.' TS:'.$currentTimestamp.' page:'.$currentUrl);
+				
+		Self::logToFile('SiteID:'.$idSite.' user Agent: '.$ua.' TS:'.$currentTimestamp.' page:'.$currentUrl);
 		
 		$db = Tracker::getDatabase();
 		$result = $db->fetchRow("SELECT `botId`, `extra_stats` FROM ".Common::prefixTable('bot_db')."
@@ -119,7 +112,7 @@ class BotTracker extends \Piwik\Plugin
 
 		$botId = $result['botId'];
 		if ($botId > 0 ){
-			BotTracker::logToFile('SiteID:'.$idSite.' found Bot: '.$botId);
+			Self::logToFile('SiteID:'.$idSite.' found Bot: '.$botId);
 
 			$db->query("UPDATE `".Common::prefixTable('bot_db')."` 
 			               SET botCount = botCount + 1
