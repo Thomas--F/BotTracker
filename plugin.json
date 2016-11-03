@@ -17,7 +17,7 @@
 	        "source": "https://github.com/Thomas--F/BotTracker/"
 	},
     "require": {
-        "piwik": ">=3.0.0-b2,<4.0.0-b1",
+        "piwik": ">=3.0.0-b1,<4.0.0-b1",
         "php": "5.3.10"
     }
 }
