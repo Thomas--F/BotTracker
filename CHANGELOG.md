@@ -62,14 +62,3 @@ __0.44__
 __0.43__
 * Compatible with Piwik 2.0
 
-## License
-
-GPL v3 / fair use
-
-## Support
-
-Please direct any feedback to: 
-
-* [https://github.com/Thomas--F/BotTracker/issues](https://github.com/Thomas--F/BotTracker/issues)
-* [http://dev.piwik.org/trac/ticket/2391](http://dev.piwik.org/trac/ticket/2391)
-
