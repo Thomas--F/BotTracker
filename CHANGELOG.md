@@ -1,4 +1,8 @@
 ## Changelog
+1.02
+
+- change PHP-requirements for Piwik v3
+
 1.01
 
 - changes at description and changelog for Piwik v3
