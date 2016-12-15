@@ -1,10 +1,12 @@
 {
     "BotTracker": {
         "PluginDescription": "Виявляє ботів та павуків і підраховує їхні візити без відстеження їх в журналі відвідувачів.",
+        "BotTracker": "Пошукові боти",
+        "Bot_Tracker": "Пошукові боти",
         "Widgets": "Пошукові боти",
         "DisplayWidget": "Показати пошукових ботів",
-        "BotName": "Ім'я бота",
-        "BotCount": "Усього відвідувань",
+        "BotName": "Назва бота",
+        "BotCount": "Відвідувань",
         "BotKeyword": "Ключове слово",
         "BotLastVisit": "Останній візит",
         "BotActive": "Активний",
@@ -24,9 +26,12 @@
         "Error_Fileimport_Upload": "Помилка під час завантаження",
         "Error_Fileimport_Not_Even": "Кількість параметрів у файлі не знайдено",
         "Import_help_headline": "Dataset-Format:",
-        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_line1": "- кожен новий рядок буде видалений перед імпортом, так що ви можете вставити розрив після кожного запису бота",
         "Import_help_line2": "- число значень повинно бути більше",
-        "Import_help_line3": "- немає ніякого роздільника \"|\" в кінці"
+        "Import_help_line3": "- немає ніякого роздільника \"|\" в кінці",
+        "Top_10_Bots": "Топ 10 Ботів",
+        "hits_by_Bot": "відвідувань ботами",
+        "Top10": "Top10"
     }
 }

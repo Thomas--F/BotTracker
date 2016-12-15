@@ -26,7 +26,6 @@
         "Error_Fileimport_Upload": "Erro ao carregar",
         "Error_Fileimport_Not_Even": "Números de parâmetros no arquivo não são pares",
         "Import_help_headline": "Formato-Conjunto de dados:",
-        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
         "Import_help_line1": "- cada avanço de linha será removido antes da importação para que você possa inserir uma pausa após cada entrada de bot",
         "Import_help_line2": "- o número de valores deve ser par",
         "Import_help_line3": "- NÃO há o delimitador \"|\" no final"

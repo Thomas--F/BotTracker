@@ -26,11 +26,12 @@
         "Error_Fileimport_Upload": "Chyba při nahrávání",
         "Error_Fileimport_Not_Even": "Počet parametrů v souboru není sudý",
         "Import_help_headline": "Formát datové sady:",
-        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|?",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_line1": "Každý nový řádek bude před importem odstraněn, takže můžete oddělit každý záznam bota",
         "Import_help_line2": "Počet hodnot musí být sudý",
         "Import_help_line3": "Na konci není oddělovač",
         "Top_10_Bots": "Top 10 bltů",
-        "hits_by_Bot": "hitů botem"
+        "hits_by_Bot": "hitů botem",
+        "Top10": "Top10"
     }
 }

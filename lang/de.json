@@ -31,6 +31,7 @@
         "Import_help_line2": "- die Anzahl der Werte muss gerade sein",
         "Import_help_line3": "- am Ende darf kein Delimiter \"|\" stehen",
         "Top_10_Bots": "Top 10 Bots",
-        "hits_by_Bot": "Zählung von Bots"
+        "hits_by_Bot": "Zählung von Bots",
+        "Top10": "Top 10"
     }
 }

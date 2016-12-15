@@ -26,11 +26,12 @@
         "Error_Fileimport_Upload": "Errore durante il caricamento",
         "Error_Fileimport_Not_Even": "Il numero di parametri nel file non è pari",
         "Import_help_headline": "Formato-Dataset",
-        "Import_help_format": "nomebot1|botkeyword1|nomebot2|botkeyword2|...",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_line1": "- tutti gli \"a capo\" verranno rimossi prima dell'importazione, così che tu possa inserire un'interruzione dopo ogni immissione di un bot",
         "Import_help_line2": "- il numero dei valori deve essere pari",
         "Import_help_line3": "- NON c'è il delimitatore \"|\" alla fine",
         "Top_10_Bots": "I primi 10 Bots",
-        "hits_by_Bot": "hits per Bot"
+        "hits_by_Bot": "hits per Bot",
+        "Top10": "Top10"
     }
 }

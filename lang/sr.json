@@ -1,6 +1,8 @@
 {
     "BotTracker": {
         "PluginDescription": "Detekcija botova i spajdera i brojanje njihovih poseta bez praćenja kroz zapis poseta.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Treker botova",
         "Widgets": "BotTracker",
         "DisplayWidget": "BotTracker prikaz",
         "BotName": "Naziv bota",
@@ -18,6 +20,16 @@
         "Message_deleted": "je obrisano!",
         "Message_bot_inserted": "Bot ubačen",
         "insert_db": "Ubacivanje podrazumevanih botova",
-        "delete": "brisanje"
+        "delete": "brisanje",
+        "Importfile": "Izaberite datoteku...",
+        "send_file": "Učitaj i procesiraj datoteku",
+        "Error_Fileimport_Upload": "Greška prilikom učitavanja",
+        "Error_Fileimport_Not_Even": "Broj parametara u datoteci nije paran",
+        "Import_help_headline": "Format podataka:",
+        "Import_help_line1": "- svaki novi red će biti uklonjen pre uvoza tako da ih možete ubaciti nakon svakog zapisa",
+        "Import_help_line2": "- broj vrednosti mora biti paran",
+        "Import_help_line3": "- na kraju ne sme postojati \"|\"",
+        "Top_10_Bots": "Prvih 10 botova",
+        "hits_by_Bot": "posete botova"
     }
 }

@@ -25,7 +25,6 @@
         "Error_Fileimport_Upload": "Fout tijdens uploaden",
         "Error_Fileimport_Not_Even": "Aantal parameters in het bestand zijn niet gelijk",
         "Import_help_headline": "Dataset-Format:",
-        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|…",
         "Import_help_line2": "- de nummers van waarden moeten gelijk zijn",
         "Import_help_line3": "- er is geen NO delimeter \"|\" aan het eind",
         "Top_10_Bots": "Top 10 Bots",
