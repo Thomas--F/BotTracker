@@ -21,7 +21,7 @@ class Menu extends \Piwik\Plugin\Menu
 	
     public function configureAdminMenu(MenuAdmin $menu)
     {
-    		if (Piwik::isUserHasSomeAdminAccess()){
+    		if (Piwik::hasUserSuperUserAccess()){
     			$menu->addSystemItem(
     				Piwik::translate('BotTracker_BotTracker'), 
     				array('module' => 'BotTracker', 'action' => 'config'), 
