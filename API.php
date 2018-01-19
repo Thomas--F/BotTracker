@@ -70,7 +70,7 @@ class API extends \Piwik\Plugin\API
 		$dataTable->renameColumn('botActive', 'label');
 		
 		$dataTable->filter('ColumnCallbackAddMetadata', array('label', 'logo', __NAMESPACE__ . '\getActiveIcon'));
-      	$dataTable->filter('ColumnCallbackReplace', array('label', create_function('$label', "return ' ';")));
+      	$dataTable->filter('ColumnCallbackReplace', array('label', function($label) { return ' '; }));
       	$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoWidth', function () { return 16; }));
       	$dataTable->queueFilter('ColumnCallbackAddMetadata', array(array(), 'logoHeight', function () { return 16; }));
 		
