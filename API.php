@@ -160,6 +160,10 @@ class API extends \Piwik\Plugin\API
 			$botList[] = array('XoviBot'                 ,'XoviBot'             );
 			$botList[] = array('Digincore'               ,'digincore'           );
 			$botList[] = array('Fr-Crawler'              ,'fr-crawler'          );
+			$botList[] = array('Seznam'                  ,'SeznamBot'           );
+			$botList[] = array('Sezanm screenshot'       ,'Seznam screenshot-generator'	);
+			$botList[] = array('SimplePie'       	     ,'SimplePie'          	     	);
+			$botList[] = array('Facebook external hit'   ,'facebookexternalhit'  		);
 
 			foreach($botList as $bot)
 			{
