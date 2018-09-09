@@ -1,4 +1,8 @@
 ## Changelog
+1.03
+
+- replace depricated functions
+
 1.02
 
 - change PHP-requirements for Piwik v3
