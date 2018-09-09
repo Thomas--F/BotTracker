@@ -4,7 +4,7 @@
     "keywords": ["BotTracker"],
     "homepage": "https://github.com/Thomas--F/BotTracker",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
-    "license": "GPL 3.0 / fair use",
+    "license": "GPL v3+",
     "authors": [
         {
             "name": "Thomas Fasselt",
