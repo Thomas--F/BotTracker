@@ -1,4 +1,8 @@
 ## Changelog
+1.04
+
+- change license string (validator-fail)
+
 1.03
 
 - replace depricated functions
