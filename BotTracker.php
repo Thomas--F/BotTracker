@@ -70,7 +70,7 @@ class BotTracker extends \Piwik\Plugin
 			 			`botId` INTEGER(10) UNSIGNED NOT NULL,
 			 			`idsite` INTEGER(10) UNSIGNED NOT NULL,
 			 			`page` VARCHAR(100) NOT NULL,
-			 			`visit_timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+			 			`visit_timestamp` TIMESTAMP NOT NULL,
 			 			`useragent` VARCHAR(100) NOT NULL,
 			 
 			 			PRIMARY KEY(`botId`,`visit_timestamp`)
