@@ -67,13 +67,14 @@ class BotTracker extends \Piwik\Plugin
 		// Create extendet_stats_table
 		$query4 =  'CREATE TABLE IF NOT EXISTS `'.Common::prefixTable('bot_db_stat').'`
 						(
+						`visitId` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 			 			`botId` INTEGER(10) UNSIGNED NOT NULL,
 			 			`idsite` INTEGER(10) UNSIGNED NOT NULL,
 			 			`page` VARCHAR(100) NOT NULL,
 			 			`visit_timestamp` TIMESTAMP NOT NULL,
 			 			`useragent` VARCHAR(100) NOT NULL,
 			 
-			 			PRIMARY KEY(`botId`,`visit_timestamp`)
+			 			PRIMARY KEY(`visitId`,`botId`,`idsite`)
 						)  DEFAULT CHARSET=utf8';
 		Db::query($query4);
 	}
