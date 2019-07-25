@@ -1,4 +1,11 @@
 ## Changelog
+1.05
+
+- removed default on visit_timestamp (issue #53)
+- changed primary key and add aditional column for stats table (issue #53)
+- changed default for last_visit (issue #61)
+- corrected delimiter in botlist.txt (issue #62) 
+
 1.04
 
 - change license string (validator-fail)
