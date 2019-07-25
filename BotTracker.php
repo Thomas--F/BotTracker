@@ -45,7 +45,7 @@ class BotTracker extends \Piwik\Plugin
 						  `botActive` BOOLEAN NOT NULL,
 						  `botKeyword` VARCHAR(32) NOT NULL,
 						  `botCount` INTEGER(10) UNSIGNED NOT NULL,
-						  `botLastVisit` TIMESTAMP NOT NULL DEFAULT '2000-01-01 00:00:00',
+						  `botLastVisit` TIMESTAMP NOT NULL DEFAULT '1970-01-01 00:00:01',
 						  `extra_stats` BOOLEAN NOT NULL DEFAULT FALSE,
 						  PRIMARY KEY(`botId`)
 						)  DEFAULT CHARSET=utf8";
