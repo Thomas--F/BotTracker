@@ -1,7 +1,7 @@
 Sezanm screenshot|Seznam screenshot-generator|
 SimplePie|SimplePie|
 Facebook external hit|facebookexternalhit|
-Riddler|Riddler
+Riddler|Riddler|
 007ac9 Crawler|007ac9 Crawler|
 360Spider|360Spider|
 A6-Indexer|A6-Indexer|
@@ -44,7 +44,7 @@ CC Metadata Scaper|CC Metadata Scaper|
 CCBot|CCBot|
 CapsuleChecker|CapsuleChecker|
 Cliqzbot|Cliqzbot|
-CloudFlare-AlwaysOnline|CloudFlare-AlwaysOnline
+CloudFlare-AlwaysOnline|CloudFlare-AlwaysOnline|
 Companybook-Crawler|Companybook-Crawler|
 ContextAd Bot|ContextAd Bot|
 CrunchBot|CrunchBot|
@@ -204,7 +204,7 @@ Zabbix|Zabbix|
 ZoominfoBot|ZoominfoBot|
 ZumBot|ZumBot|
 ZuperlistBot|ZuperlistBot|
-^LCC |^LCC |
+^LCC|^LCC|
 acapbot|acapbot|
 acoonbot|acoonbot|
 adbeat_bot|adbeat_bot|
@@ -359,4 +359,4 @@ yacybot|yacybot|
 yandex.com|yandex.com|
 yanga|yanga|
 yoozBot|yoozBot|
-zgrab|zgrab|
+zgrab|zgrab
