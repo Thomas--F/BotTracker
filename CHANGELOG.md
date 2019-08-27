@@ -1,4 +1,7 @@
 ## Changelog
+1.06
+-  correct default for "botLastVisit" (issue #63)
+
 1.05
 
 - removed default on visit_timestamp (issue #53)
