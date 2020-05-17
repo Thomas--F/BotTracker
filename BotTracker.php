@@ -111,7 +111,7 @@ class BotTracker extends \Piwik\Plugin
 		                        AND   LOCATE(`botKeyword`,?) >0
 						            LIMIT 1", array($idSite, $ua));
 
-		$botId = $result['botId'];
+		$botId = $result['botId']??0;
 		if ($botId > 0 ){
 			Self::logToFile('SiteID:'.$idSite.' found Bot: '.$botId);
 
