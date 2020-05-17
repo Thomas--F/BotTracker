@@ -1,4 +1,7 @@
 ## Changelog
+1.07
+-  correct PHP notice on line 114 (issue #65)
+
 1.06
 -  correct default for "botLastVisit" (issue #63)
 
