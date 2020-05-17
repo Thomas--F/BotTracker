@@ -25,7 +25,7 @@ You can add/delete/modify the keywords in the administration-menu. There are web
 
 See http://piwik.org/faq/plugins/#faq_21
 
-If you update form Piwik 1.x to Piwik 2.x or from an old version of BotTracker (before 0.45) please reinstall the plugin.
+If you update from Piwik 1.x to Piwik 2.x or from an old version of BotTracker (before 0.45) please reinstall the plugin.
 
 # License
 
