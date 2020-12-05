@@ -1,4 +1,7 @@
 ## Changelog
+2.00
+- upgrade to Matomo 4 (issue #66)
+
 1.07
 -  correct PHP notice on line 114 (issue #65)
 
