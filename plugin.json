@@ -1,6 +1,6 @@
 {
     "name": "BotTracker",
-    "version": "2.00",
+    "version": "2.01",
     "keywords": ["BotTracker"],
     "homepage": "https://github.com/Thomas--F/BotTracker",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
