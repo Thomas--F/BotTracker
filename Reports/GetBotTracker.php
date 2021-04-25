@@ -55,7 +55,7 @@ class GetBotTracker extends Base
 		$view->requestConfig->filter_sort_column = 'botCount';
 		$view->requestConfig->filter_sort_order = 'desc';
 
-		$view->config->columns_to_display  = array('label','botName','botKeyword','botCount','botLastVisit');
+		$view->config->columns_to_display  = array('botName','botKeyword','botCount','botLastVisit','label');
 		$view->config->translations['label'] = Piwik::translate('BotTracker_BotActive');
 		$view->config->disable_row_evolution  = true;
 		$view->config->show_related_reports  = true;

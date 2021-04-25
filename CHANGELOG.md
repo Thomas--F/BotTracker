@@ -1,4 +1,7 @@
 ## Changelog
+2.01
+- change order of columns in the BotTracker report (issue #68)
+
 2.00
 - upgrade to Matomo 4 (issue #66)
 
