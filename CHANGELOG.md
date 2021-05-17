@@ -1,4 +1,7 @@
 ## Changelog
+2.02
+ - fix for issue #70
+
 2.01
 - change order of columns in the BotTracker report (issue #68)
 
