@@ -125,7 +125,8 @@ class BotTracker extends \Piwik\Plugin
 			if ($result['extra_stats'] > 0){
 				$query = "INSERT INTO `".Common::prefixTable('bot_db_stat')."` 
 					(idsite, botid, page, visit_timestamp, useragent) VALUES (?,?,?,?,?)";
-				$params = array($idSite,$botId,$currentUrl,$currentTimestamp,$ua);
+				// max length of useragent can be 100 Bytes
+				$params = array($idSite,$botId,$currentUrl,$currentTimestamp,substr($ua,0,100));
 				$db->query($query,$params);
 			}
 		}
