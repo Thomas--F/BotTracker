@@ -1,4 +1,7 @@
 ## Changelog
+2.03
+ - assure that useragent length limit is kept for extra stats table (issue #73)
+
 2.02
  - fix for issue #70
 
