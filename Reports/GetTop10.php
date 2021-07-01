@@ -48,7 +48,8 @@ class GetTop10 extends Base
       	$view->config->selectable_columns = array("value");
       	$view->config->max_graph_elements = 10;
 		$view->config->disable_row_evolution  = true;
-		$view->config->show_related_reports  = true;
+		$view->config->show_related_reports  = false;
+		$view->config->show_table_all_columns = false;
     }
 
     /**
