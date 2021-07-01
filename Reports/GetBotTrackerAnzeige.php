@@ -43,17 +43,24 @@ class GetBotTrackerAnzeige extends Base
     {
 		$view->config->translations['botId'] = Piwik::translate('BotTracker_BotId');
 		$view->config->translations['botName'] = Piwik::translate('BotTracker_BotName');
-		$view->config->translations['botKeyword'] = Piwik::translate('BotTracker_BotKeyword');
+		//$view->config->translations['botKeyword'] = Piwik::translate('BotTracker_BotKeyword');
 		$view->config->translations['botCount'] = Piwik::translate('BotTracker_BotCount');
 		$view->config->translations['botLastVisit'] = Piwik::translate('BotTracker_BotLastVisit');
 		$view->config->show_search = false;
 		$view->config->show_footer_icons = false;
 		$view->config->show_exclude_low_population = false;
-		$view->config->columns_to_display  = array('botName','botCount','botLastVisit');
+		$view->config->show_table_all_columns = false;
+		$view->config->show_insights = false;
+		$view->config->show_related_reports  = false;
+		$view->config->show_pivot_by_subtable = false;
+		$view->config->show_table_performance = false;
+		$view->config->show_all_views_icons = false;
+		$view->config->show_export = false;
+		$view->config->columns_to_display  = array("botName","botCount","botLastVisit");
+		$view->config->disable_row_evolution  = true;
 		$view->requestConfig->filter_sort_column = 'botCount';
 		$view->requestConfig->filter_sort_order = 'desc';
 		$view->requestConfig->filter_limit = 10;
-		$view->config->disable_row_evolution  = true;
     }
 
     /**
