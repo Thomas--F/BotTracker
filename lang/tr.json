@@ -1,5 +1,37 @@
 {
     "BotTracker": {
-        "BotKeyword": "Anahtar Sözcük"
+        "PluginDescription": "Bot ve örümcekleri algılayarak bunların ziyaretlerinin izleme dışında tutulmasını ve ziyaretçi günlüğüne kaydedilmemesini sağlar.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Bot Tracker",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker görünümü",
+        "BotName": "Bot adı",
+        "BotCount": "Ziyaret sayısı",
+        "BotKeyword": "Anahtar sözcük",
+        "BotLastVisit": "Son ziyaret",
+        "BotActive": "Etkin",
+        "ExtraStats": "Ek İstatistikler",
+        "Config": "BotTracker yapılandırması",
+        "save_changes": "Kaydet",
+        "NoOfActiveBots": "Bu site için bot sayısı",
+        "true": "Evet",
+        "false": "Hayır",
+        "Error_empty": "boş!",
+        "Message_deleted": "silinmiş!",
+        "Message_bot_inserted": "Botlar eklendi",
+        "insert_db": "Varsayılan botları ekle",
+        "delete": "sil",
+        "Importfile": "İçe aktarılacak dosyayı seçin...",
+        "send_file": "Dosyayı yükle ve işle",
+        "Error_Fileimport_Upload": "Yükleme sırasında sorun çıktı",
+        "Error_Fileimport_Not_Even": "Dosyadaki parametre sayısı çiftler biçiminde değil",
+        "Import_help_headline": "Veri Kümesi biçimi:",
+        "Import_help_format": "BotAdı1|BotAnahtarSözcüğü1|BotAdı2|BotAnahtarSözcüğü2|...",
+        "Import_help_line1": "- satır sonları içe aktarma işleminden önce kaldırılır. Böylece her bot kaydını ayrı bir satıra yazabilirsiniz",
+        "Import_help_line2": "- değer sayısı çift biçiminde olmalı",
+        "Import_help_line3": "- sonda \"|\" ayıracı yok",
+        "Top_10_Bots": "İlk 10 bot",
+        "hits_by_Bot": "Bota göre tıklanma",
+        "Top10": "İlk 10"
     }
 }

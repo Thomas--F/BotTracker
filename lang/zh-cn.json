@@ -1,5 +1,37 @@
 {
     "BotTracker": {
-        "BotLastVisit": "最后访问"
+        "PluginDescription": "检测漫游器和蜘蛛并计算其访问次数，而无需在访问者日志中跟踪它们。",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "机器人追踪器",
+        "Widgets": "BotTracker",
+        "DisplayWidget": "BotTracker显示",
+        "BotName": "机器人名称",
+        "BotCount": "访问次数",
+        "BotKeyword": "关键词",
+        "BotLastVisit": "最后访问",
+        "BotActive": "活跃",
+        "ExtraStats": "访问次数",
+        "Config": "BotTracker配置",
+        "save_changes": "保存",
+        "NoOfActiveBots": "该站点的机器人数量",
+        "true": "是",
+        "false": "否",
+        "Error_empty": "是空的！",
+        "Message_deleted": "被删除了！",
+        "Message_bot_inserted": "插入机器人",
+        "insert_db": "插入默认启动",
+        "delete": "删除",
+        "Importfile": "选择导入文件...",
+        "send_file": "上传和处理文件",
+        "Error_Fileimport_Upload": "上传时发生错误",
+        "Error_Fileimport_Not_Even": "文件中的参数个数不等于",
+        "Import_help_headline": "数据集格式：",
+        "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
+        "Import_help_line1": "- 在导入之前，所有换行符都会被删除，因此您可以在每次漫游输入之后插入一个换行符",
+        "Import_help_line2": "- 值的数量必须为偶数",
+        "Import_help_line3": "- 没有定界符“ |” 在最后",
+        "Top_10_Bots": "前10机器人",
+        "hits_by_Bot": "Bot的热门歌曲",
+        "Top10": "前10名"
     }
 }
