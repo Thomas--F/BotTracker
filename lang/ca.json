@@ -1,0 +1,9 @@
+{
+    "BotTracker": {
+        "BotKeyword": "Paraula clau",
+        "BotActive": "Actiu",
+        "save_changes": "Desa",
+        "true": "Sí",
+        "false": "No"
+    }
+}

@@ -11,7 +11,7 @@
         "BotLastVisit": "Ultima visita",
         "BotActive": "Activo",
         "ExtraStats": "Estadísticas extras",
-        "Config": "Configuración del BotTracker",
+        "Config": "Configuraci&oacute;n del BotTracker",
         "save_changes": "Guardar",
         "NoOfActiveBots": "Número de Bots para este sitio",
         "true": "Si",
@@ -22,14 +22,16 @@
         "insert_db": "Insertar Bots predeterminados",
         "delete": "eliminar",
         "Importfile": "Elegir Importfile...",
-        "send_file": "Cargar y procesar archivo",
+        "send_file": "Subir y procesar archivo",
         "Error_Fileimport_Upload": "Error durante la carga",
         "Error_Fileimport_Not_Even": "Número de parámetros en el archivo no es par",
-        "Import_help_headline": "Formato del conjunto de datos:",
-        "Import_help_line1": "- cada salto de línea será eliminado antes de su importación, por lo que puede insertar una pausa cada vez que ingresa un bot.",
+        "Import_help_headline": "Formato de los datos:",
+        "Import_help_format": "nombrebot1|botpalabra1|nombrebot2|botpalabra2|...",
+        "Import_help_line1": "- cada salto de línea será eliminado antes de su importación, por lo que puedes insertar un salto de línea después de cada registro de bot.",
         "Import_help_line2": "- el número de valores debe ser par",
         "Import_help_line3": "- NO hay un delimitador \"|\" al final",
         "Top_10_Bots": "Los 10 Bots principales",
-        "hits_by_Bot": "impactos por Bot"
+        "hits_by_Bot": "impactos por Bot",
+        "Top10": "Top10"
     }
 }

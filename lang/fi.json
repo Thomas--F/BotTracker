@@ -21,6 +21,8 @@
         "delete": "poista",
         "Importfile": "Valitse tiedosto...",
         "send_file": "Lähetä ja prosessoi tiedosto",
-        "Error_Fileimport_Upload": "Virhe lähetyksen aikana"
+        "Error_Fileimport_Upload": "Virhe lähetyksen aikana",
+        "Top_10_Bots": "Top 10 -botit",
+        "hits_by_Bot": "osumaa botilta"
     }
 }

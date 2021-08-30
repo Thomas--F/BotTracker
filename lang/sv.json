@@ -1,6 +1,8 @@
 {
     "BotTracker": {
-        "PluginDescription": "Upptäcler och räknar besök av bottar och spiders utan att lagra dem i besöksloggen.",
+        "PluginDescription": "Upptäcker och räknar besök av bottar och spindlar utan att lagra dem i besöksloggen.",
+        "BotTracker": "BotTracker",
+        "Bot_Tracker": "Bot Tracker",
         "Widgets": "BotTracker",
         "DisplayWidget": "Visa BotTracker",
         "BotName": "Bot-namn",
@@ -24,8 +26,12 @@
         "Error_Fileimport_Upload": "Fel vid uppladdning",
         "Error_Fileimport_Not_Even": "Nummer och parametrar i filen måste vara lika",
         "Import_help_headline": "Dataset-Format:",
+        "Import_help_format": "botnamn1|botsökord1|botnamn2|botsökord2|…",
         "Import_help_line1": "- varje radbrytning kommer att tas bort innan importen så att du kan använda dig av radbrytning efter varje bot-post",
         "Import_help_line2": "- antalet värden måste vara lika",
-        "Import_help_line3": "Det finns ingen avgränsare \"|\" i slutet"
+        "Import_help_line3": "Det finns ingen avgränsare \"|\" i slutet",
+        "Top_10_Bots": "Topp 10 robotar",
+        "hits_by_Bot": "träffar av robot",
+        "Top10": "Topp 10"
     }
 }
