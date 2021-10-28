@@ -17,9 +17,8 @@ use Piwik\Db;
 use Piwik\Plugins\SitesManager\API as APISitesManager;
 use Piwik\Piwik;
 use Piwik\Tracker;
+use Piwik\Plugin;
 use Piwik\Plugins\BotTracker\API as BotTrackerAPI;
-
-require_once PIWIK_INCLUDE_PATH . '/plugins/BotTracker/functions.php';
 
 class BotTracker extends \Piwik\Plugin
 {	
@@ -31,6 +30,12 @@ class BotTracker extends \Piwik\Plugin
 		{
 			botDb_close($this->botDb);
 		}
+	}
+	
+	public function postLoad()
+	{
+		$dir = Plugin\Manager::getPluginDirectory('BotTracker');
+		require_once $dir . '/functions.php';
 	}
 	
 	public function install()
