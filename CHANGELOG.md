@@ -1,4 +1,8 @@
 ## Changelog
+2.04
+ - Fix plugin does not work when used in Matomo for WordPress (issue #83)
+ - a bunch of translation-updates (issue #81)
+
 2.03
  - assure that useragent length limit is kept for extra stats table (issue #73)
 
