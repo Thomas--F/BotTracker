@@ -1,4 +1,7 @@
 ## Changelog
+2.05
+ - fix a problem in the api.php after the changes in v2.04 (issue #84)
+
 2.04
  - Fix plugin does not work when used in Matomo for WordPress (issue #83)
  - a bunch of translation-updates (issue #81)
