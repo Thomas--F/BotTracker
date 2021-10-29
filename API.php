@@ -20,10 +20,6 @@ use Piwik\Site;
 use Piwik\Date;
 use Piwik\Piwik;
 
-/**
- * @see plugins/BotTracker/functions.php
- */
-require_once PIWIK_INCLUDE_PATH . '/plugins/BotTracker/functions.php';
 
 /**
  * @package Piwik_BotTracker
