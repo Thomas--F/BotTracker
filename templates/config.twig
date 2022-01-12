@@ -29,7 +29,7 @@
         </section>
 
 		<div id="button" style="display:inline;" >
-			<form method="post" action="{{ {'action':'config_insert_db', 'token_auth':token_auth} | urlRewriteWithParameters }}" id="dbButton">
+			<form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}" method="POST">
 				<input type="hidden" value="{{ idSite }}" name="siteID" />
 				<input type="submit" value="{{'BotTracker_insert_db'|translate}} (35)" name="submit" class="submit" />
 			</form>
