@@ -27,6 +27,12 @@ use Piwik\Piwik;
 class API extends \Piwik\Plugin\API
 {
 	static private $instance = null;
+
+	public function __construct(){
+		$dir = \Piwik\Plugin\Manager::getPluginDirectory('BotTracker');
+		require_once $dir . '/functions.php';
+	}
+
 	static public function getInstance()
 	{
 		if (self::$instance == null)
