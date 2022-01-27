@@ -31,10 +31,12 @@ class API extends \Piwik\Plugin\API
 	{
 		if (self::$instance == null)
 		{
+			//  static varable instance of getINstance
 			self::$instance = new self;
 		}
 		return self::$instance;
 	}
+	
 	
 	static function getAllBotData($idSite)
 	{
