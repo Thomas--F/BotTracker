@@ -1,1 +1,8 @@
-{}
+{
+    "BotTracker": {
+        "BotKeyword": "Ključna riječ",
+        "save_changes": "Spremi",
+        "true": "Da",
+        "false": "Ne"
+    }
+}

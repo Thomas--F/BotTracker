@@ -54,7 +54,7 @@ class API extends \Piwik\Plugin\API
 
 	public static function getActiveBotData($idSite)
 	{
-		$rows = Db::get()->fetchAll("SELECT * FROM ".Common::prefixTable('bot_db')." WHERE `botActive` = 1 AND idSite= ? ORDER BY `botId`", array($idSite));
+		$rows = Db::get()->fetchAll("SELECT `botName`, `botLastVisit`, `botCount` FROM ".Common::prefixTable('bot_db')." WHERE `botActive` = 1 AND idSite= ? ORDER BY `botId`", array($idSite));
 		$rows = self::convertBotLastVisitToLocalTime($rows, $idSite);
 		// convert this array to a DataTable object
 		return DataTable::makeFromIndexedArray($rows);

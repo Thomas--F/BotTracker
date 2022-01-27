@@ -1,1 +1,10 @@
-{}
+{
+    "BotTracker": {
+        "BotKeyword": "Ключови думи",
+        "BotLastVisit": "Последно посещение",
+        "BotActive": "Активна",
+        "save_changes": "Запиши",
+        "true": "Да",
+        "false": "Не"
+    }
+}

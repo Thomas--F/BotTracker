@@ -1,1 +1,7 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "সক্রিয়",
+        "save_changes": "সংরক্ষণ করুন",
+        "false": "না"
+    }
+}

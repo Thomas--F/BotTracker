@@ -26,10 +26,12 @@
         "Error_Fileimport_Upload": "Greška prilikom učitavanja",
         "Error_Fileimport_Not_Even": "Broj parametara u datoteci nije paran",
         "Import_help_headline": "Format podataka:",
+        "Import_help_format": "ime1|ključnareč1|ime2|ključnareč2|...",
         "Import_help_line1": "- svaki novi red će biti uklonjen pre uvoza tako da ih možete ubaciti nakon svakog zapisa",
         "Import_help_line2": "- broj vrednosti mora biti paran",
         "Import_help_line3": "- na kraju ne sme postojati \"|\"",
         "Top_10_Bots": "Prvih 10 botova",
-        "hits_by_Bot": "posete botova"
+        "hits_by_Bot": "posete botova",
+        "Top10": "Top 10"
     }
 }

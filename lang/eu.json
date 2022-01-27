@@ -1,1 +1,9 @@
-{}
+{
+    "BotTracker": {
+        "BotKeyword": "Gako-hitza",
+        "BotActive": "Gaituta",
+        "save_changes": "Gorde",
+        "true": "Bai",
+        "false": "Ez"
+    }
+}

@@ -1,1 +1,19 @@
-{}
+{
+    "BotTracker": {
+        "Bot_Tracker": "Pelacak Bot",
+        "BotName": "Nama-Bot",
+        "BotCount": "Hitung Kunjungan",
+        "BotKeyword": "Katakunci",
+        "BotLastVisit": "Kunjungan terakhir",
+        "BotActive": "Aktif",
+        "save_changes": "Simpan",
+        "true": "Ya",
+        "false": "Tidak",
+        "Error_empty": "adalah kosong!",
+        "Message_deleted": "telah dihapus!",
+        "delete": "hapus",
+        "send_file": "Unggah dan Proses Berkas",
+        "Error_Fileimport_Upload": "Kesalahan selama mengunggah",
+        "Top10": "Top10"
+    }
+}

@@ -1,1 +1,9 @@
-{}
+{
+    "BotTracker": {
+        "BotKeyword": "ቁልፍ ቃላት",
+        "BotActive": "ገባሪ",
+        "save_changes": "አስቀምጥ",
+        "true": "አዎን",
+        "false": "የለም"
+    }
+}

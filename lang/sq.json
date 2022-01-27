@@ -1,10 +1,10 @@
 {
     "BotTracker": {
-        "PluginDescription": "Zbulon bote & merimanga dhe numëron vizitat e tyre pa i ndjekur ata te regjistri i vizitorëve.",
+        "PluginDescription": "Zbulon bote & merimanga dhe numëron vizitat e tyre pa ndjekje të tyre te regjistri i vizitorëve.",
         "BotTracker": "Ndjekës Botesh",
         "Bot_Tracker": "Ndjekës Botesh",
         "Widgets": "Ndjekës Botesh",
-        "DisplayWidget": "Shfaqje Ndjekësish Botesh",
+        "DisplayWidget": "Shfaqje Ndjekësi Botesh",
         "BotName": "Emër Boti",
         "BotCount": "Numër Vizitash",
         "BotKeyword": "Fjalëkyç",
@@ -13,7 +13,7 @@
         "ExtraStats": "Statistika ekstra",
         "Config": "Formësim Ndjekësi Botesh",
         "save_changes": "Ruaje",
-        "NoOfActiveBots": "No. Botesh për këtë sajt",
+        "NoOfActiveBots": "Nr. Botesh për këtë sajt",
         "true": "Po",
         "false": "Jo",
         "Error_empty": "është i zbrazët!",
@@ -32,6 +32,6 @@
         "Import_help_line3": "- NUK ka kufizues \"|\" në fund të",
         "Top_10_Bots": "10 Botet Kryesues",
         "hits_by_Bot": "hit-e nga Bot",
-        "Top10": "10 Kryesueset"
+        "Top10": "10 Kryesuesit"
     }
 }
