@@ -1,4 +1,7 @@
 ## Changelog
+2.06
+ - fix for the archive-problem (issue #87)
+
 2.05
  - fix a problem in the api.php after the changes in v2.04 (issue #84)
 
