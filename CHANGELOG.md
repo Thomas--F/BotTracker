@@ -1,4 +1,7 @@
 ## Changelog
+2.07
+- translation-updates (issue #94)
+
 2.06
  - fix for the archive-problem (issue #87)
 
