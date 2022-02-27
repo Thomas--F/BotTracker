@@ -1,19 +1,19 @@
 {
     "BotTracker": {
-        "Bot_Tracker": "Pelacak Bot",
-        "BotName": "Nama-Bot",
-        "BotCount": "Hitung Kunjungan",
-        "BotKeyword": "Katakunci",
-        "BotLastVisit": "Kunjungan terakhir",
         "BotActive": "Aktif",
-        "save_changes": "Simpan",
-        "true": "Ya",
-        "false": "Tidak",
+        "BotCount": "Hitung Kunjungan",
+        "BotKeyword": "Kata Kunci",
+        "BotLastVisit": "Kunjungan terakhir",
+        "BotName": "Nama-Bot",
+        "Bot_Tracker": "Pelacak Bot",
+        "Error_Fileimport_Upload": "Kesalahan selama mengunggah",
         "Error_empty": "adalah kosong!",
         "Message_deleted": "telah dihapus!",
+        "Top10": "Top10",
         "delete": "hapus",
+        "false": "Tidak",
+        "save_changes": "Simpan",
         "send_file": "Unggah dan Proses Berkas",
-        "Error_Fileimport_Upload": "Kesalahan selama mengunggah",
-        "Top10": "Top10"
+        "true": "Ya"
     }
 }
