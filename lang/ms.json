@@ -1,1 +1,10 @@
-{}
+{
+    "BotTracker": {
+        "BotName": "Nama-Bot",
+        "BotTracker": "PenjejakBot",
+        "Bot_Tracker": "Penjejak Bot",
+        "DisplayWidget": "Paparan PenjejakBot",
+        "PluginDescription": "Mengesan bot &amp; perayap dan mengira lawatan mereka tanpa menjejaki mereka dalam log pelawat.",
+        "Widgets": "PenjejakBot"
+    }
+}
