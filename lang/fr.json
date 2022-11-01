@@ -11,7 +11,7 @@
         "DisplayWidget": "Affichage BotTracker",
         "Error_Fileimport_Not_Even": "Le nombre de paramètres dans le fichier n'est pas pair",
         "Error_Fileimport_Upload": "Erreur pendant le télé-versement",
-        "Error_empty": "est vide!",
+        "Error_empty": "est vide !",
         "ExtraStats": "Stats supp.",
         "Import_help_format": "nomrobot1|clefrobot1|nomrobot2|clefrobot2|...",
         "Import_help_headline": "Format-de-données :",
