@@ -14,7 +14,7 @@
         "Error_empty": "є порожнім!",
         "ExtraStats": "додаткова Статистика",
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
-        "Import_help_headline": "Dataset-Format:",
+        "Import_help_headline": "Формат набору даних:",
         "Import_help_line1": "- кожен новий рядок буде видалений перед імпортом, так що ви можете вставити розрив після кожного запису бота",
         "Import_help_line2": "- число значень повинно бути більше",
         "Import_help_line3": "- немає ніякого роздільника \"|\" в кінці",
