@@ -28,6 +28,7 @@ class GetBotTracker extends Base
         parent::init();
 
         $this->name          = Piwik::translate('BotTracker_BotTracker');
+	$this->subcategoryId = 'BotTracker';
         // This defines in which order your report appears in the mobile app, in the menu and in the list of widgets
         $this->order = 99;
 
