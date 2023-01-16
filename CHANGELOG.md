@@ -1,4 +1,9 @@
 ## Changelog
+
+2.08
+- translation-updates (issue #97)
+- fix deprecated dynamic properties (issue #99)
+
 2.07
 - translation-updates (issue #94)
 
