@@ -2,6 +2,7 @@
 
 2.08
 - translation-updates (issue #97)
+- new OK-icon with transparency (issue #98)
 - fix deprecated dynamic properties (issue #99)
 
 2.07
