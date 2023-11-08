@@ -26,10 +26,9 @@ class GetTop10 extends Base
         parent::init();
 
         $this->name          = Piwik::translate('BotTracker_Top_10_Bots');
-	$this->subcategoryId = 'BotTracker';
+        $this->subcategoryId = 'BotTracker';
         // This defines in which order your report appears in the mobile app, in the menu and in the list of widgets
         $this->order = 99;
-
     }
 
     /**
@@ -40,14 +39,14 @@ class GetTop10 extends Base
      */
     public function configureView(ViewDataTable $view)
     {
-      	$view->config->translations['value'] = Piwik::translate('BotTracker_hits_by_Bot');
-      	$view->config->show_footer_icons = true;
-      	$view->config->show_insights = false;
-      	$view->config->selectable_columns = array("value");
-      	$view->config->max_graph_elements = 10;
-		$view->config->disable_row_evolution  = true;
-		$view->config->show_related_reports  = false;
-		$view->config->show_table_all_columns = false;
+        $view->config->translations['value'] = Piwik::translate('BotTracker_hits_by_Bot');
+        $view->config->show_footer_icons = true;
+        $view->config->show_insights = false;
+        $view->config->selectable_columns = array("value");
+        $view->config->max_graph_elements = 10;
+        $view->config->disable_row_evolution  = true;
+        $view->config->show_related_reports  = false;
+        $view->config->show_table_all_columns = false;
     }
 
     /**
@@ -61,13 +60,12 @@ class GetTop10 extends Base
         return array(); // eg return array(new XyzReport());
     }
 
-     public function getDefaultTypeViewDataTable()
-     {
-     	return 'graphPie';
-     }
-     public function alwaysUseDefaultViewDataTable()
-     {
-     	return true;
-     }
-
+    public function getDefaultTypeViewDataTable()
+    {
+        return 'graphPie';
+    }
+    public function alwaysUseDefaultViewDataTable()
+    {
+        return true;
+    }
 }

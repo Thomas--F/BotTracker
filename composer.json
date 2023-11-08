@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpunit/phpunit": "^10.4",
+        "squizlabs/php_codesniffer": "^3.7",
+        "pheromone/phpcs-security-audit": "^2.0",
+        "slevomat/coding-standard": "^8.14"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

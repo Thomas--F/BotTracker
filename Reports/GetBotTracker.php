@@ -28,10 +28,9 @@ class GetBotTracker extends Base
         parent::init();
 
         $this->name          = Piwik::translate('BotTracker_BotTracker');
-	$this->subcategoryId = 'BotTracker';
+        $this->subcategoryId = 'BotTracker';
         // This defines in which order your report appears in the mobile app, in the menu and in the list of widgets
         $this->order = 99;
-
     }
 
     /**
@@ -42,27 +41,27 @@ class GetBotTracker extends Base
      */
     public function configureView(ViewDataTable $view)
     {
-		$view->config->translations['botId'] = Piwik::translate('BotTracker_BotId');
-		$view->config->translations['botName'] = Piwik::translate('BotTracker_BotName');
-		$view->config->translations['botKeyword'] = Piwik::translate('BotTracker_BotKeyword');
-		$view->config->translations['botCount'] = Piwik::translate('BotTracker_BotCount');
-		$view->config->translations['botLastVisit'] = Piwik::translate('BotTracker_BotLastVisit');
-		$view->config->translations['label'] = Piwik::translate('BotTracker_BotActive');
-		$view->config->columns_to_display  = array('botName','botKeyword','botCount','botLastVisit','label');
-		$view->config->disable_row_evolution  = true;
-		$view->config->show_search = false;
-		$view->config->show_footer_icons = false;
-		$view->config->show_exclude_low_population = false;
-		$view->config->show_table_all_columns = false;
-		$view->config->show_insights = false;
-		$view->config->show_related_reports  = false;
-		$view->config->show_pivot_by_subtable = false;
-		$view->config->show_table_performance = false;
-		$view->config->show_all_views_icons = false;
-		$view->config->show_export = false;
-		$view->requestConfig->filter_limit = 25;
-		$view->requestConfig->filter_sort_column = 'botCount';
-		$view->requestConfig->filter_sort_order = 'desc';
+        $view->config->translations['botId'] = Piwik::translate('BotTracker_BotId');
+        $view->config->translations['botName'] = Piwik::translate('BotTracker_BotName');
+        $view->config->translations['botKeyword'] = Piwik::translate('BotTracker_BotKeyword');
+        $view->config->translations['botCount'] = Piwik::translate('BotTracker_BotCount');
+        $view->config->translations['botLastVisit'] = Piwik::translate('BotTracker_BotLastVisit');
+        $view->config->translations['label'] = Piwik::translate('BotTracker_BotActive');
+        $view->config->columns_to_display  = array('botName','botKeyword','botCount','botLastVisit','label');
+        $view->config->disable_row_evolution  = true;
+        $view->config->show_search = false;
+        $view->config->show_footer_icons = false;
+        $view->config->show_exclude_low_population = false;
+        $view->config->show_table_all_columns = false;
+        $view->config->show_insights = false;
+        $view->config->show_related_reports  = false;
+        $view->config->show_pivot_by_subtable = false;
+        $view->config->show_table_performance = false;
+        $view->config->show_all_views_icons = false;
+        $view->config->show_export = false;
+        $view->requestConfig->filter_limit = 25;
+        $view->requestConfig->filter_sort_column = 'botCount';
+        $view->requestConfig->filter_sort_order = 'desc';
     }
 
     /**
@@ -76,12 +75,11 @@ class GetBotTracker extends Base
         return array(); // eg return array(new XyzReport());
     }
     
-	public function configureWidgets(WidgetsList $widgetsList, ReportWidgetFactory $factory)
-	{
-		
-		$widgetsList->addWidgetConfig(
-        		$factory->createWidget()->setIsNotWidgetizable()
-    			);
-	}
-    
+    public function configureWidgets(WidgetsList $widgetsList, ReportWidgetFactory $factory)
+    {
+        
+        $widgetsList->addWidgetConfig(
+            $factory->createWidget()->setIsNotWidgetizable()
+        );
+    }
 }
