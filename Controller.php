@@ -43,10 +43,31 @@ class Controller extends ControllerAdmin
 
         $sitesList = APISitesManager::getInstance()->getSitesWithAdminAccess();
         $botList = APIBotTracker::getAllBotDataForConfig($siteID);
-        return $this->renderTemplate('index', [
-            'idSite' => $siteID,
-            'botList' => $botList,
-        ]);
+        $nonce = Nonce::getNonce('BotTracker.saveConfig');
+
+        // return $this->renderTemplate('index', [
+        //     'topMenu' => MenuTop::getInstance()->getMenu(),
+        //     'adminMenu' => MenuAdmin::getInstance()->getMenu(),
+        //     'idSite' => $siteID,
+        //     'botList' => $botList,
+        //     'nonce' => $nonce,
+        // ]);
+        $view = new View('@BotTracker/index');
+        $view->language = LanguagesManager::getLanguageCodeForCurrentUser();
+
+        $this->setBasicVariablesView($view);
+        $view->defaultReportSiteName = Site::getNameFor($siteID);
+        $view->assign('sitesList', $sitesList);
+        $view->assign('botList', $botList);
+        $view->assign('idSite', $siteID);
+        $view->assign('errorList', $errorList);
+
+        $view->nonce = Nonce::getNonce('BotTracker.saveConfig');
+        $view->adminMenu = MenuAdmin::getInstance()->getMenu();
+        $view->topMenu = MenuTop::getInstance()->getMenu();
+        $view->notifications = NotificationManager::getAllNotificationsToDisplay();
+
+        echo $view->render();
     }
 
 	public function config($siteID = 0, $errorList = array())
@@ -80,7 +101,6 @@ class Controller extends ControllerAdmin
         $view->phpVersion = phpversion();
         $view->phpIsNewEnough = version_compare($view->phpVersion, '5.3.0', '>=');
 
-
         echo $view->render();
     }
 
@@ -92,7 +112,7 @@ class Controller extends ControllerAdmin
         $siteID = $request->getIntegerParameter('idSite', 0);
         // $this->logToFile('configReload: siteID='.$siteID);
 
-        $this->config($siteID);
+        $this->index($siteID);
     }
 
     public function config_import()
@@ -126,7 +146,7 @@ class Controller extends ControllerAdmin
         } else {
                 $errorList[]=Piwik::translate('BotTracker_Error_Fileimport_Upload');
         }
-        $this->config($siteID, $errorList);
+        $this->index($siteID, $errorList);
     }
 
     public function saveConfig()
@@ -184,7 +204,7 @@ class Controller extends ControllerAdmin
                 }
             }
 
-            $this->config($siteID, $errorList);
+            $this->index($siteID, $errorList);
         } catch (\Exception $e) {
             echo $e;
         }
@@ -204,8 +224,7 @@ class Controller extends ControllerAdmin
             APIBotTracker::deleteBot($botId);
 
             $errorList[]='Bot '.$botId.Piwik::translate('BotTracker_Message_deleted');
-
-            $this->config($siteID, $errorList);
+            $this->index($siteID, $errorList);
         } catch (\Exception $e) {
             echo $e;
         }
@@ -223,7 +242,7 @@ class Controller extends ControllerAdmin
             $i = APIBotTracker::insert_default_bots($siteID);
             $errorList[] = $i." ".Piwik::translate('BotTracker_Message_bot_inserted');
 
-            $this->config($siteID, $errorList);
+            $this->index($siteID, $errorList);
         } catch (\Exception $e) {
             echo $e;
         }

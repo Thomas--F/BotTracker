@@ -4,26 +4,48 @@
 {% set title %}{{'BotTracker_BotTracker'|translate}}{% endset %}
 
 {% block content %}
+{% import 'macros.twig' as piwik %}
 
-<div vue-entry="BotTracker.Intro"></div>
-<div vue-entry="BotTracker.Summary"></div>
+{% if notifications is not empty and notifications|length %}
+    {% for notificationId, n in notifications %}
 
-<div id="button" style="display:inline;" >
-    <form enctype="multipart/form-data"
-     action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}"
-     method="POST">
-       <input type="hidden" value="{{ idSite }}" name="siteID" />
-       <input
-        type="submit"
-        value="{{'BotTracker_insert_db'|translate}} (35)"
-        name="submit"
-        class="submit btn" />
-    </form>
+        {{ n.message|notification({'id': notificationId, 'type': n.type, 'title': n.title, 'noclear': n.hasNoClear, 'context': n.context, 'raw': n.raw}, false) }}
+
+    {% endfor %}
+{% endif %}
+
+
+{% if errorList|length >= 1 %}
+<div id="messages" class="alert">
+   {% for error in errorList %}
+        <p>{{error}}</p>
+    {% endfor %}
 </div>
+{% endif %}
 
-<div class=card">
+<div class="card">
   <div class="card-content">
+    <div id="presentation">
+      <h2>{{'BotTracker_BotTracker'|translate}}</h2>
+      <p>{{'BotTracker_PluginDescription'|translate}}</p>
+      <form enctype="multipart/form-data"
+        action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}"
+        method="POST">
+        <input type="hidden" value="{{ idSite }}" name="siteID" />
+        <input
+            type="submit"
+            value="{{'BotTracker_insert_db'|translate}} (35)"
+            name="submit"
+            class="btn" />
+      </form>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-content">
+
   <p>{{'BotTracker_NoOfActiveBots'|translate}}: {{botList|length}}</p>
+  <form method="POST" action="{{ linkTo({'module':'BotTracker','action':'saveConfig'}) }}">
   <table class="card card-table entityTable">
     <thead>
         <tr><th>BotID</th>
@@ -36,18 +58,32 @@
         </tr>
     </thead>
 	{% for bot in botList %}
-		<tr>
-	       <td>{{bot.botId}}</td>
-	       <td>{{bot.idsite}}</td>
-	       <td>{{bot.botActive}}</td>
-           <td>{{bot.extra_stats}}</td>
-		  <td><input type="text" size="30" value="{{bot.botName}}" name="{{bot.botId}}_botName"/></td>
-		  <td><input type="text" size="32" maxlength="32" value="{{bot.botKeyword}}" name="{{bot.botId}}_botKeyword"/></td>
-		  <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'>
-            <span class="icon-delete"></span></a></td>
-		</tr>
+    <tr>
+        <td>{{bot.botId}}</td>
+        <td>{{bot.idsite}}</td>
+        <td>
+          <label>
+            <input type="checkbox" id="{{bot.botId}}_botActive" name="{{bot.botId}}_botActive" {{ bot.botActive == true ? "Checked" }} value="1" />
+            <span></span>
+          </label>
+        </td>
+        <td>
+          <label>
+            <input type="checkbox" id="{{bot.botId}}_extraStats" name="{{bot.botId}}_extraStats" {{ bot.extra_stats == true ? "Checked" }} value="1" />
+            <span></span>
+          </label>
+        </td>
+        <td><input type="text" size="30" value="{{bot.botName}}" name="{{bot.botId}}_botName"/></td>
+        <td><input type="text" size="32" maxlength="32" value="{{bot.botKeyword}}" name="{{bot.botId}}_botKeyword"/></td>
+        <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'><span class="icon-delete"></span></a></td>
+    </tr>
 	{% endfor %}
-    </table>
+  </table>
+  <input type="hidden" value="{{nonce}}" name="form_nonce" />
+  <input type="hidden" value="{{idSite}}" name="siteID" />
+
+  <input type="submit" value="{{'BotTracker_save_changes'|translate}}" name="submit" class="btn submit" />
+  </form>
 </div>
 </div>
 
