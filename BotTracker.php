@@ -95,9 +95,21 @@ class BotTracker extends \Piwik\Plugin
 
     public function registerEvents()
     {
-        return array(
+        return [
             'Tracker.isExcludedVisit'  => 'checkBot',
-        );
+            'Translate.getClientSideTranslationKeys' => 'getClientSideTranslationKeys',
+        ];
+    }
+
+    /**
+     * Get translations strings to js.
+     */
+    public function getClientSideTranslationKeys(&$translationKeys)
+    {
+        $translationKeys[] = 'BotTracker_BotTracker';
+        $translationKeys[] = 'BotTracker_PluginDescription';
+        $translationKeys[] = 'BotTracker_insert_db';
+        $translationKeys[] = 'BotTracker_NoOfActiveBots';
     }
 
     function checkBot(&$exclude, $request)

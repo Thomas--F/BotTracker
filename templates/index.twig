@@ -1,0 +1,54 @@
+
+{% extends 'admin.twig' %}
+
+{% set title %}{{'BotTracker_BotTracker'|translate}}{% endset %}
+
+{% block content %}
+
+<div vue-entry="BotTracker.Intro"></div>
+<div vue-entry="BotTracker.Summary"></div>
+
+<div id="button" style="display:inline;" >
+    <form enctype="multipart/form-data"
+     action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}"
+     method="POST">
+       <input type="hidden" value="{{ idSite }}" name="siteID" />
+       <input
+        type="submit"
+        value="{{'BotTracker_insert_db'|translate}} (35)"
+        name="submit"
+        class="submit btn" />
+    </form>
+</div>
+
+<div class=card">
+  <div class="card-content">
+  <p>{{'BotTracker_NoOfActiveBots'|translate}}: {{botList|length}}</p>
+  <table class="card card-table entityTable">
+    <thead>
+        <tr><th>BotID</th>
+            <th>SiteID</th>
+            <th>{{'BotTracker_BotActive'|translate}}</th>
+            <th>{{'BotTracker_ExtraStats'|translate}}</th>
+            <th>{{'BotTracker_BotName'|translate}}</th>
+            <th>{{'BotTracker_BotKeyword'|translate}}</th>
+            <th></th>
+        </tr>
+    </thead>
+	{% for bot in botList %}
+		<tr>
+	       <td>{{bot.botId}}</td>
+	       <td>{{bot.idsite}}</td>
+	       <td>{{bot.botActive}}</td>
+           <td>{{bot.extra_stats}}</td>
+		  <td><input type="text" size="30" value="{{bot.botName}}" name="{{bot.botId}}_botName"/></td>
+		  <td><input type="text" size="32" maxlength="32" value="{{bot.botKeyword}}" name="{{bot.botId}}_botKeyword"/></td>
+		  <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'>
+            <span class="icon-delete"></span></a></td>
+		</tr>
+	{% endfor %}
+    </table>
+</div>
+</div>
+
+{% endblock %}

@@ -12,7 +12,7 @@
         "Error_Fileimport_Not_Even": "Nummer och parametrar i filen måste vara lika",
         "Error_Fileimport_Upload": "Fel vid uppladdning",
         "Error_empty": "är tom!",
-        "ExtraStats": "extra statistik",
+        "ExtraStats": "Extra statistik",
         "Import_help_format": "botnamn1|botsökord1|botnamn2|botsökord2|…",
         "Import_help_headline": "Dataset-Format:",
         "Import_help_line1": "- varje radbrytning kommer att tas bort innan importen så att du kan använda dig av radbrytning efter varje bot-post",

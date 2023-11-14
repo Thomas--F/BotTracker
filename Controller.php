@@ -24,10 +24,32 @@ use Piwik\Plugins\BotTracker\API as APIBotTracker;
 use Piwik\Menu\MenuAdmin;
 use Piwik\Menu\MenuTop;
 use Piwik\Request;
+use Piwik\Plugin\ControllerAdmin;
 
-class Controller extends \Piwik\Plugin\Controller
+class Controller extends ControllerAdmin
 {
-    public function config($siteID = 0, $errorList = array())
+
+	public function index($siteID = 0, $errorList = [])
+    {
+        Piwik::checkUserHasSuperUserAccess();
+
+		// @todo: add Matomo logging.
+        // $this->logToFile('config: siteID='.$siteID);
+
+        if ($siteID==0) {
+            $request = Request::fromRequest();
+            $siteID = $request->getIntegerParameter('idSite', 0);
+        }
+
+        $sitesList = APISitesManager::getInstance()->getSitesWithAdminAccess();
+        $botList = APIBotTracker::getAllBotDataForConfig($siteID);
+        return $this->renderTemplate('index', [
+            'idSite' => $siteID,
+            'botList' => $botList,
+        ]);
+    }
+
+	public function config($siteID = 0, $errorList = array())
     {
         Piwik::checkUserHasSuperUserAccess();
 
@@ -73,7 +95,7 @@ class Controller extends \Piwik\Plugin\Controller
         $this->config($siteID);
     }
 
-    public function configImport()
+    public function config_import()
     {
         Piwik::checkUserHasSuperUserAccess();
 
@@ -189,7 +211,7 @@ class Controller extends \Piwik\Plugin\Controller
         }
     }
 
-    public function configInsertDb()
+    public function config_insert_db()
     {
         try {
             // Only admin is allowed to do this!

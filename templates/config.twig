@@ -20,7 +20,7 @@
                  only-sites-with-admin-access="true"
                  class="sites_autocomplete"
                  ng-model="sitesList.site"
-                 ng-change="BotTracker.configReload()"
+                 ng-change="BotTracker.config_reload()"
                  siteid="{{ idSite }}"
                  sitename="{{ defaultReportSiteName }}"
                  id="selectID"
@@ -29,7 +29,7 @@
         </section>
 
 		<div id="button" style="display:inline;" >
-			<form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'configInsertDb'})}}" method="POST">
+			<form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}" method="POST">
 				<input type="hidden" value="{{ idSite }}" name="siteID" />
 				<input type="submit" value="{{'BotTracker_insert_db'|translate}} (35)" name="submit" class="submit" />
 			</form>
@@ -64,7 +64,6 @@
 	       <td>{{bot.botId}}</td>
 	       <td>{{bot.idsite}}</td>
 	       <td><div piwik-field uicontrol="checkbox" name="{{bot.botId}}_botActive"
-                  		ng-model="botActive_{{bot.botId}}.enabled"
 	                    value="{% if bot.botActive == 1%}1{% endif %}"
 		      </div></td>
             <td><div piwik-field uicontrol="checkbox" name="{{bot.botId}}_extraStats"
@@ -114,7 +113,7 @@
 	//-->
 	</script>
 
-	<form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'configImport'})}}" method="POST">
+	<form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'config_import'})}}" method="POST">
  		<input type="hidden" name="MAX_FILE_SIZE" value="50000" />
 	    {{'BotTracker_Importfile'|translate}}[<a href="#" onClick="show_text('helptext'); return false;">?</a>]: <input name="importfile" type="file" />
  		<input type="submit" value="{{'BotTracker_send_file'|translate}}" />
