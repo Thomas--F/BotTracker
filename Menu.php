@@ -18,13 +18,13 @@ use Piwik\Piwik;
  */
 class Menu extends \Piwik\Plugin\Menu
 {
-    
+
     public function configureAdminMenu(MenuAdmin $menu)
     {
         if (Piwik::hasUserSuperUserAccess()) {
             $menu->addSystemItem(
                 Piwik::translate('BotTracker_BotTracker'),
-                array('module' => 'BotTracker', 'action' => 'config'),
+                array('module' => 'BotTracker', 'action' => 'index'),
                 $orderId = 99
             );
         }

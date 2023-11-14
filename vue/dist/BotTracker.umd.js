@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("CoreHome"), require("vue"), require("CorePluginsAdmin"));
+		module.exports = factory(require("CoreHome"), require("vue"));
 	else if(typeof define === 'function' && define.amd)
-		define(["CoreHome", , "CorePluginsAdmin"], factory);
+		define(["CoreHome", ], factory);
 	else if(typeof exports === 'object')
-		exports["BotTracker"] = factory(require("CoreHome"), require("vue"), require("CorePluginsAdmin"));
+		exports["BotTracker"] = factory(require("CoreHome"), require("vue"));
 	else
-		root["BotTracker"] = factory(root["CoreHome"], root["Vue"], root["CorePluginsAdmin"]);
-})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__19dc__, __WEBPACK_EXTERNAL_MODULE__8bbf__, __WEBPACK_EXTERNAL_MODULE_a5a2__) {
+		root["BotTracker"] = factory(root["CoreHome"], root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__19dc__, __WEBPACK_EXTERNAL_MODULE__8bbf__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -110,13 +110,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
 
 /***/ }),
 
-/***/ "a5a2":
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_a5a2__;
-
-/***/ }),
-
 /***/ "fae3":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -126,8 +119,6 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "Intro", function() { return /* reexport */ Intro; });
-__webpack_require__.d(__webpack_exports__, "Summary", function() { return /* reexport */ Summary; });
-__webpack_require__.d(__webpack_exports__, "Settings", function() { return /* reexport */ Settings; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -148,14 +139,29 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/BotTracker/vue/src/Intro/Intro.vue?vue&type=template&id=0de8321e
+// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/BotTracker/vue/src/Intro/Intro.vue?vue&type=template&id=13180b41
 
+var _hoisted_1 = {
+  class: "sites_autocomplete"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_SiteSelector = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("SiteSelector");
+
   var _directive_content_intro = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveDirective"])("content-intro");
 
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])((Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", null, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("h2", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('BotTracker_BotTracker')), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('BotTracker_PluginDescription')), 1)], 512)), [[_directive_content_intro]]);
+  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", null, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("h2", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('BotTracker_BotTracker')), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('BotTracker_PluginDescription')), 1)], 512), [[_directive_content_intro]]), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", _hoisted_1, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_SiteSelector, {
+    modelValue: _ctx.site,
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return _ctx.site = $event;
+    }),
+    "show-selected-site": true,
+    "switch-site-on-select": false,
+    "show-all-sites-item": false,
+    showselectedsite: true,
+    id: "defaultReportSiteSelector"
+  }, null, 8, ["modelValue"])])], 64);
 }
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Intro/Intro.vue?vue&type=template&id=0de8321e
+// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Intro/Intro.vue?vue&type=template&id=13180b41
 
 // EXTERNAL MODULE: external "CoreHome"
 var external_CoreHome_ = __webpack_require__("19dc");
@@ -177,106 +183,7 @@ var external_CoreHome_ = __webpack_require__("19dc");
 Introvue_type_script_lang_ts.render = render
 
 /* harmony default export */ var Intro = (Introvue_type_script_lang_ts);
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/BotTracker/vue/src/Summary/Summary.vue?vue&type=template&id=1b5142bd
-
-function Summaryvue_type_template_id_1b5142bd_render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_ContentBlock = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("ContentBlock");
-
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_ContentBlock, {
-    "content-title": "My title",
-    "help-url": "https://matomo.org"
-  });
-}
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Summary/Summary.vue?vue&type=template&id=1b5142bd
-
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--14-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/BotTracker/vue/src/Summary/Summary.vue?vue&type=script&lang=ts
-
-
-/* harmony default export */ var Summaryvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
-  components: {
-    ContentBlock: external_CoreHome_["ContentBlock"]
-  }
-}));
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Summary/Summary.vue?vue&type=script&lang=ts
- 
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Summary/Summary.vue
-
-
-
-Summaryvue_type_script_lang_ts.render = Summaryvue_type_template_id_1b5142bd_render
-
-/* harmony default export */ var Summary = (Summaryvue_type_script_lang_ts);
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/BotTracker/vue/src/Settings/Settings.vue?vue&type=template&id=1f101d48
-
-function Settingsvue_type_template_id_1f101d48_render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_Field = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("Field");
-
-  var _directive_form = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveDirective"])("form");
-
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])((Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", null, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_Field, {
-    uicontrol: "multituple",
-    name: "multitupletextvalue",
-    title: "Multiple values with values (two)",
-    "inline-help": "Multi Tuple again.",
-    "ui-control-attributes": {
-      field1: {
-        key: 'index',
-        title: 'Index',
-        uiControl: 'text',
-        availableValues: null
-      },
-      field2: {
-        key: 'value',
-        title: 'Value',
-        uiControl: 'text',
-        availableValues: null
-      }
-    },
-    modelValue: _ctx.values,
-    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.values = $event;
-    })
-  }, null, 8, ["modelValue"])], 512)), [[_directive_form]]);
-}
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Settings/Settings.vue?vue&type=template&id=1f101d48
-
-// EXTERNAL MODULE: external "CorePluginsAdmin"
-var external_CorePluginsAdmin_ = __webpack_require__("a5a2");
-
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--14-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/BotTracker/vue/src/Settings/Settings.vue?vue&type=script&lang=ts
-
-
-/* harmony default export */ var Settingsvue_type_script_lang_ts = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
-  components: {
-    Field: external_CorePluginsAdmin_["Field"]
-  },
-  directives: {
-    Form: external_CorePluginsAdmin_["Form"]
-  },
-  data: function data() {
-    return {
-      values: [{
-        index: 'test',
-        value: 'myfoo'
-      }, {
-        index: 'test 2',
-        value: 'myfoo 2'
-      }]
-    };
-  }
-}));
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Settings/Settings.vue?vue&type=script&lang=ts
- 
-// CONCATENATED MODULE: ./plugins/BotTracker/vue/src/Settings/Settings.vue
-
-
-
-Settingsvue_type_script_lang_ts.render = Settingsvue_type_template_id_1f101d48_render
-
-/* harmony default export */ var Settings = (Settingsvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./plugins/BotTracker/vue/src/index.ts
-
-
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 

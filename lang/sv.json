@@ -32,6 +32,7 @@
         "insert_db": "Infoga standard-bots",
         "save_changes": "Spara",
         "send_file": "Ladda upp och bearbeta fil",
-        "true": "Ja"
+        "true": "Ja",
+        "AddNewBot": "Lägg till ny bot"
     }
 }

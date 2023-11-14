@@ -23,6 +23,9 @@
 </div>
 {% endif %}
 
+
+<div vue-entry="BotTracker.Intro"></div>
+
 <div class="card">
   <div class="card-content">
     <div id="presentation">
@@ -84,6 +87,75 @@
 
   <input type="submit" value="{{'BotTracker_save_changes'|translate}}" name="submit" class="btn submit" />
   </form>
+</div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div id="addNew">
+      <h2>{{'BotTracker_AddNewBot'|translate}}</h2>
+
+      <h3>{{'BotTracker_Single'|translate}}</h3>
+      <form method="POST" action="{{ linkTo({'module':'BotTracker','action':'addNew'}) }}">
+        <table class="card card-table entityTable">
+          <thead>
+            <tr><th>BotID</th>
+                <th>SiteID</th>
+                <th>{{'BotTracker_BotActive'|translate}}</th>
+                <th>{{'BotTracker_ExtraStats'|translate}}</th>
+                <th>{{'BotTracker_BotName'|translate}}</th>
+                <th>{{'BotTracker_BotKeyword'|translate}}</th>
+                <th></th>
+            </tr>
+          </thead>
+          <tr>
+            <td>{{'BotTracker_New'|translate}}</td>
+            <td>{{idSite}}</td>
+            <td>
+              <label>
+                <input type="checkbox" id="new_botActive" name="new_botActive" value="1" />
+                <span></span>
+              </label>
+            </td>
+            <td>
+                <label>
+                  <input type="checkbox" id="new_extraStats" name="new_extraStats" value="1" />
+                  <span></span>
+                </label>
+            </td>
+            <td><input type="text" size="30" name="new_botName"/></td>
+            <td><input type="text" size="32" maxlength="32" name="new_botKeyword"/></td>
+          </tr>
+        </table>
+        <input type="hidden" value="{{nonce}}" name="form_nonce" />
+        <input type="hidden" value="{{idSite}}" name="siteID" />
+        <input type="submit" value="{{'BotTracker_save_changes'|translate}}" name="submit" class="btn" />
+    </form>
+    <hr />
+    <h3>{{'BotTracker_File'|translate}}</h3>
+    <div class="form-group row matomo-form-field">
+    <form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'config_import'})}}" method="POST">
+      <input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+      <div class="col s12 input-field m6">
+        {{'BotTracker_Importfile'|translate}} <input name="importfile" type="file" />
+        <input class="btn" type="submit" value="{{'BotTracker_send_file'|translate}}" />
+       </div>
+       <div class="col s12 m6">
+         <div class="form-help">
+           <div class="inline-help">
+             <h4>{{'BotTracker_Import_help_headline'|translate}}</h4>
+             <p>{{'BotTracker_Import_help_format'|translate}}</p>
+             <ul>
+               <li>{{'BotTracker_Import_help_line1'|translate}}</li>
+               <li>{{'BotTracker_Import_help_line2'|translate}}</li>
+               <li>{{'BotTracker_Import_help_line3'|translate}}</li>
+             </ul>
+           </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 </div>
 </div>
 

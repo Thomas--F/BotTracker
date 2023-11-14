@@ -45,13 +45,6 @@ class Controller extends ControllerAdmin
         $botList = APIBotTracker::getAllBotDataForConfig($siteID);
         $nonce = Nonce::getNonce('BotTracker.saveConfig');
 
-        // return $this->renderTemplate('index', [
-        //     'topMenu' => MenuTop::getInstance()->getMenu(),
-        //     'adminMenu' => MenuAdmin::getInstance()->getMenu(),
-        //     'idSite' => $siteID,
-        //     'botList' => $botList,
-        //     'nonce' => $nonce,
-        // ]);
         $view = new View('@BotTracker/index');
         $view->language = LanguagesManager::getLanguageCodeForCurrentUser();
 
@@ -70,39 +63,7 @@ class Controller extends ControllerAdmin
         echo $view->render();
     }
 
-	public function config($siteID = 0, $errorList = array())
-    {
-        Piwik::checkUserHasSuperUserAccess();
 
-        // $this->logToFile('config: siteID='.$siteID);
-
-        if ($siteID==0) {
-            $request = Request::fromRequest();
-            $siteID = $request->getIntegerParameter('idSite', 0);
-        }
-
-        $sitesList = APISitesManager::getInstance()->getSitesWithAdminAccess();
-        $botList = APIBotTracker::getAllBotDataForConfig($siteID);
-
-        $view = new View('@BotTracker/config');
-        $view->language = LanguagesManager::getLanguageCodeForCurrentUser();
-
-        $this->setBasicVariablesView($view);
-        $view->defaultReportSiteName = Site::getNameFor($siteID);
-        $view->assign('sitesList', $sitesList);
-        $view->assign('botList', $botList);
-        $view->assign('idSite', $siteID);
-        $view->assign('errorList', $errorList);
-
-        $view->nonce = Nonce::getNonce('BotTracker.saveConfig');
-        $view->adminMenu = MenuAdmin::getInstance()->getMenu();
-        $view->topMenu = MenuTop::getInstance()->getMenu();
-        $view->notifications = NotificationManager::getAllNotificationsToDisplay();
-        $view->phpVersion = phpversion();
-        $view->phpIsNewEnough = version_compare($view->phpVersion, '5.3.0', '>=');
-
-        echo $view->render();
-    }
 
     public function configReload()
     {
@@ -185,6 +146,24 @@ class Controller extends ControllerAdmin
                     }
                 }
             }
+            $this->index($siteID, $errorList);
+        } catch (\Exception $e) {
+            echo $e;
+        }
+    }
+
+
+    public function addNew()
+    {
+        try {
+            // Only admin is allowed to do this!
+            Piwik::checkUserHasSuperUserAccess();
+            $request = Request::fromRequest();
+            $siteID = $request->getIntegerParameter('idSite', 0);
+
+            $botList = APIBotTracker::getAllBotDataForConfig($siteID);
+
+            $errorList = [];
 
             $botName = trim(Request::fromRequest()->getStringParameter('new_botName', ''));
             $botKeyword = trim(Request::fromRequest()->getStringParameter('new_botKeyword', ''));
