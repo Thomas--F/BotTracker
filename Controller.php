@@ -29,11 +29,11 @@ use Piwik\Plugin\ControllerAdmin;
 class Controller extends ControllerAdmin
 {
 
-	public function index($siteID = 0, $errorList = [])
+    public function index($siteID = 0, $errorList = [])
     {
         Piwik::checkUserHasSuperUserAccess();
 
-		// @todo: add Matomo logging.
+        // @todo: add Matomo logging.
         // $this->logToFile('config: siteID='.$siteID);
 
         if ($siteID==0) {
