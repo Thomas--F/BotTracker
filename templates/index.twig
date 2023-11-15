@@ -23,24 +23,19 @@
 </div>
 {% endif %}
 
-
-<div vue-entry="BotTracker.Intro"></div>
-
 <div class="card">
   <div class="card-content">
     <div id="presentation">
       <h2>{{'BotTracker_BotTracker'|translate}}</h2>
       <p>{{'BotTracker_PluginDescription'|translate}}</p>
-      <form enctype="multipart/form-data"
-        action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}"
-        method="POST">
-        <input type="hidden" value="{{ idSite }}" name="siteID" />
-        <input
-            type="submit"
-            value="{{'BotTracker_insert_db'|translate}} (35)"
-            name="submit"
-            class="btn" />
-      </form>
+
+      <p>{{'BotTracker_SelectAWebsite'|translate}}</p>
+      <div
+        vue-entry="CoreHome.SiteSelector"
+        show-selected-site="true"
+        show-all-sites-item="false"
+        class="sites_autocomplete"
+      ></div>
     </div>
   </div>
 </div>
@@ -93,8 +88,19 @@
 <div class="card">
   <div class="card-content">
     <div id="addNew">
-      <h2>{{'BotTracker_AddNewBot'|translate}}</h2>
+      <h2>{{'BotTracker_AddNewBots'|translate}}</h2>
 
+      <form enctype="multipart/form-data"
+      action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}"
+      method="POST">
+        <input type="hidden" value="{{ idSite }}" name="siteID" />
+        <input
+            type="submit"
+            value="{{'BotTracker_insert_db'|translate}} (35)"
+            name="submit"
+            class="btn" />
+      </form>
+      <hr />
       <h3>{{'BotTracker_Single'|translate}}</h3>
       <form method="POST" action="{{ linkTo({'module':'BotTracker','action':'addNew'}) }}">
         <table class="card card-table entityTable">

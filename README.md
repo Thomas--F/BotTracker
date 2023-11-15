@@ -36,15 +36,3 @@ GPL v3 / fair use
 Please direct any feedback to:
 
 * [https://github.com/Thomas--F/BotTracker/issues](https://github.com/Thomas--F/BotTracker/issues)
-
-## Development
-
-When working with Vue components, you need to build them, run in site root:
-
-```bash
-npm install -g npm@10.2.3
-npm install
-./console development:enable
-./console vue:build CoreHome
-./console vue:build BotTracker
-```
