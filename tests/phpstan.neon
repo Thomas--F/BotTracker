@@ -1,0 +1,7 @@
+includes:
+  - /var/www/html/plugins/BotTracker/vendor/phpstan/phpstan-deprecation-rules/rules.neon
+parameters:
+  excludePaths:
+    - /var/www/html/plugins/BotTracker/vendor
+  bootstrapFiles:
+    - /var/www/html/plugins/BotTracker/tests/ci/phpstan.php

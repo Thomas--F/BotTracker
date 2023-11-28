@@ -1,6 +1,6 @@
 {
     "name": "BotTracker",
-    "version": "2.08",
+    "version": "3.0.0",
     "keywords": ["BotTracker"],
     "homepage": "https://github.com/Thomas--F/BotTracker",
     "description": "Detection of bots & spiders and count their visits without tracking them in the visitor-log.",
@@ -17,7 +17,7 @@
 	        "source": "https://github.com/Thomas--F/BotTracker/"
 	},
     "require": {
-        "piwik": ">=4.0.0-dev,<5.0.0",
+        "piwik": ">=5.0.0-rc1,<6.0.0-b1",
         "php": ">=7.2.5"
     }
 }

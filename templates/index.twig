@@ -1,0 +1,168 @@
+
+{% extends 'admin.twig' %}
+
+{% set title %}{{'BotTracker_BotTracker'|translate}}{% endset %}
+
+{% block content %}
+{% import 'macros.twig' as piwik %}
+
+{% if notifications is not empty and notifications|length %}
+    {% for notificationId, n in notifications %}
+
+        {{ n.message|notification({'id': notificationId, 'type': n.type, 'title': n.title, 'noclear': n.hasNoClear, 'context': n.context, 'raw': n.raw}, false) }}
+
+    {% endfor %}
+{% endif %}
+
+
+{% if errorList|length >= 1 %}
+<div id="messages" class="alert">
+   {% for error in errorList %}
+        <p>{{error}}</p>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="card">
+  <div class="card-content">
+    <div id="presentation">
+      <h2>{{'BotTracker_BotTracker'|translate}}</h2>
+      <p>{{'BotTracker_PluginDescription'|translate}}</p>
+
+      <p>{{'BotTracker_SelectAWebsite'|translate}}</p>
+      <div
+        vue-entry="CoreHome.SiteSelector"
+        show-selected-site="true"
+        show-all-sites-item="false"
+        class="sites_autocomplete"
+      ></div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-content">
+
+  <p>{{'BotTracker_NoOfActiveBots'|translate}}: {{botList|length}}</p>
+  <form method="POST" action="{{ linkTo({'module':'BotTracker','action':'saveConfig'}) }}">
+  <table class="card card-table entityTable">
+    <thead>
+        <tr><th>BotID</th>
+            <th>SiteID</th>
+            <th>{{'BotTracker_BotActive'|translate}}</th>
+            <th>{{'BotTracker_ExtraStats'|translate}}</th>
+            <th>{{'BotTracker_BotName'|translate}}</th>
+            <th>{{'BotTracker_BotKeyword'|translate}}</th>
+            <th></th>
+        </tr>
+    </thead>
+	{% for bot in botList %}
+    <tr>
+        <td>{{bot.botId}}</td>
+        <td>{{bot.idsite}}</td>
+        <td>
+          <label>
+            <input type="checkbox" id="{{bot.botId}}_botActive" name="{{bot.botId}}_botActive" {{ bot.botActive == true ? "Checked" }} value="1" />
+            <span></span>
+          </label>
+        </td>
+        <td>
+          <label>
+            <input type="checkbox" id="{{bot.botId}}_extraStats" name="{{bot.botId}}_extraStats" {{ bot.extra_stats == true ? "Checked" }} value="1" />
+            <span></span>
+          </label>
+        </td>
+        <td><input type="text" size="30" value="{{bot.botName}}" name="{{bot.botId}}_botName"/></td>
+        <td><input type="text" size="32" maxlength="32" value="{{bot.botKeyword}}" name="{{bot.botId}}_botKeyword"/></td>
+        <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'><span class="icon-delete"></span></a></td>
+    </tr>
+	{% endfor %}
+  </table>
+  <input type="hidden" value="{{nonce}}" name="form_nonce" />
+  <input type="hidden" value="{{idSite}}" name="siteID" />
+
+  <input type="submit" value="{{'BotTracker_save_changes'|translate}}" name="submit" class="btn submit" />
+  </form>
+</div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div id="addNew">
+      <h2>{{'BotTracker_AddNewBots'|translate}}</h2>
+
+      <form enctype="multipart/form-data"
+      action="{{ linkTo({'module':'BotTracker','action':'config_insert_db'})}}"
+      method="POST">
+        <input type="hidden" value="{{ idSite }}" name="siteID" />
+        <input
+            type="submit"
+            value="{{'BotTracker_insert_db'|translate}} (35)"
+            name="submit"
+            class="btn" />
+      </form>
+      <hr />
+      <h3>{{'BotTracker_Single'|translate}}</h3>
+      <form method="POST" action="{{ linkTo({'module':'BotTracker','action':'addNew'}) }}">
+        <table class="card card-table entityTable">
+          <thead>
+            <tr><th>BotID</th>
+                <th>SiteID</th>
+                <th>{{'BotTracker_BotActive'|translate}}</th>
+                <th>{{'BotTracker_ExtraStats'|translate}}</th>
+                <th>{{'BotTracker_BotName'|translate}}</th>
+                <th>{{'BotTracker_BotKeyword'|translate}}</th>
+                <th></th>
+            </tr>
+          </thead>
+          <tr>
+            <td>{{'BotTracker_New'|translate}}</td>
+            <td>{{idSite}}</td>
+            <td>
+              <label>
+                <input type="checkbox" id="new_botActive" name="new_botActive" value="1" />
+                <span></span>
+              </label>
+            </td>
+            <td>
+                <label>
+                  <input type="checkbox" id="new_extraStats" name="new_extraStats" value="1" />
+                  <span></span>
+                </label>
+            </td>
+            <td><input type="text" size="30" name="new_botName"/></td>
+            <td><input type="text" size="32" maxlength="32" name="new_botKeyword"/></td>
+          </tr>
+        </table>
+        <input type="hidden" value="{{nonce}}" name="form_nonce" />
+        <input type="hidden" value="{{idSite}}" name="siteID" />
+        <input type="submit" value="{{'BotTracker_save_changes'|translate}}" name="submit" class="btn" />
+    </form>
+    <hr />
+    <h3>{{'BotTracker_File'|translate}}</h3>
+    <div class="form-group row matomo-form-field">
+    <form enctype="multipart/form-data" action="{{ linkTo({'module':'BotTracker','action':'config_import'})}}" method="POST">
+      <input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+      <div class="col s12 input-field m6">
+        {{'BotTracker_Importfile'|translate}} <input name="importfile" type="file" />
+        <input class="btn" type="submit" value="{{'BotTracker_send_file'|translate}}" />
+       </div>
+       <div class="col s12 m6">
+         <div class="form-help">
+           <div class="inline-help">
+             <h4>{{'BotTracker_Import_help_headline'|translate}}</h4>
+             <p>{{'BotTracker_Import_help_format'|translate}}</p>
+             <ul>
+               <li>{{'BotTracker_Import_help_line1'|translate}}</li>
+               <li>{{'BotTracker_Import_help_line2'|translate}}</li>
+               <li>{{'BotTracker_Import_help_line3'|translate}}</li>
+             </ul>
+           </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

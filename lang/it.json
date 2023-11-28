@@ -12,7 +12,7 @@
         "Error_Fileimport_Not_Even": "Il numero di parametri nel file non è pari",
         "Error_Fileimport_Upload": "Errore durante il caricamento",
         "Error_empty": "è vuoto!",
-        "ExtraStats": "extra Statistiche",
+        "ExtraStats": "Extra Statistiche",
         "Import_help_format": "nomebot1|parolachiavebot1|nomebot2|parolachiavebot2|...",
         "Import_help_headline": "Formato-Dataset:",
         "Import_help_line1": "- tutti gli \"a capo\" verranno rimossi prima dell'importazione, così che tu possa inserire un'interruzione dopo ogni immissione di un bot",

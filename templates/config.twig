@@ -46,10 +46,10 @@
 		<br>
 		<div>
    {% endif %}
-   
+
    	<font size=+2>{{'BotTracker_NoOfActiveBots'|translate}}: {{botList|length}} <br><br></font>
 	<form method="POST" action="{{ linkTo({'module':'BotTracker','action':'saveConfig'}) }}">
-	
+
 	<table class="adminTable" style="width: 700px;">
 	<tr><th style="text-align: left; padding: 0px 5px;">BotID</th>
 	    <th style="text-align: left; padding: 0px 5px;">Side ID</th>
@@ -58,13 +58,12 @@
 	    <th style="text-align: left; padding: 0px 5px;">{{'BotTracker_BotName'|translate}}</th>
 	    <th style="text-align: left; padding: 0px 5px;">{{'BotTracker_BotKeyword'|translate}}</th>
 	    <th style="text-align: left; padding: 0px 5px;"></th>
-	</tr>    
+	</tr>
 	{% for bot in botList %}
 		<tr>
 	       <td>{{bot.botId}}</td>
 	       <td>{{bot.idsite}}</td>
 	       <td><div piwik-field uicontrol="checkbox" name="{{bot.botId}}_botActive"
-                  		ng-model="botActive_{{bot.botId}}.enabled"
 	                    value="{% if bot.botActive == 1%}1{% endif %}"
 		      </div></td>
             <td><div piwik-field uicontrol="checkbox" name="{{bot.botId}}_extraStats"
@@ -75,8 +74,8 @@
 		  <td><input type="text" size="32" maxlength="32" value="{{bot.botKeyword}}" name="{{bot.botId}}_botKeyword"/></td>
 		  <td><a href='{{ linkTo({'module':'BotTracker','action':'deleteBotEntry', 'idSite':idSite, 'botId':bot.botId}) }}'><span class="icon-delete"></span></a></td>
 		</tr>
-	{% endfor %}	
-	
+	{% endfor %}
+
 		<tr>
 	     <td>new</td>
 	     <td>{{idSite}}</td>
@@ -91,12 +90,12 @@
 		<td><input type="text" size="30" name="new_botName"/></td>
 		<td><input type="text" size="32" maxlength="32" name="new_botKeyword"/></td>
 		</tr>
-	
-	</table>	
+
+	</table>
 
 	<input type="hidden" value="{{nonce}}" name="form_nonce" />
 	<input type="hidden" value="{{idSite}}" name="siteID" />
-	
+
 	<input type="submit" value="{{'BotTracker_save_changes'|translate}}" name="submit" class="submit" />
 	</form>
 
@@ -132,7 +131,7 @@
 </div>
 
 
-    
+
 {% endif %}
 
 {% endblock %}

@@ -13,22 +13,22 @@ namespace Piwik\Plugins\BotTracker;
 
 use Piwik\Piwik;
 
-
 function getActiveIcon($botActive)
 {
-	if ($botActive == 1){
-		$pathWithCode = 'plugins/BotTracker/images/ok.png';
-	} else {
-		$pathWithCode = 'plugins/BotTracker/images/delete.png';
-	}
+    if ($botActive == 1) {
+        $pathWithCode = 'plugins/BotTracker/images/ok.png';
+    } else {
+        $pathWithCode = 'plugins/BotTracker/images/delete.png';
+    }
 
-	return $pathWithCode;
+    return $pathWithCode;
 }
 
-function getRequest($key) {   
+function getRequest($key)
+{
     return (isset($_REQUEST[$key]) && $_REQUEST[$key])?$_REQUEST[$key]:'';
 }
-function getServer($key) {   
+function getServer($key)
+{
     return (isset($_SERVER[$key]) && $_SERVER[$key])?$_SERVER[$key]:'';
 }
-
