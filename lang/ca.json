@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Afegeix nous bots",
         "BotActive": "Actiu",
         "BotCount": "Recompte de visites",
         "BotKeyword": "Paraula clau",
@@ -13,6 +14,7 @@
         "Error_Fileimport_Upload": "Error en carregar arxiu",
         "Error_empty": "està buit!",
         "ExtraStats": "Estadístiques addicionals",
+        "File": "Arxiu",
         "Import_help_format": "nombot1|paraulaclaubot1|nombot2|paraulaclaubot2|...",
         "Import_help_headline": "Format de les dades:",
         "Import_help_line1": "- Cada salt de línia s'eliminarà abans de la importació, de manera que podeu inserir un retorn després de cada entrada de bot",
@@ -21,8 +23,11 @@
         "Importfile": "Escull arxiu per importar...",
         "Message_bot_inserted": "Bots inserits",
         "Message_deleted": "s'ha esborrat!",
+        "New": "Nou",
         "NoOfActiveBots": "Nombre de bots per a aquest lloc",
         "PluginDescription": "Detecta bots i aranyes i compta les seves visites sense fer-ne un seguiment al registre de visitants.",
+        "SelectAWebsite": "Escolliu un lloc web",
+        "Single": "Únic",
         "Top10": "Top10",
         "Top_10_Bots": "Els 10 bots principals",
         "Widgets": "Seguidor de bots",
