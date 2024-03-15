@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Voeg nieuwe bots toe",
         "BotActive": "Actief",
         "BotCount": "Aantal bezoeken",
         "BotKeyword": "Sleutelwoord",
@@ -13,6 +14,7 @@
         "Error_Fileimport_Upload": "Fout tijdens uploaden",
         "Error_empty": "is leeg!",
         "ExtraStats": "Extra statistieken",
+        "File": "Bestand",
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_headline": "Dataset-Format:",
         "Import_help_line1": "- elke regelinvoer wordt vóór het importeren verwijderd, zodat u na elke bot invoer een pauze kunt invoegen",
@@ -21,8 +23,10 @@
         "Importfile": "Kies uploadbestand...",
         "Message_bot_inserted": "Bots ingevoegd",
         "Message_deleted": "was verwijderd!",
+        "New": "Nieuw",
         "NoOfActiveBots": "Aantal bots voor deze site",
         "PluginDescription": "Detecteert bots en zoekmachines en telt hun bezoek zonder deze in het bezoekerslog te vermelden.",
+        "SelectAWebsite": "Selecteer een website",
         "Top10": "Top10",
         "Top_10_Bots": "Top 10 bots",
         "Widgets": "BotTracker",
