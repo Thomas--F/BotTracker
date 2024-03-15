@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Añadir nuevos bots",
         "BotActive": "Activo",
         "BotCount": "Contador de visitas",
         "BotKeyword": "Palabra clave",
@@ -12,7 +13,8 @@
         "Error_Fileimport_Not_Even": "Número de parámetros en el archivo no es par",
         "Error_Fileimport_Upload": "Error durante la carga",
         "Error_empty": "¡está vacío!",
-        "ExtraStats": "Estadísticas extras",
+        "ExtraStats": "Estadísticas adicionales",
+        "File": "Archivo",
         "Import_help_format": "nombrebot1|botpalabra1|nombrebot2|botpalabra2|...",
         "Import_help_headline": "Formato de los datos:",
         "Import_help_line1": "- se eliminarán todos los saltos de línea antes de la importación, por lo que puedes insertar un salto después de cada entrada del bot",
@@ -21,8 +23,11 @@
         "Importfile": "Elegir Importfile...",
         "Message_bot_inserted": "Bots insertados",
         "Message_deleted": "¡fue borrado!",
+        "New": "Nuevo",
         "NoOfActiveBots": "Número de Bots para este sitio",
         "PluginDescription": "Detecta bots & spiders y las contabiliza sin agregarlas al registro de visitas.",
+        "SelectAWebsite": "Seleccione una página web",
+        "Single": "Único",
         "Top10": "Top10",
         "Top_10_Bots": "Los 10 Bots principales",
         "Widgets": "BotTracker",
