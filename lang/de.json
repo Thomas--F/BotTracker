@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Neue Bots einfügen",
         "BotActive": "Aktiv",
         "BotCount": "Anzahl Zugriffe",
         "BotKeyword": "Schlüsselwort",
@@ -13,6 +14,7 @@
         "Error_Fileimport_Upload": "Fehler beim Upload",
         "Error_empty": "ist leer!",
         "ExtraStats": "erw. Statistik",
+        "File": "Datei",
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_headline": "Datenformat:",
         "Import_help_line1": "- jeder Zeilenumbruch wird vor dem Import gelöscht, es können also Umbrüche nach jedem Bot-Eintrag eingefügt werden",
@@ -21,8 +23,11 @@
         "Importfile": "Importdatei wählen...",
         "Message_bot_inserted": "Bots eingefügt",
         "Message_deleted": "wurde gelöscht!",
+        "New": "Neu",
         "NoOfActiveBots": "Anzahl Bots für diese Seite",
         "PluginDescription": "Ermitteln und Zählen von Bot & WebSpider-Zugriffen, ohne dass diese im Besucher-Log erscheinen.",
+        "SelectAWebsite": "Selektier eine Website",
+        "Single": "Alleine",
         "Top10": "Top 10",
         "Top_10_Bots": "Top 10 Bots",
         "Widgets": "BotTracker",
