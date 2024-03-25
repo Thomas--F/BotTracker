@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Προσθήκη νέων bot",
         "BotActive": "Ενεργό",
         "BotCount": "Αριθμός επισκέψεων",
         "BotKeyword": "Λέξη κλειδί",
@@ -12,7 +13,8 @@
         "Error_Fileimport_Not_Even": "Ο αριθμός παραμέτρου στο αρχείο δεν είναι άρτιος",
         "Error_Fileimport_Upload": "Σφάλμα κατά το ανέβασμα",
         "Error_empty": "είναι κενό!",
-        "ExtraStats": "επιπλέον στατιστικά",
+        "ExtraStats": "Επιπλέον Στατιστικά",
+        "File": "Αρχείο",
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_headline": "Μορφή συνόλου δεδομένων:",
         "Import_help_line1": "- κάθε αλλαγή γραμμής θα αφαιρεθεί πριν την εισαγωγή, για να μπορείτε να εισαγάγετε μια αποκοπή μετά από κάθε εγγραφή του bot",
@@ -21,8 +23,11 @@
         "Importfile": "Επιλέξτε αρχείο για εισαγωγή...",
         "Message_bot_inserted": "Μποτ που εισήχθησαν",
         "Message_deleted": "διαγράφηκε!",
+        "New": "Νέο",
         "NoOfActiveBots": "Αριθμός μποτ σε αυτόν τον ιστοτόπο",
         "PluginDescription": "Εντοπίζει μποτ και αράχνες και μετράει τις επισκέψεις τους χωρίς να καταμετρώνται στο ημερολόγιο επισκεπτών.",
+        "SelectAWebsite": "Επιλογή ιστοτόπου",
+        "Single": "Μοναδικό",
         "Top10": "Τοπ10",
         "Top_10_Bots": "Κορυφαία 10 Bot",
         "Widgets": "BotTracker",
