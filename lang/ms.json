@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "BotActive": "Aktif",
         "BotName": "Nama-Bot",
         "BotTracker": "PenjejakBot",
         "Bot_Tracker": "Penjejak Bot",
