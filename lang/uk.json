@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Додати нових ботів",
         "BotActive": "Активний",
         "BotCount": "Відвідувань",
         "BotKeyword": "Ключове слово",
@@ -12,7 +13,8 @@
         "Error_Fileimport_Not_Even": "Кількість параметрів у файлі не знайдено",
         "Error_Fileimport_Upload": "Помилка під час завантаження",
         "Error_empty": "є порожнім!",
-        "ExtraStats": "додаткова Статистика",
+        "ExtraStats": "Додаткова статистика",
+        "File": "Файл",
         "Import_help_format": "botname1|botkeyword1|botname2|botkeyword2|...",
         "Import_help_headline": "Формат набору даних:",
         "Import_help_line1": "- кожен новий рядок буде видалений перед імпортом, так що ви можете вставити розрив після кожного запису бота",
@@ -21,8 +23,11 @@
         "Importfile": "Виберіть файл для імпорту...",
         "Message_bot_inserted": "ботів вставлено",
         "Message_deleted": "видалено!",
+        "New": "Новий",
         "NoOfActiveBots": "Кількість пошукових ботів для цього сайту",
         "PluginDescription": "Виявляє ботів та павуків і підраховує їхні візити без відстеження їх в журналі відвідувачів.",
+        "SelectAWebsite": "Вибрати вебсайт",
+        "Single": "Один",
         "Top10": "Top10",
         "Top_10_Bots": "Топ 10 Ботів",
         "Widgets": "Пошукові боти",
