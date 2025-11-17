@@ -1,1 +1,9 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "Aktivno",
+        "BotKeyword": "Ključna Beseda",
+        "false": "Ne",
+        "save_changes": "Shrani",
+        "true": "Da"
+    }
+}
