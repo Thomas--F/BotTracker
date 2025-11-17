@@ -1,6 +1,9 @@
 {
     "BotTracker": {
+        "BotActive": "فعال",
         "BotKeyword": "کلیدواژه",
+        "BotLastVisit": "اخرین بازدید",
+        "New": "جدید",
         "Top_10_Bots": "۱۰ ربات برتر",
         "delete": "حذف",
         "false": "خیر",
