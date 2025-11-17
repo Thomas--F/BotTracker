@@ -1,1 +1,9 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "చేతనం",
+        "BotKeyword": "కీపదం",
+        "false": "కాదు",
+        "save_changes": "భద్రపరచు",
+        "true": "అవును"
+    }
+}
