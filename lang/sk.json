@@ -1,5 +1,10 @@
 {
     "BotTracker": {
-        "BotLastVisit": "Posledná návšteva"
+        "BotActive": "Aktívny",
+        "BotKeyword": "Kľúčové slovo",
+        "BotLastVisit": "Posledná návšteva",
+        "false": "Nie",
+        "save_changes": "Uložiť",
+        "true": "Áno"
     }
 }
