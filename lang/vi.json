@@ -1,5 +1,11 @@
 {
     "BotTracker": {
-        "PluginDescription": "Phát hiện máy và nhện tìm kiếm và đếm lượt ghé thăm của chúng mà không theo dõi chúng trong nhật ký truy cập."
+        "BotActive": "Kích hoạt",
+        "BotKeyword": "Từ khóa",
+        "BotLastVisit": "Lượt truy cập cuối cùng",
+        "PluginDescription": "Phát hiện máy và nhện tìm kiếm và đếm lượt ghé thăm của chúng mà không theo dõi chúng trong nhật ký truy cập.",
+        "false": "Không",
+        "save_changes": "Lưu",
+        "true": "Có"
     }
 }
