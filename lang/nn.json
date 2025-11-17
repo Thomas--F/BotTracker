@@ -1,1 +1,10 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "Aktivt",
+        "BotKeyword": "Nøkkelord",
+        "delete": "slett",
+        "false": "Nei",
+        "save_changes": "Lagre",
+        "true": "Ja"
+    }
+}
