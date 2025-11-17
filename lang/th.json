@@ -1,1 +1,9 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "เปิดการทำงาน",
+        "BotKeyword": "คีย์เวิร์ด",
+        "false": "ไม่",
+        "save_changes": "บันทึก",
+        "true": "ใช่"
+    }
+}
