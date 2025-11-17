@@ -1,7 +1,10 @@
 {
     "BotTracker": {
+        "BotActive": "Aktyvus",
+        "BotKeyword": "Raktinis žodis",
         "BotLastVisit": "Paskutinis apsilankymas",
-        "true": "Taip",
-        "false": "Ne"
+        "false": "Ne",
+        "save_changes": "Išsaugoti",
+        "true": "Taip"
     }
 }
