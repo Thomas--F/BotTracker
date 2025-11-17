@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Yeni botlar ekle",
         "BotActive": "Etkin",
         "BotCount": "Ziyaret sayısı",
         "BotKeyword": "Anahtar Sözcük",
@@ -12,7 +13,8 @@
         "Error_Fileimport_Not_Even": "Dosyadaki parametre sayısı eşit değil",
         "Error_Fileimport_Upload": "Dosya yüklenirken sorun çıktı",
         "Error_empty": "boş!",
-        "ExtraStats": "ek istatistikler",
+        "ExtraStats": "Ek istatistikler",
+        "File": "Dosya",
         "Import_help_format": "botAdı1|botAnahtarSözcüğü1|botAdı2|botAnahtarSözcüğü2|...",
         "Import_help_headline": "Veri kümesi biçimi:",
         "Import_help_line1": "- içe aktarmadan önce her satır sonu karakteri kaldırılır. Böylece her bot kaydından sonra bir kesme ekleyebilirsiniz",
@@ -21,8 +23,11 @@
         "Importfile": "İçe aktarılacak dosyayı seçin...",
         "Message_bot_inserted": "Eklenen botlar",
         "Message_deleted": "silindi!",
+        "New": "Yeni",
         "NoOfActiveBots": "Bu site için bot sayısı",
         "PluginDescription": "Botları ve örümcekleri algılar ve ziyaretçi günlüğüne kaydetmeden ziyaretlerini sayar.",
+        "SelectAWebsite": "Bir site seçin",
+        "Single": "Tek",
         "Top10": "En üst 10",
         "Top_10_Bots": "En üstteki 10 bot",
         "Widgets": "BotTracker",
