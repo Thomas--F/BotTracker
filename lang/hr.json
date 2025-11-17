@@ -1,8 +1,15 @@
 {
     "BotTracker": {
+        "BotActive": "Aktivno",
+        "BotCount": "Broj posjeta",
         "BotKeyword": "Ključna riječ",
+        "BotLastVisit": "Zadnja posjeta",
+        "Error_empty": "je prazno!",
+        "ExtraStats": "Dodatna statistika",
+        "Message_deleted": "je izbrisano!",
+        "delete": "izbriši",
+        "false": "Ne",
         "save_changes": "Spremi",
-        "true": "Da",
-        "false": "Ne"
+        "true": "Da"
     }
 }
