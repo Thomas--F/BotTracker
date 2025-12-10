@@ -5,6 +5,7 @@
         "BotKeyword": "Kulcsszó",
         "BotLastVisit": "Utolsó látogatás",
         "BotName": "Bot neve",
+        "BotTracker": "BotTracker",
         "Config": "BotTracker Beállítása",
         "DisplayWidget": "BotTracker statisztikák",
         "Error_empty": "üres!",
