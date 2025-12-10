@@ -5,6 +5,7 @@
         "BotKeyword": "Avainsana",
         "BotLastVisit": "Edellinen käynti",
         "BotName": "Botin nimi",
+        "BotTracker": "BotTracker",
         "Config": "BotTrackerin asetukset",
         "DisplayWidget": "BotTrackerin näkymä",
         "Error_Fileimport_Upload": "Virhe lähetyksen aikana",
