@@ -1,8 +1,10 @@
 {
     "BotTracker": {
-        "BotKeyword": "מונח חיפוש",
         "BotActive": "פעיל",
+        "BotKeyword": "מונח חיפוש",
+        "File": "קובץ",
+        "false": "לא",
         "save_changes": "לשמור",
-        "false": "לא"
+        "true": "כן"
     }
 }

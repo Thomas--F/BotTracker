@@ -1,5 +1,6 @@
 {
     "BotTracker": {
+        "AddNewBots": "Shtoni robotë të rinj",
         "BotActive": "Aktiv",
         "BotCount": "Numër Vizitash",
         "BotKeyword": "Fjalëkyç",
@@ -12,7 +13,8 @@
         "Error_Fileimport_Not_Even": "Numri i parametrave në kartelë s’është i njëllojtë",
         "Error_Fileimport_Upload": "Gabim gjatë ngarkimit",
         "Error_empty": "është i zbrazët!",
-        "ExtraStats": "Statistika ekstra",
+        "ExtraStats": "Statistika Ekstra",
+        "File": "Kartelë",
         "Import_help_format": "emërboti1|fjalëkyçboti1|emërboti2|fjalëkyçboti1|…",
         "Import_help_headline": "Format Grupi të Dhënash:",
         "Import_help_line1": "- çdo “linefeed” do të hiqet para importimit, ndaj mund të futni një ndërprerje pas çdo zëri boti",
@@ -21,8 +23,11 @@
         "Importfile": "Zgjidhni kartelë importimi…",
         "Message_bot_inserted": "Bote të injektuar",
         "Message_deleted": "është fshirë!",
+        "New": "I ri",
         "NoOfActiveBots": "Nr. Botesh për këtë sajt",
         "PluginDescription": "Zbulon bote &amp; merimanga dhe numëron vizitat e tyre, pa ndjekje të tyre te regjistri i vizitorëve.",
+        "SelectAWebsite": "Përzgjidhni një sajt",
+        "Single": "Njësh",
         "Top10": "10 Kryesuesit",
         "Top_10_Bots": "10 Botet Kryesues",
         "Widgets": "Ndjekës Botesh",

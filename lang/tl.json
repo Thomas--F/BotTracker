@@ -1,1 +1,9 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "Aktibo",
+        "BotKeyword": "Keyword",
+        "BotLastVisit": "Huling pagbisita",
+        "false": "Hindi",
+        "save_changes": "I-save"
+    }
+}

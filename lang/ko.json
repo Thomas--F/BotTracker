@@ -1,5 +1,10 @@
 {
     "BotTracker": {
-        "BotLastVisit": "최근 방문"
+        "BotActive": "활성",
+        "BotKeyword": "검색어",
+        "BotLastVisit": "최근 방문",
+        "false": "아니오",
+        "save_changes": "저장",
+        "true": "예"
     }
 }

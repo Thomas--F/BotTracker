@@ -1,1 +1,11 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "Activ",
+        "BotKeyword": "Cuvânt-cheie",
+        "BotLastVisit": "Ultima vizita",
+        "New": "Nou",
+        "false": "Nu",
+        "save_changes": "Salvare",
+        "true": "Da"
+    }
+}
