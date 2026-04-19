@@ -1,3 +1,10 @@
+
+This Repository is no longer supported.
+Please use the following fork:
+https://github.com/Digitalist-Open-Cloud/Matomo-Plugin-BotTracker
+
+
+
 # Matomo BotTracker Plugin
 
 ## Description
