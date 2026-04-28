@@ -1,7 +1,12 @@
 {
     "BotTracker": {
+        "BotActive": "Aktyvus",
         "BotLastVisit": "Paskutinis apsilankymas",
+        "BotName": "Pavadinimas",
+        "Config": "Konfigūracija",
+        "Documentation": "Dokumentacija",
         "false": "Ne",
+        "save_changes": "Išsaugoti",
         "true": "Taip"
     }
 }
