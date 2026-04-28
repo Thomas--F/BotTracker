@@ -1,1 +1,10 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "చేతనం",
+        "BotName": "పేరు",
+        "Config": "స్వరూపణం",
+        "false": "కాదు",
+        "save_changes": "భద్రపరచు",
+        "true": "అవును"
+    }
+}
