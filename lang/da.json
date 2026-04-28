@@ -3,7 +3,12 @@
         "BotActive": "Aktiv",
         "BotKeyword": "Søgeord",
         "BotLastVisit": "Seneste besøg",
+        "BotName": "Navn",
+        "Config": "Konfiguration",
+        "Documentation": "Dokumentation",
+        "New": "Ny",
         "false": "Nej",
-        "save_changes": "Gem"
+        "save_changes": "Gem",
+        "true": "Ja"
     }
 }
