@@ -1,6 +1,9 @@
 {
     "BotTracker": {
+        "BotName": "Nome",
+        "Config": "Configuración",
         "false": "Non",
-        "save_changes": "Gardar"
+        "save_changes": "Gardar",
+        "true": "Si"
     }
 }
