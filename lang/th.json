@@ -1,1 +1,10 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "เปิดการทำงาน",
+        "BotName": "ชื่อ",
+        "Config": "การตั้งค่า",
+        "false": "ไม่",
+        "save_changes": "บันทึก",
+        "true": "ใช่"
+    }
+}
