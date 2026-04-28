@@ -5,12 +5,11 @@
         "BotKeyword": "Märksõna",
         "BotLastVisit": "Viimane külastus",
         "BotTracker": "BotTracker",
-        "delete": "kustuta",
         "Error_empty": "on tühi!",
-        "false": "Ei",
         "Message_deleted": "kustutati!",
+        "Widgets": "BotTracker",
+        "false": "Ei",
         "save_changes": "Salvesta",
-        "true": "Jah",
-        "Widgets": "BotTracker"
+        "true": "Jah"
     }
 }

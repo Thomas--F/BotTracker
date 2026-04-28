@@ -1,10 +1,9 @@
 {
     "BotTracker": {
         "BotKeyword": "کلیدواژه",
-        "delete": "حذف",
+        "Top_10_Bots": "۱۰ ربات برتر",
         "false": "خیر",
         "save_changes": "ذخیره",
-        "Top_10_Bots": "۱۰ ربات برتر",
         "true": "بله"
     }
 }

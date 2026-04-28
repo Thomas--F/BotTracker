@@ -6,16 +6,15 @@
         "BotLastVisit": "Utolsó látogatás",
         "BotName": "Bot neve",
         "Config": "BotTracker Beállítása",
-        "delete": "töröl",
         "DisplayWidget": "BotTracker statisztikák",
         "Error_empty": "üres!",
-        "false": "Nem",
-        "insert_db": "Alapértelmezett botok beszúrása",
         "Message_bot_inserted": "bot beszúrva.",
         "Message_deleted": "törölve!",
         "PluginDescription": "Botokat és sipdereket azonosít, számolja a látogatásaikat anélkül, hogy a többi statisztikában megjelennének.",
+        "Widgets": "BotTracker",
+        "false": "Nem",
+        "insert_db": "Alapértelmezett botok beszúrása",
         "save_changes": "Mentés",
-        "true": "Igen",
-        "Widgets": "BotTracker"
+        "true": "Igen"
     }
 }
