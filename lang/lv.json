@@ -1,1 +1,13 @@
-{}
+{
+    "BotTracker": {
+        "BotActive": "Aktīvs",
+        "BotName": "Vārds",
+        "Config": "Konfigurācija",
+        "Documentation": "Dokumentācija",
+        "New": "Jauns",
+        "SelectAWebsite": "Izvēlieties vietni",
+        "false": "Nē",
+        "save_changes": "Saglabāt",
+        "true": "Jā"
+    }
+}
