@@ -1,5 +1,5 @@
 {
-   "BotTracker": {
+    "BotTracker": {
         "AddNewBots": "Lägg till ny bottar",
         "BotActive": "Aktiv",
         "BotCount": "Besöksräknare",
@@ -11,29 +11,29 @@
         "Config": "Konfiguration",
         "DisplayWidget": "Visa Bot Tracker",
         "Documentation": "Dokumentation",
-        "Error_empty": "är tom!",
         "Error_Fileimport_Not_Even": "Nummer och parametrar i filen måste vara lika",
         "Error_Fileimport_Upload": "Fel vid uppladdning",
+        "Error_empty": "är tom!",
         "ExtraStats": "Extra statistik",
-        "false": "Nej",
-        "hits_by_Bot": "träffar av bott",
-        "insert_db": "Infoga/uppdatera standard-bottar",
-        "Importfile": "Välj importfil...",
         "Import_help_format": "botnamn1|botsökord1|botnamn2|botsökord2|…",
         "Import_help_headline": "Dataset-Format:",
         "Import_help_line1": "- varje radbrytning kommer att tas bort innan importen så att du kan använda dig av radbrytning efter varje bot-post",
         "Import_help_line2": "- antalet värden måste vara lika",
         "Import_help_line3": "Det finns ingen avgränsare \"|\" i slutet",
+        "Importfile": "Välj importfil...",
         "Message_bot_inserted": "Bottar infogade",
         "Message_deleted": "raderades!",
         "NoOfActiveBots": "Antal bottar för denna webbplats",
         "PluginDescription": "Upptäcker och räknar besök av bottar och spindlar utan att lagra dem i besöksloggen.",
-        "save_changes": "Spara",
         "SelectAWebsite": "Välj webbplats",
-        "send_file": "Ladda upp och bearbeta fil",
         "Top10": "Topp 10",
         "Top_10_Bots": "Bot Tracker: Topp 10",
-        "true": "Ja",
-        "Widgets": "Bot Tracker"
-   }
+        "Widgets": "Bot Tracker",
+        "false": "Nej",
+        "hits_by_Bot": "träffar av bott",
+        "insert_db": "Infoga/uppdatera standard-bottar",
+        "save_changes": "Spara",
+        "send_file": "Ladda upp och bearbeta fil",
+        "true": "Ja"
+    }
 }
